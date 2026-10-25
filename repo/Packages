@@ -2,44 +2,47 @@ Package: com.lgyz.pro
 Version: 0.1.0
 Architecture: iphoneos-arm64
 Maintainer: lgyz
-Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader, dylv.liquidass (>= 0.1.1)
-Description: Companion tweak for Liquid (Gl)ass 0.1.1 that restores the Custom Views feature removed from the official build. Inject liquid glass into any view by class name, with scope (SpringBoard / global / per-app), material presets, sampling quality, custom or adaptive mask color, adaptive corner radius, strong background clear, button animation, and a floating LG menu (class sampling, rule management, menu customization, drag). Localized in English, Chinese and Vietnamese.
-Name: LiquidAss Custom Views
-Author: lgyz
-Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
 Filename: ./com.lgyz.pro_0.1.0_iphoneos-arm64.deb
 Size: 223040
 MD5sum: 5a64e0ebb33d4b84eced7ffe238a9a18
 SHA1: c9b915e19fed661567159bd945377fcf21d51d01
 SHA256: 9afd71a252e14791424f15b863495784229c3af58f024f20308d55f1f794fff3
+Section: Tweaks
+Description: Companion tweak for Liquid (Gl)ass 0.1.1 that restores the Custom Views feature removed from the official build. Inject liquid glass into any view by class name, with scope (SpringBoard / global / per-app), material presets, sampling quality, custom or adaptive mask color, adaptive corner radius, strong background clear, button animation, and a floating LG menu (class sampling, rule management, menu customization, drag). Localized in English, Chinese and Vietnamese.
+Author: lgyz
+Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
+Name: LiquidAss Custom Views
 
 Package: com.taicang.ccbackgroundalpha
 Version: 1.1.7
 Architecture: iphoneos-arm64
 Maintainer: taicang
-Section: Tweaks
+Installed-Size: 156
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.8)
-Description: 自定义控制中心模块背景与整体背景透明度（分别调节 0~100），可移除多余视图，改动即时生效
-Name: CC背景透明度
-Author: taicang
 Filename: ./com.taicang.ccbackgroundalpha_1.1.7_iphoneos-arm64.deb
 Size: 9814
 MD5sum: f8f99270dcf3992411fe48db4cf8c744
 SHA1: 661f88e8e6507aa55dbb3eaa97fa681bbe4276bc
 SHA256: f01b885cc7d5b2221754e6fd57ca4d800f2832180c660b5166be7113c74737f1
+Section: Tweaks
+Description: 自定义控制中心模块背景与整体背景透明度（分别调节 0~100），可移除多余视图，改动即时生效
+Author: taicang
+Name: CC背景透明度
 
 Package: com.taicang.vpsnap
 Version: 1.2.0
 Architecture: iphoneos-arm64
 Maintainer: taicang
-Section: Tweaks
+Installed-Size: 72
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
-Description: 音量下+电源=截图（保留Home+电源截图）；音量上+电源长按5秒=注销
-Name: VolumePowerSnap
-Author: taicang
 Filename: ./com.taicang.vpsnap_1.2.0_iphoneos-arm64.deb
 Size: 5244
 MD5sum: 21a49f28777555be627a7bc2b60b31d1
 SHA1: 1ac320725e69107cc9979edc78063816b260eb42
 SHA256: dde22c118ff8e5441389d41739bff27d8b506028c3de23e2bfaa078195d804c2
+Section: Tweaks
+Description: 音量下+电源=截图（保留Home+电源截图）；音量上+电源长按5秒=注销
+Author: taicang
+Name: VolumePowerSnap
+

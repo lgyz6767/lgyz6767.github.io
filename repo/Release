@@ -1,21 +1,7 @@
-Origin: lgyz6767 Repo
-Label: lgyz6767
+Origin: Lgyz's repo
+Label: Lgyz's repo
 Suite: stable
-Version: 1.0
-Codename: ios
+Codename: stable
 Architectures: iphoneos-arm64
 Components: main
-Description: lgyz6767 jailbreak repo — LiquidAssCustom, CCBackgroundAlpha, VolumePowerSnap
-Date: Sat, 26 Sep 2026 06:07:34 UTC
-Packages:
-  f3af5ce9ff163f43312c7a56a4bac6da 2185 Packages
-  0ef58b8cb29e6dc448ce998c8010a70634a09f7f 2185 Packages
-  c1500117abd8ca0053e0cf746e48bcb0324c7a9bafc6a122a4213967bd4e8c67 2185 Packages
-Packages.gz:
-  bff86cd169b3e83fd98cde7fd8b7f353 1262 Packages.gz
-  ce79cf7817f3f49169d3da4b7194c14aa7b9fe82 1262 Packages.gz
-  3f62d41c6954cc66e2b7d5242ca187bb0366ec34bb10ea9d1eaf0a3e28f92837 1262 Packages.gz
-Packages.bz2:
-  2b18131b9f1f57dee7c1f89ed3fa6649 1329 Packages.bz2
-  20702e3cce4142787a004a74b385e063e8a5cc9f 1329 Packages.bz2
-  cb47bba28d8d5a270417271b060d68dfdfa5496fb4691922ba7d3f929b63f7bd 1329 Packages.bz2
+Description: 个人Rootless插件源，Dopamine iOS15+
