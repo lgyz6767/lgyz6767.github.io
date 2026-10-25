@@ -1,7 +1,17 @@
-Origin: Lgyz's repo
-Label: Lgyz's repo
-Suite: stable
-Codename: stable
-Architectures: iphoneos-arm64
-Components: main
-Description: 个人Rootless插件源，Dopamine iOS15+
+Date: Sun, 25 Oct 2026 12:35:06 +0000
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e                0 Packages
+ 225eb071d831dbc910fc7354846561b0               29 Packages.gz
+ 15a390947096a94327914f418e15da39               38 Release
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 Packages
+ 6467dde754d2ce06173e8c84503861db0bbb7136               29 Packages.gz
+ 14e1ef89b724976e921a25821c6f1f549bb401dc               38 Release
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 Packages
+ 4c40774bf067e1ae04ae213c7bf7d27976d21f71ef0d1c5bf8be5fdf124b9e4b               29 Packages.gz
+ f57ee442219658322c813fda11110f989945437cf0e8cdb84896288258a2d696               38 Release
+SHA512:
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 Packages
+ 3769fc4f2c40aec72e7fded3c84d9d2ba7c98b5327998c38be01cc7eeffa121c1a86ccc3e8542c26e499393a66ad6573f03d5014df17fbdd80d7792eba16edd9               29 Packages.gz
+ bf06e000c3ce322f4d7df9471ebc550adfc233ae3551f79a859c066223d7366f0e8a77952a0e3ac36741a90265363877c157b9e27e705205afa764211de5ae59               38 Release
