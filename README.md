@@ -1,14 +1,15 @@
-# lgyz6767.github.io
+# lgyz6767 Repo (Cydia / Sileo)
 
-Personal page + jailbreak repo.
+Jailbreak repository — iOS 15 rootless tweaks.
 
-- Site: https://lgyz6767.github.io/
-- Repo: https://lgyz6767.github.io/repo (Sileo/Zebra: add "lgyz6767.github.io")
-- Tweak: https://github.com/lgyz6767/liquidasscustom
+## Add to Sileo / Zebra / Saily
 
-## repo/
+```
+lgyz6767.github.io
+```
 
-Cydia/Sileo repository — com.lgyz.pro (LiquidAssCustom).
+## Packages
 
-Files: Packages, Packages.bz2, Packages.gz, Release, com.lgyz.pro_0.1.0_iphoneos-arm64.deb
-
+| Package | Version | Arch | Description |
+|---|---|---|---|
+| com.lgyz.pro | 0.1.0 | iphoneos-arm64 | LiquidAssCustom — companion for LiquidAss 0.1.1+ : custom liquid-glass views |
