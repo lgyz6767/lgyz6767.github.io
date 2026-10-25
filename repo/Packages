@@ -14,6 +14,23 @@ Author: lgyz
 Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
 Name: LiquidAss Custom Views
 
+Package: com.local.androidback
+Version: 1.1.4-1
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 392
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit, com.opa334.altlist
+Filename: ./com.local.androidback_1.1.4-1_iphoneos-arm64.deb
+Size: 53066
+MD5sum: cf48442752f5d6aec211c6703adcd474
+SHA1: b13f7bf57e9e8519002c2031c3a029be67623a90
+SHA256: a9f5625b2e084b48c6fee3d5c90ce3af19c8b593bc3c97d89c82acd886341453
+Section: Tweaks
+Description: 安卓风格边缘返回 v1.1.2：多策略返回（默认系统手势驱动，复用系统交互转场，同实测90%有效插件的方案，文件/文件管理类 App 也可返回）、左/右缘即时识别手势、波浪指示器（自定义颜色/描边/透明度/整体大小/箭头大小/箭头淡入时机）、曲线变平缩回动画、AltList 黑白名单、8 语言、液态玻璃退出提示、日志开关与复制/Filza 跳转。iPhone 7 / iOS 15 / Dopamine rootless。
+Tag: purpose::extension
+Author: lgyz6767
+Name: AndroidBack（安卓波浪返回）
+
 Package: com.taicang.ccbackgroundalpha
 Version: 1.1.7
 Architecture: iphoneos-arm64
