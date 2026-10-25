@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="lgyz6767 — iOS jailbreak tweak developer. LiquidAss companion: custom liquid-glass views for iOS 15 rootless.">
+<meta name="color-scheme" content="dark">
+<title>lgyz6767 · Liquid Glass Tweaks</title>
+<style>
+:root{
+  --bg:#0a0d14;
+  --card:rgba(255,255,255,.06);
+  --card-brd:rgba(255,255,255,.14);
+  --txt:#eef1f7;
+  --muted:#9aa4b5;
+  --acc:#4da3ff;
+  --acc2:#8a7dff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(77,163,255,.16), transparent 60%),
+    radial-gradient(1000px 500px at 90% 20%, rgba(138,125,255,.14), transparent 55%),
+    radial-gradient(800px 800px at 50% 120%, rgba(64,212,189,.10), transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  min-height:100vh;
+  line-height:1.6;
+}
+.wrap{max-width:880px;margin:0 auto;padding:64px 24px 96px}
+.glass{
+  background:var(--card);
+  border:1px solid var(--card-brd);
+  border-radius:22px;
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+.hero{padding:40px 36px;text-align:center;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:-40%;
+  background:conic-gradient(from 0deg, transparent 0deg, rgba(77,163,255,.22) 60deg, transparent 120deg, transparent 180deg, rgba(138,125,255,.22) 240deg, transparent 300deg);
+  animation:spin 22s linear infinite;
+}
+@keyframes spin{to{transform:rotate(1turn)}}
+.hero>*{position:relative}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:999px;
+  background:rgba(77,163,255,.14);border:1px solid rgba(77,163,255,.35);
+  color:var(--acc);font-size:13px;font-weight:600;letter-spacing:.4px;
+}
+h1{font-size:clamp(30px,6vw,46px);font-weight:800;margin:18px 0 6px;letter-spacing:-.5px}
+.sub{color:var(--muted);font-size:17px;max-width:560px;margin:0 auto 26px}
+.lg{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:92px;height:92px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%, rgba(255,255,255,.28), rgba(255,255,255,.05) 42%, rgba(0,0,0,.18));
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.25), 0 10px 34px rgba(77,163,255,.35);
+  font-size:34px;font-weight:800;letter-spacing:1px;color:#fff;margin-bottom:22px;
+}
+.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:16px;text-decoration:none;font-weight:700;font-size:15px;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn.primary{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;box-shadow:0 8px 24px rgba(77,163,255,.35)}
+.btn.ghost{background:rgba(255,255,255,.07);border:1px solid var(--card-brd);color:var(--txt)}
+.btn:hover{transform:translateY(-2px)}
+section{margin-top:34px}
+h2{font-size:21px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:8px;height:20px;border-radius:4px;background:linear-gradient(180deg,var(--acc),var(--acc2))}
+.card{padding:26px 28px}
+.card p{color:var(--muted);margin-bottom:14px}
+.card p:last-child{margin-bottom:0}
+.code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:rgba(0,0,0,.35);border:1px solid var(--card-brd);
+  padding:12px 16px;border-radius:12px;font-size:14px;color:#bfe0ff;
+  user-select:all;display:inline-block;
+}
+.tweak{border:1px solid var(--card-brd);border-radius:18px;padding:20px 22px;margin-bottom:16px;background:rgba(255,255,255,.04)}
+.tweak h3{font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tweak .ver{color:var(--acc);font-weight:700;font-size:13px;background:rgba(77,163,255,.12);border:1px solid rgba(77,163,255,.3);padding:3px 10px;border-radius:999px}
+.tweak p{color:var(--muted);font-size:14px;margin-top:8px}
+.tweak ul{margin:10px 0 0 18px;color:var(--muted);font-size:14px}
+.tweak li{margin-bottom:4px}
+.tweak a{color:var(--acc);text-decoration:none}
+footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="glass hero">
+    <div class="lg">LG</div>
+    <div class="badge">iOS 15 · Rootless · iPad Air 2 / iPhone 7</div>
+    <h1>lgyz6767</h1>
+    <p class="sub">Jailbreak tweak developer. Making your springboard feel like liquid glass — a companion for <b>LiquidAss</b> that brings fully custom liquid-glass views.</p>
+    <div class="actions">
+      <a class="btn primary" href="/repo">＋ Add Repo to Sileo</a>
+      <a class="btn ghost" href="https://github.com/lgyz6767/liquidasscustom" target="_blank" rel="noopener">GitHub Source</a>
+      <a class="btn ghost" href="https://github.com/lgyz6767/liquidasscustom/releases" target="_blank" rel="noopener">Releases</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Cydia / Sileo Source</h2>
+    <div class="glass card">
+      <p>Add the repo in Sileo / Zebra / Saily and install <b>LiquidAssCustom</b> (com.lgyz.pro):</p>
+      <span class="code">https://lgyz6767.github.io/repo</span>
+      <p style="margin-top:14px">The tweak requires <b>LiquidAss ≥ 0.1.1</b> (iOS 15, rootless). It re-adds the old “custom class” workflow: add rules with scope (SpringBoard / Global / per-app), target &amp; parent class names, liquid-glass parameters, button animation and much more — right from the settings app.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tweaks</h2>
+    <div class="glass tweak">
+      <h3>LiquidAssCustom <span class="ver">0.1.0</span></h3>
+      <p><b>Package:</b> com.lgyz.pro · <b>Section:</b> Tweaks · <b>Arch:</b> iphoneos-arm64</p>
+      <ul>
+        <li>Custom liquid-glass rules: scope, target / parent / grandparent classes, glass parameters, strong background clear</li>
+        <li>LG button with menu — sample class (with child/parent class picker), manage rules, menu customization, drag &amp; rotate</li>
+        <li>Auto mask color &amp; corner radius, adaptive colors, multi-language (EN / ZH / VN)</li>
+        <li>Free-rotate tweak &amp; upside-down rotation support for iPhone 7 (iOS 15.8.x)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Installation</h2>
+    <div class="glass card">
+      <p>1. Open Sileo → Sources → Add → paste <b>lgyz6767.github.io</b>.<br>2. Install <b>LiquidAssCustom</b>.<br>3. Open Settings → LiquidAssCustom → add a rule (class names can be picked right from the screen via the LG button).<br>4. Respring / restart SpringBoard.</p>
+      <p>Need help? Open an issue on <a href="https://github.com/lgyz6767/liquidasscustom" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 lgyz6767 · LiquidAssCustom is not affiliated with LiquidAss.</footer>
+</div>
+</body>
+</html>
