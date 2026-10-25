@@ -3,7 +3,7 @@ Version: 1.0.0-89
 Architecture: iphoneos-arm64
 Maintainer: lgyz
 Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.lgyz.mtfile/com.lgyz.mtfile_1.0.0-89_iphoneos-arm64.deb
+Filename: ./com.lgyz.mtfile_1.0.0-89_iphoneos-arm64.deb
 Size: 1192996
 MD5sum: 833e5d928dfe0d69837c244a375a12f3
 SHA1: 98369c2429d0e2f84e0d7e3c7f562457b7086119
@@ -19,7 +19,7 @@ Version: 0.1.0
 Architecture: iphoneos-arm64
 Maintainer: lgyz
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader, dylv.liquidass (>= 0.1.1)
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.lgyz.pro/com.lgyz.pro_0.1.0_iphoneos-arm64.deb
+Filename: ./com.lgyz.pro_0.1.0_iphoneos-arm64.deb
 Size: 223040
 MD5sum: 5a64e0ebb33d4b84eced7ffe238a9a18
 SHA1: c9b915e19fed661567159bd945377fcf21d51d01
@@ -37,7 +37,7 @@ Architecture: iphoneos-arm64
 Maintainer: lgyz6767
 Installed-Size: 392
 Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit, com.opa334.altlist
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.local.androidback/com.local.androidback_1.1.4-1_iphoneos-arm64.deb
+Filename: ./com.local.androidback_1.1.4-1_iphoneos-arm64.deb
 Size: 53066
 MD5sum: cf48442752f5d6aec211c6703adcd474
 SHA1: b13f7bf57e9e8519002c2031c3a029be67623a90
@@ -55,7 +55,7 @@ Architecture: iphoneos-arm64
 Maintainer: ngkhoi, dylv
 Installed-Size: 7724
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader, com.opa334.altlist
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.ngkhoi.liquidass27/com.ngkhoi.liquidass27_0.1.2t-27_iphoneos-arm64 (2).deb
+Filename: ./com.ngkhoi.liquidass27_0.1.2t-27_iphoneos-arm64 (2).deb
 Size: 3842264
 MD5sum: feb7fc82f435ff2b36b3f343c7f4b31f
 SHA1: 73f54b3ba9de84701d42f244366000dde8f9839f
@@ -72,7 +72,7 @@ Architecture: iphoneos-arm64
 Maintainer: taicang
 Installed-Size: 156
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.8)
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.taicang.ccbackgroundalpha/com.taicang.ccbackgroundalpha_1.1.7_iphoneos-arm64.deb
+Filename: ./com.taicang.ccbackgroundalpha_1.1.7_iphoneos-arm64.deb
 Size: 9814
 MD5sum: f8f99270dcf3992411fe48db4cf8c744
 SHA1: 661f88e8e6507aa55dbb3eaa97fa681bbe4276bc
@@ -89,7 +89,7 @@ Architecture: iphoneos-arm64
 Maintainer: taicang
 Installed-Size: 72
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
-Filename: /data/data/com.termux/files/home/work/pool/main/c/com.taicang.vpsnap/com.taicang.vpsnap_1.2.0_iphoneos-arm64.deb
+Filename: ./com.taicang.vpsnap_1.2.0_iphoneos-arm64.deb
 Size: 5244
 MD5sum: 21a49f28777555be627a7bc2b60b31d1
 SHA1: 1ac320725e69107cc9979edc78063816b260eb42
@@ -106,7 +106,7 @@ Architecture: iphoneos-arm64
 Maintainer: lgyz6767
 Installed-Size: 268
 Depends: mobilesubstrate, preferenceloader
-Filename: /data/data/com.termux/files/home/work/pool/main/w/wiki.lgyz.lstabsileo/wiki.lgyz.lstabsileo_0.6.7_iphoneos-arm64.deb
+Filename: ./wiki.lgyz.lstabsileo_0.6.7_iphoneos-arm64.deb
 Size: 27880
 MD5sum: 1c2e2e955de1a810585bbd938a1b25f1
 SHA1: 5d8f684560cedb8bb0917965547cc7cdc0d1fcb8
