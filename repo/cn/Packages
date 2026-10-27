@@ -1,0 +1,120 @@
+Package: com.lgyz.mtfile
+Version: 1.0.0-89
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-89_iphoneos-arm64.deb
+Size: 1192996
+MD5sum: 833e5d928dfe0d69837c244a375a12f3
+SHA1: 98369c2429d0e2f84e0d7e3c7f562457b7086119
+SHA256: a368e3c67a59382de51270a8ed1a0964ec4dd9243bb2f1a813aa84d671bcff8d
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.pro
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader, dylv.liquidass (>= 0.1.1)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.pro_0.1.0_iphoneos-arm64.deb
+Size: 223040
+MD5sum: 5a64e0ebb33d4b84eced7ffe238a9a18
+SHA1: c9b915e19fed661567159bd945377fcf21d51d01
+SHA256: 9afd71a252e14791424f15b863495784229c3af58f024f20308d55f1f794fff3
+Section: 自研
+Priority: optional
+Description: Companion tweak for Liquid (Gl)ass 0.1.1 that restores the Custom Views feature removed from the official build. Inject liquid glass into any view by class name, with scope (SpringBoard / global / per-app), material presets, sampling quality, custom or adaptive mask color, adaptive corner radius, strong background clear, button animation, and a floating LG menu (class sampling, rule management, menu customization, drag). Localized in English, Chinese and Vietnamese.
+Author: lgyz
+Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
+Name: LiquidAss Custom Views
+
+Package: com.local.androidback
+Version: 1.1.4-1
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 392
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit, com.opa334.altlist
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.local.androidback_1.1.4-1_iphoneos-arm64.deb
+Size: 53066
+MD5sum: cf48442752f5d6aec211c6703adcd474
+SHA1: b13f7bf57e9e8519002c2031c3a029be67623a90
+SHA256: a9f5625b2e084b48c6fee3d5c90ce3af19c8b593bc3c97d89c82acd886341453
+Section: 自研
+Priority: optional
+Description: 安卓风格边缘返回 v1.1.2：多策略返回（默认系统手势驱动，复用系统交互转场，同实测90%有效插件的方案，文件/文件管理类 App 也可返回）、左/右缘即时识别手势、波浪指示器（自定义颜色/描边/透明度/整体大小/箭头大小/箭头淡入时机）、曲线变平缩回动画、AltList 黑白名单、8 语言、液态玻璃退出提示、日志开关与复制/Filza 跳转。iPhone 7 / iOS 15 / Dopamine rootless。
+Tag: purpose::extension
+Author: lgyz6767
+Name: AndroidBack（安卓波浪返回）
+
+Package: com.ngkhoi.liquidass27
+Version: 0.1.2t-27
+Architecture: iphoneos-arm64
+Maintainer: ngkhoi, dylv
+Installed-Size: 7724
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader, com.opa334.altlist
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.ngkhoi.liquidass27_0.1.2t-27_iphoneos-arm64 (2).deb
+Size: 3842264
+MD5sum: feb7fc82f435ff2b36b3f343c7f4b31f
+SHA1: 73f54b3ba9de84701d42f244366000dde8f9839f
+SHA256: 7c16a5c85dd860d340de2880f1d2c4a2f5e5be7be33c478557e5f0cb420a32e4
+Section: 搬运
+Priority: optional
+Description: liquidass but 27（还原 27，非 26）。终于有官方中文了，搬运于官方 Discord，内测版，安装需要卸载原版 liquidass（这句话是我加的）
+Author: ngkhoi, dylv
+Name: 【搬运】Liquid (Gl)ass 27 内测抢先版！
+
+Package: com.taicang.ccbackgroundalpha
+Version: 1.1.7
+Architecture: iphoneos-arm64
+Maintainer: taicang
+Installed-Size: 156
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.8)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.taicang.ccbackgroundalpha_1.1.7_iphoneos-arm64.deb
+Size: 9814
+MD5sum: f8f99270dcf3992411fe48db4cf8c744
+SHA1: 661f88e8e6507aa55dbb3eaa97fa681bbe4276bc
+SHA256: f01b885cc7d5b2221754e6fd57ca4d800f2832180c660b5166be7113c74737f1
+Section: 杂鱼
+Priority: optional
+Description: 自定义控制中心模块背景与整体背景透明度（分别调节 0~100），可移除多余视图，改动即时生效
+Author: taicang
+Name: CC背景透明度
+
+Package: com.taicang.vpsnap
+Version: 1.2.0
+Architecture: iphoneos-arm64
+Maintainer: taicang
+Installed-Size: 72
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.taicang.vpsnap_1.2.0_iphoneos-arm64.deb
+Size: 5244
+MD5sum: 21a49f28777555be627a7bc2b60b31d1
+SHA1: 1ac320725e69107cc9979edc78063816b260eb42
+SHA256: dde22c118ff8e5441389d41739bff27d8b506028c3de23e2bfaa078195d804c2
+Section: 杂鱼
+Priority: optional
+Description: 音量下+电源=截图（保留Home+电源截图）；音量上+电源长按5秒=注销
+Author: taicang
+Name: VolumePowerSnap
+
+Package: wiki.lgyz.lstabsileo
+Version: 0.6.7
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 268
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./wiki.lgyz.lstabsileo_0.6.7_iphoneos-arm64.deb
+Size: 27880
+MD5sum: 1c2e2e955de1a810585bbd938a1b25f1
+SHA1: 5d8f684560cedb8bb0917965547cc7cdc0d1fcb8
+SHA256: 04f08ca670a6b96a920e514274dbde6aa6967ceaf4a91541c832d66a5aac73d2
+Section: 自研
+Priority: optional
+Description: Inject cross-page continuous slide transition into Sileo native tab bar (reusable UIKit animator).
+Tag: compatible::ios15
+Author: lgyz6767
+Name: LS Tab Slide for Sileo
+
