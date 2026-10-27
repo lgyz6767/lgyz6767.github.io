@@ -3,12 +3,10 @@
 Personal page + jailbreak repo.
 
 - Site: https://lgyz6767.github.io/
-- Repo: https://lgyz6767.github.io/repo (Sileo/Zebra: add "lgyz6767.github.io")
+- Repo: https://lgyz6767.github.io/repo/ (Sileo/Zebra: add "lgyz6767.github.io/repo/")
 - Tweak: https://github.com/lgyz6767/liquidasscustom
+# 中国人能飞：镜像版加速源https://lgyz6767.github.io/repo/cn/
 
-## repo/
+If you want to upload tweak to my repo,you may email me at lgyz12345678@gmail.com 
 
-Cydia/Sileo repository — com.lgyz.pro (LiquidAssCustom).
-
-Files: Packages, Packages.bz2, Packages.gz, Release, com.lgyz.pro_0.1.0_iphoneos-arm64.deb
 
