@@ -16,6 +16,7 @@
             --radius-btn: 14px;
             --ripple-dark: rgba(0, 0, 0, 0.06);
             --ripple-light: rgba(255, 255, 255, 0.35);
+            --ripple-blue: rgba(0, 122, 255, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -37,188 +38,106 @@
         /* ========== 顶部源信息 ========== */
         .repo-header {
             background: linear-gradient(135deg, rgba(0, 122, 255, 0.9) 0%, rgba(74, 158, 255, 0.9) 100%);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: var(--radius-card);
-            padding: 28px 24px;
-            color: white;
-            margin-bottom: 24px;
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-card); padding: 28px 24px; color: white; margin-bottom: 24px;
             box-shadow: 0 8px 32px rgba(0, 122, 255, 0.2), inset 0 1px 0 rgba(255,255,255,0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2); position: relative; overflow: hidden;
         }
 
         .repo-header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
         .repo-header p { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
 
         .repo-url-display {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-size: 13px;
-            font-family: ui-monospace, monospace;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.3);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2); border-radius: 12px; padding: 10px 14px;
+            font-size: 13px; font-family: ui-monospace, monospace;
+            display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
         }
 
         .repo-url-display .url-text { flex: 1; opacity: 0.95; word-break: break-all; }
 
         .copy-btn {
-            background: rgba(255, 255, 255, 0.25);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: background 0.2s;
+            background: rgba(255, 255, 255, 0.25); border: 1px solid rgba(255,255,255,0.2);
+            color: white; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600;
+            cursor: pointer; position: relative; overflow: hidden; transition: background 0.2s;
         }
         .copy-btn:active { background: rgba(255, 255, 255, 0.4); }
 
         /* ========== 添加源按钮 ========== */
-        .add-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
+        .add-buttons { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
 
         .add-btn {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 12px;
-            border-radius: var(--radius-btn);
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            color: white;
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 16px 12px; border-radius: var(--radius-btn); font-size: 15px; font-weight: 600;
+            text-decoration: none; color: white;
+            backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.5);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.2s;
-            user-select: none;
-            -webkit-user-select: none;
+            border: 1px solid rgba(255, 255, 255, 0.3); transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.2s;
+            user-select: none; -webkit-user-select: none;
         }
         .add-btn:active { transform: scale(0.97); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
-
         .add-btn.sileo { background: rgba(0, 122, 255, 0.85); }
         .add-btn.zebra { background: rgba(88, 86, 214, 0.85); }
         .add-btn.saily { background: rgba(52, 199, 89, 0.85); }
-
-        .add-btn .pm-icon {
-            width: 22px;
-            height: 22px;
-            object-fit: contain;
-            border-radius: 4px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-        }
+        .add-btn .pm-icon { width: 22px; height: 22px; object-fit: contain; border-radius: 4px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
 
         /* ========== 波纹动画 ========== */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple-anim 0.6s linear;
-            pointer-events: none;
-        }
+        .ripple { position: absolute; border-radius: 50%; transform: scale(0); animation: ripple-anim 0.6s linear; pointer-events: none; }
         .ripple.dark-ripple { background: var(--ripple-dark); }
         .ripple.light-ripple { background: var(--ripple-light); }
+        .ripple.blue-ripple { background: var(--ripple-blue); }
         @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
 
         /* ========== 搜索栏 ========== */
         .search-wrapper { position: relative; margin-bottom: 20px; }
-        .search-wrapper .search-icon {
-            position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-            width: 18px; height: 18px; color: var(--text-sub); pointer-events: none;
-        }
+        .search-wrapper .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-sub); pointer-events: none; }
         .search-input {
-            width: 100%; padding: 14px 14px 14px 42px;
-            border-radius: 14px;
-            font-size: 15px; color: var(--text-main); outline: none;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255,255,255,0.8);
-            transition: all 0.2s;
-            -webkit-appearance: none;
+            width: 100%; padding: 14px 14px 14px 42px; border-radius: 14px; font-size: 15px; color: var(--text-main); outline: none;
+            background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255,255,255,0.8);
+            transition: all 0.2s; -webkit-appearance: none;
         }
-        .search-input:focus { 
-            background: rgba(255, 255, 255, 0.8);
-            border-color: var(--blue); 
-            box-shadow: 0 0 0 3px var(--blue-light), inset 0 1px 0 rgba(255,255,255,0.8); 
-        }
+        .search-input:focus { background: rgba(255, 255, 255, 0.8); border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-light), inset 0 1px 0 rgba(255,255,255,0.8); }
 
-        /* ========== 状态栏 ========== */
-        .status-bar { display: flex; align-items: center; justify-content: space-between; padding: 0 4px; margin-bottom: 12px; }
-        .status-bar .count-wrapper { display: flex; align-items: center; gap: 8px; }
+        /* ========== 状态栏与进度条 ========== */
+        .status-bar { display: flex; align-items: center; justify-content: space-between; padding: 0 4px; margin-bottom: 8px; }
+        .status-left { display: flex; align-items: center; gap: 8px; }
         .status-bar .count { font-size: 13px; color: var(--text-sub); font-weight: 500; }
         
-        /* 镜像解析状态标签 */
         .status-badge {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 2px 6px;
-            border-radius: 4px;
-            background: var(--blue-light);
-            color: var(--blue);
-            border: 1px solid rgba(0,122,255,0.15);
+            position: relative; overflow: hidden; cursor: pointer;
+            font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px;
+            background: var(--blue-light); color: var(--blue); border: 1px solid rgba(0,122,255,0.15);
+            transition: all 0.2s; user-select: none;
         }
         .status-badge.local { background: rgba(0,0,0,0.04); color: var(--text-sub); border-color: transparent; }
+        .status-badge:active { transform: scale(0.95); }
 
         .refresh-btn {
-            position: relative; overflow: hidden; background: none; border: none;
-            color: var(--blue); font-size: 13px; font-weight: 600;
-            cursor: pointer; padding: 6px 12px; border-radius: 8px;
-            display: flex; align-items: center; gap: 4px; transition: background 0.2s;
+            position: relative; overflow: hidden; background: none; border: none; color: var(--blue); font-size: 13px; font-weight: 600;
+            cursor: pointer; padding: 6px 12px; border-radius: 8px; display: flex; align-items: center; gap: 4px; transition: background 0.2s;
         }
         .refresh-btn:active { background: var(--blue-light); }
         .refresh-btn svg { width: 14px; height: 14px; }
+
+        .progress-container { display: none; margin-bottom: 12px; padding: 0 4px; }
+        .progress-track { height: 4px; background: var(--blue-light); border-radius: 2px; overflow: hidden; margin-bottom: 6px; }
+        .progress-bar { height: 100%; background: var(--blue); width: 0%; border-radius: 2px; transition: width 0.1s linear; }
+        .progress-text { font-size: 11px; color: var(--blue); display: flex; justify-content: space-between; font-family: ui-monospace, monospace; }
 
         /* ========== 插件列表 ========== */
         .package-list { display: flex; flex-direction: column; gap: 14px; }
 
         .package-card {
-            position: relative; 
-            overflow: hidden;
-            padding: 16px; 
-            display: flex; gap: 14px; align-items: flex-start;
-            cursor: pointer; 
-            border-radius: var(--radius-card);
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            position: relative; overflow: hidden; padding: 16px; display: flex; gap: 14px; align-items: flex-start;
+            cursor: pointer; border-radius: var(--radius-card);
+            background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.7); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
             transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.2s, background 0.2s;
         }
-        .package-card:active { 
-            transform: scale(0.98); 
-            background: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
-        }
-
-        .package-card .pkg-icon {
-            width: 56px; height: 56px; border-radius: 14px; object-fit: cover;
-            background: rgba(255,255,255,0.8); flex-shrink: 0; 
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
+        .package-card:active { transform: scale(0.98); background: rgba(255, 255, 255, 0.6); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1); }
+        .package-card .pkg-icon { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; background: rgba(255,255,255,0.8); flex-shrink: 0; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         .package-card .pkg-info { flex: 1; min-width: 0; padding-top: 2px; }
         .package-card .pkg-name { font-size: 16px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .package-card .pkg-id { font-size: 12px; color: var(--text-sub); font-family: ui-monospace, monospace; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -228,104 +147,78 @@
         .pkg-tag.version { background: rgba(0,0,0,0.04); color: var(--text-sub); border-color: transparent; }
         .package-card .pkg-desc { font-size: 13px; color: var(--text-sub); margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4; }
 
-        /* ========== 空状态 ========== */
-        .empty-state { text-align: center; padding: 60px 20px; color: var(--text-sub); }
+        /* ========== 错误状态与镜像列表 ========== */
+        .empty-state { text-align: center; padding: 40px 20px; color: var(--text-sub); }
         .empty-state svg { width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.4; }
         .empty-state p { font-size: 15px; font-weight: 500; }
+        .empty-state .error-detail { font-size: 13px; margin-top: 8px; color: #FF3B30; background: rgba(255,59,48,0.1); padding: 8px 12px; border-radius: 8px; display: inline-block; text-align: left; word-break: break-all; max-width: 90%; }
 
-        .loading-spinner { display: inline-block; width: 24px; height: 24px; border: 2.5px solid var(--blue-light); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        /* 修复：波浪溢出问题 */
+        .mirror-list-container {
+            margin-top: 24px; text-align: left; background: rgba(255,255,255,0.6); backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.8); border-radius: 16px; padding: 16px; width: 100%; max-width: 400px; margin-inline: auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+        .mirror-list-title { font-size: 13px; font-weight: 600; color: var(--text-main); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+        .mirror-item {
+            position: relative; /* 修复定位 */
+            overflow: hidden;   /* 修复溢出 */
+            display: flex; align-items: center; justify-content: space-between; padding: 12px 14px;
+            border-radius: 10px; background: rgba(255,255,255,0.8); margin-bottom: 8px; border: 1px solid rgba(0,0,0,0.04);
+            cursor: pointer; transition: background 0.15s ease, transform 0.15s ease;
+        }
+        .mirror-item:last-child { margin-bottom: 0; }
+        .mirror-item:active { background: var(--blue-light); transform: scale(0.98); }
+        .mirror-name { font-size: 13px; font-weight: 500; color: var(--text-main); font-family: ui-monospace, monospace; }
+        .mirror-tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: rgba(0,0,0,0.05); color: var(--text-sub); }
+        .mirror-tag.active { background: rgba(255, 59, 48, 0.1); color: #FF3B30; font-weight: 600; }
+        .mirror-tag.success { background: var(--blue-light); color: var(--blue); font-weight: 600; }
 
         /* ========== 详情弹窗 ========== */
         .detail-overlay {
-            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-            z-index: 1000; opacity: 0; visibility: hidden;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
+            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease;
             display: flex; align-items: flex-end; justify-content: center;
         }
         .detail-overlay.active { opacity: 1; visibility: visible; }
-
         .detail-sheet {
-            background: rgba(255, 255, 255, 0.85); 
-            backdrop-filter: blur(32px) saturate(180%); 
-            -webkit-backdrop-filter: blur(32px) saturate(180%);
-            width: 100%; max-width: 560px; max-height: 85vh;
-            border-radius: 28px 28px 0 0; padding: 24px 20px 32px;
-            overflow-y: auto; transform: translateY(100%);
-            transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
-            box-shadow: 0 -8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.9); 
-            border-top: 1px solid rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(32px) saturate(180%); -webkit-backdrop-filter: blur(32px) saturate(180%);
+            width: 100%; max-width: 560px; max-height: 85vh; border-radius: 28px 28px 0 0; padding: 24px 20px 32px;
+            overflow-y: auto; transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+            box-shadow: 0 -8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.8);
             -webkit-overflow-scrolling: touch;
         }
         .detail-overlay.active .detail-sheet { transform: translateY(0); }
-
         .detail-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
-        .detail-header .detail-icon {
-            width: 72px; height: 72px; border-radius: 16px; object-fit: cover;
-            background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-shrink: 0;
-        }
+        .detail-header .detail-icon { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-shrink: 0; }
         .detail-header .detail-title { flex: 1; min-width: 0; padding-top: 4px; }
         .detail-header .detail-title h2 { font-size: 22px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; line-height: 1.2; }
         .detail-header .detail-title .detail-id { font-size: 13px; color: var(--text-sub); font-family: ui-monospace, monospace; word-break: break-all; }
-
-        .detail-close {
-            background: rgba(0,0,0,0.05); border: 1px solid rgba(255,255,255,0.4); width: 32px; height: 32px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            cursor: pointer; color: var(--text-sub); flex-shrink: 0; transition: background 0.2s, color 0.2s;
-        }
+        .detail-close { background: rgba(0,0,0,0.05); border: 1px solid rgba(255,255,255,0.4); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-sub); flex-shrink: 0; transition: background 0.2s, color 0.2s; }
         .detail-close:hover { background: rgba(0,0,0,0.1); color: var(--text-main); }
         .detail-close svg { width: 16px; height: 16px; }
 
         .detail-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-        .detail-meta-item { 
-            background: rgba(255, 255, 255, 0.5); 
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.6);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
-            border-radius: 14px; padding: 12px 16px; 
-        }
+        .detail-meta-item { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8); border-radius: 14px; padding: 12px 16px; }
         .detail-meta-item .label { font-size: 11px; color: var(--text-sub); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
         .detail-meta-item .value { font-size: 14px; color: var(--text-main); font-weight: 500; word-break: break-all; }
 
         .detail-section { margin-bottom: 16px; }
         .detail-section .section-label { font-size: 12px; font-weight: 600; color: var(--text-sub); margin-bottom: 8px; }
-        .detail-section .section-content { 
-            font-size: 14px; color: var(--text-main); line-height: 1.6; 
-            background: rgba(255, 255, 255, 0.5); 
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.6);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
-            border-radius: 14px; padding: 16px; 
-            white-space: pre-wrap; word-break: break-word; 
-        }
+        .detail-section .section-content { font-size: 14px; color: var(--text-main); line-height: 1.6; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8); border-radius: 14px; padding: 16px; white-space: pre-wrap; word-break: break-word; }
 
         .detail-download-btn {
-            position: relative; 
-            overflow: hidden; 
-            display: block; width: 100%;
-            padding: 16px; 
-            background: rgba(0, 122, 255, 0.9); 
-            color: white; 
-            border: 1px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border-radius: var(--radius-btn); 
-            font-size: 16px; font-weight: 600;
+            position: relative; overflow: hidden; display: block; width: 100%; padding: 16px; background: rgba(0, 122, 255, 0.9); color: white; border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: var(--radius-btn); font-size: 16px; font-weight: 600;
             text-align: center; cursor: pointer; text-decoration: none; margin-top: 12px;
-            box-shadow: 0 8px 24px rgba(0, 122, 255, 0.2), inset 0 1px 0 rgba(255,255,255,0.4); 
-            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 8px 24px rgba(0, 122, 255, 0.2), inset 0 1px 0 rgba(255,255,255,0.4); transition: background 0.2s, transform 0.2s;
         }
         .detail-download-btn:active { background: rgba(0, 98, 204, 0.9); transform: scale(0.97); }
 
         .footer { text-align: center; padding: 32px 0 0; font-size: 12px; color: var(--text-sub); }
 
-        @media (max-width: 380px) {
-            .detail-meta-grid { grid-template-columns: 1fr; }
-        }
-        @media (min-width: 600px) {
-            body { max-width: 640px; margin: 0 auto; padding: 40px 24px 60px; }
-        }
+        @media (max-width: 380px) { .detail-meta-grid { grid-template-columns: 1fr; } }
+        @media (min-width: 600px) { body { max-width: 640px; margin: 0 auto; padding: 40px 24px 60px; } }
     </style>
 </head>
 <body>
@@ -341,16 +234,13 @@
 
     <div class="add-buttons">
         <a href="sileo://source/https://lgyz6767.github.io/repo/" class="add-btn sileo">
-            <img class="pm-icon" src="sileo.png" alt="Sileo">
-            添加到 Sileo
+            <img class="pm-icon" src="sileo.png" alt="Sileo"> 添加到 Sileo
         </a>
         <a href="zbra://sources/add/https://lgyz6767.github.io/repo/" class="add-btn zebra">
-            <img class="pm-icon" src="zebra.png" alt="Zebra">
-            添加到 Zebra
+            <img class="pm-icon" src="zebra.png" alt="Zebra"> 添加到 Zebra
         </a>
         <a href="apt-repo://https://lgyz6767.github.io/repo/" class="add-btn saily">
-            <img class="pm-icon" src="saily.png" alt="Saily">
-            添加到 Saily
+            <img class="pm-icon" src="saily.png" alt="Saily"> 添加到 Saily
         </a>
     </div>
 
@@ -363,9 +253,9 @@
     </div>
 
     <div class="status-bar">
-        <div class="count-wrapper">
-            <span class="count" id="packageCount">加载中...</span>
-            <span class="status-badge local" id="sourceBadge" style="display:none;"></span>
+        <div class="status-left">
+            <span class="count" id="packageCount">准备就绪</span>
+            <button class="status-badge" id="sourceBadge" style="display:none;" onclick="toggleMirrorMode()"></button>
         </div>
         <button class="refresh-btn" id="refreshBtn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -377,10 +267,17 @@
         </button>
     </div>
 
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="progress-text">
+            <span id="progressStatus">连接中...</span>
+            <span id="progressSpeed"></span>
+        </div>
+    </div>
+
     <div class="package-list" id="packageList">
         <div class="empty-state">
-            <div class="loading-spinner"></div>
-            <p style="margin-top:16px;">正在解析源数据...</p>
+            <p>正在准备数据...</p>
         </div>
     </div>
 
@@ -393,27 +290,43 @@
     </div>
 
     <script>
-        // ==========================================
-        // 1. 配置与多语言检测 (核心修改点)
-        // ==========================================
         const REPO_BASE = 'https://lgyz6767.github.io/repo/';
+        const RAW_BASE = 'https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo/';
         const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
 
-        // 检测中文环境（兼容 zh-CN, zh-TW, zh-HK 等）
-        const isZh = (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('zh') || 
-                     (navigator.languages && navigator.languages.some(l => l.toLowerCase().startsWith('zh')));
+        // ==========================================
+        // 1. 镜像节点配置池
+        // ==========================================
+        const MIRRORS = [
+            { id: 'ghm', name: 'ghm.078465.xyz', prefix: 'https://ghm.078465.xyz/' + RAW_BASE },
+            { id: 'tbap', name: 'github.tbap.top', prefix: 'https://github.tbap.top/' + RAW_BASE },
+            { id: 'gh-proxy', name: 'gh-proxy.com', prefix: 'https://gh-proxy.com/' + RAW_BASE },
+            { id: 'ghfast', name: 'ghfast.top', prefix: 'https://ghfast.top/' + RAW_BASE },
+            { id: 'llkk', name: 'gh.llkk.cc', prefix: 'https://gh.llkk.cc/' + RAW_BASE },
+            { id: 'ddlc', name: 'gh.ddlc.top', prefix: 'https://gh.ddlc.top/' + RAW_BASE },
+            { id: 'gitmirror', name: 'raw.gitmirror.com', prefix: 'https://raw.gitmirror.com/lgyz6767/lgyz6767.github.io/main/repo/' },
+            { id: 'jsdelivr', name: 'jsDelivr CDN', prefix: 'https://cdn.jsdelivr.net/gh/lgyz6767/lgyz6767.github.io@main/repo/' },
+            { id: 'direct', name: '原源直连 (GitHub)', prefix: REPO_BASE }
+        ];
 
-        // 根据语言动态决定请求的 Packages 文件路径
-        // 中文环境请求 repo/cn/Packages，其他请求 repo/Packages
-        const PACKAGES_URL = REPO_BASE + (isZh ? 'cn/Packages' : 'Packages');
-
+        // 状态管理
+        let useMirrorMode = (navigator.language || '').toLowerCase().startsWith('zh');
+        let currentMirrorIndex = useMirrorMode ? 0 : (MIRRORS.length - 1);
+        
         let allPackages = [];
         let filteredPackages = [];
+        let isFetching = false;
+        let currentController = null; // 用于打断当前请求
 
+        // DOM 引用
         const listEl = document.getElementById('packageList');
         const searchInput = document.getElementById('searchInput');
         const countEl = document.getElementById('packageCount');
         const badgeEl = document.getElementById('sourceBadge');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressStatus = document.getElementById('progressStatus');
+        const progressSpeed = document.getElementById('progressSpeed');
         const detailOverlay = document.getElementById('detailOverlay');
         const detailSheet = document.getElementById('detailSheet');
 
@@ -428,10 +341,11 @@
         document.getElementById('buildDate').textContent = new Date().toLocaleDateString('zh-CN');
 
         // ==========================================
-        // 2. 全局波纹事件委托
+        // 2. 全局波纹效果
         // ==========================================
         document.addEventListener('pointerdown', function(e) {
-            const target = e.target.closest('.add-btn, .package-card, .detail-download-btn, .refresh-btn, .copy-btn');
+            // 加入 .mirror-item
+            const target = e.target.closest('.add-btn, .package-card, .detail-download-btn, .refresh-btn, .copy-btn, .status-badge, .mirror-item');
             if (!target) return;
 
             const rect = target.getBoundingClientRect();
@@ -441,9 +355,11 @@
             const y = e.clientY - rect.top - radius;
 
             const ripple = document.createElement('span');
-            const isDarkRipple = target.classList.contains('package-card') || target.classList.contains('refresh-btn');
-            ripple.className = `ripple ${isDarkRipple ? 'dark-ripple' : 'light-ripple'}`;
+            let rippleType = 'light-ripple';
+            if (target.classList.contains('package-card') || target.classList.contains('refresh-btn') || target.classList.contains('mirror-item')) rippleType = 'dark-ripple';
+            if (target.classList.contains('status-badge')) rippleType = 'blue-ripple';
             
+            ripple.className = `ripple ${rippleType}`;
             ripple.style.width = ripple.style.height = `${diameter}px`;
             ripple.style.left = `${x}px`;
             ripple.style.top = `${y}px`;
@@ -455,55 +371,240 @@
             setTimeout(() => ripple.remove(), 600);
         });
 
-        document.getElementById('refreshBtn').addEventListener('click', loadPackages);
+        // ==========================================
+        // 3. 交互与状态更新
+        // ==========================================
+        document.getElementById('refreshBtn').addEventListener('click', () => {
+            // 强制刷新，自动轮询所有节点
+            loadPackages(true, currentMirrorIndex, true);
+        });
+        
         document.getElementById('copyRepoUrlBtn').addEventListener('click', copyRepoUrl);
 
-        loadPackages();
+        function toggleMirrorMode() {
+            // 点击顶部 Badge 自由切换：原源 <-> 镜像(当前选中的)
+            useMirrorMode = !useMirrorMode;
+            if (useMirrorMode && currentMirrorIndex === MIRRORS.length - 1) {
+                currentMirrorIndex = 0; // 如果从直连切回镜像，默认选第一个
+            } else if (!useMirrorMode) {
+                currentMirrorIndex = MIRRORS.length - 1; // 切到直连
+            }
+            loadPackages(true, currentMirrorIndex, false);
+        }
 
-        // ==========================================
-        // 3. 数据加载与解析
-        // ==========================================
-        async function loadPackages() {
-            listEl.innerHTML = `<div class="empty-state"><div class="loading-spinner"></div><p style="margin-top:16px;">正在解析源数据...</p></div>`;
-            countEl.textContent = '加载中...';
-            
-            // 显示当前的解析来源徽标
+        function updateBadgeUI() {
             badgeEl.style.display = 'inline-block';
-            if (isZh) {
-                badgeEl.textContent = '⚡ 镜像加速';
+            if (useMirrorMode) {
+                const m = MIRRORS[currentMirrorIndex];
+                badgeEl.textContent = `⚡ ${m.name}`;
                 badgeEl.className = 'status-badge';
             } else {
-                badgeEl.textContent = '🌐 原源直连';
+                badgeEl.textContent = `🌐 原源直连`;
                 badgeEl.className = 'status-badge local';
-            }
-
-            try {
-                const proxyUrl = CORS_PROXY + encodeURIComponent(PACKAGES_URL);
-                const resp = await fetch(proxyUrl);
-                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-                const text = await resp.text();
-
-                allPackages = parsePackages(text);
-                filteredPackages = [...allPackages];
-                renderList(filteredPackages);
-                countEl.textContent = `共 ${allPackages.length} 个插件`;
-            } catch (err) {
-                console.error('加载 Packages 失败:', err);
-                listEl.innerHTML = `
-                    <div class="empty-state">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                            <line x1="12" y1="9" x2="12" y2="13"></line>
-                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                        </svg>
-                        <p>加载失败</p>
-                        <p style="font-size:13px;margin-top:8px;color:var(--text-sub);">${escapeHtml(err.message)}</p>
-                        <button class="refresh-btn" style="margin:16px auto 0; background:var(--blue-light); color:var(--blue);" onclick="loadPackages()">重试</button>
-                    </div>`;
-                countEl.textContent = '加载失败';
             }
         }
 
+        // 核心：允许随时打断、强制指定节点
+        function switchMirror(index) {
+            // 如果正在请求，打断它！
+            if (currentController) {
+                currentController.abort();
+                currentController = null;
+            }
+            isFetching = false;
+
+            currentMirrorIndex = index;
+            useMirrorMode = (index !== MIRRORS.length - 1);
+            // 强制刷新该特定节点，不自动轮询
+            loadPackages(true, index, false); 
+        }
+
+        // ==========================================
+        // 4. 核心加载器 (支持打断、精准错误、自动轮询)
+        // ==========================================
+        async function loadPackages(forceNetwork = false, startIndex = null, autoFallback = false) {
+            if (isFetching) return; // 防止并发
+            isFetching = true;
+
+            // 初始化请求控制器
+            if (currentController) currentController.abort();
+            currentController = new AbortController();
+            const signal = currentController.signal;
+
+            let currentTestIdx = startIndex !== null ? startIndex : currentMirrorIndex;
+            const maxAttempts = autoFallback ? MIRRORS.length : 1;
+            let success = false;
+            let lastError = null;
+
+            updateBadgeUI();
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+            countEl.textContent = '加载中...';
+            detailOverlay.classList.remove('active');
+
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
+                if (signal.aborted) break; // 如果中途被用户点击打断，直接退出循环
+
+                const m = MIRRORS[currentTestIdx];
+                const targetUrl = m.prefix + 'Packages';
+                const proxyUrl = CORS_PROXY + encodeURIComponent(targetUrl);
+
+                progressStatus.textContent = `尝试 [${m.name}]...`;
+                progressSpeed.textContent = '';
+
+                // 每个节点独立的 10 秒超时
+                const timeoutId = setTimeout(() => {
+                    if (currentController) currentController.abort();
+                }, 10000);
+
+                try {
+                    const response = await fetch(proxyUrl, { signal });
+                    clearTimeout(timeoutId);
+
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                    const contentLength = response.headers.get('content-length');
+                    const total = parseInt(contentLength, 10) || 0;
+                    
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder('utf-8');
+                    let receivedLength = 0;
+                    let chunks = [];
+                    let lastTime = performance.now();
+                    let lastBytes = 0;
+
+                    progressStatus.textContent = `下载中... [${m.name}]`;
+
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+
+                        chunks.push(value);
+                        receivedLength += value.length;
+
+                        const now = performance.now();
+                        const timeDiff = (now - lastTime) / 1000;
+                        if (timeDiff > 0.4) {
+                            const speed = (receivedLength - lastBytes) / timeDiff;
+                            lastTime = now;
+                            lastBytes = receivedLength;
+                            
+                            const speedText = speed > 1024 * 1024 ? (speed / 1024 / 1024).toFixed(2) + ' MB/s' : (speed / 1024).toFixed(1) + ' KB/s';
+                            progressSpeed.textContent = speedText;
+
+                            if (total > 0) {
+                                const percent = Math.min(100, (receivedLength / total) * 100);
+                                progressBar.style.width = percent.toFixed(1) + '%';
+                                progressStatus.textContent = `[${m.name}] ${percent.toFixed(1)}%`;
+                            } else {
+                                progressStatus.textContent = `[${m.name}] ${(receivedLength / 1024).toFixed(1)} KB`;
+                                progressBar.style.width = '50%';
+                            }
+                        }
+                    }
+
+                    progressStatus.textContent = '解析数据...';
+                    progressBar.style.width = '100%';
+
+                    const allChunks = new Uint8Array(receivedLength);
+                    let position = 0;
+                    for (let chunk of chunks) {
+                        allChunks.set(chunk, position);
+                        position += chunk.length;
+                    }
+                    const text = decoder.decode(allChunks);
+
+                    // ====== 成功 ======
+                    allPackages = parsePackages(text);
+                    filteredPackages = [...allPackages];
+                    renderList(filteredPackages);
+                    countEl.textContent = `共 ${allPackages.length} 个插件`;
+                    
+                    // 更新当前节点状态
+                    currentMirrorIndex = currentTestIdx;
+                    useMirrorMode = (currentTestIdx !== MIRRORS.length - 1);
+                    updateBadgeUI();
+                    
+                    setTimeout(() => { progressContainer.style.display = 'none'; }, 500);
+                    success = true;
+                    break; // 跳出循环
+
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    
+                    // 如果是被用户手动打断的，直接跳出，不提示错误
+                    if (signal.aborted && err.name === 'AbortError') {
+                        return; 
+                    }
+
+                    lastError = err;
+                    
+                    // 如果允许自动轮询，切到下一个节点
+                    if (autoFallback && attempt < MIRRORS.length - 1) {
+                        currentTestIdx = (currentTestIdx + 1) % MIRRORS.length;
+                    }
+                }
+            }
+
+            isFetching = false;
+
+            if (!success && !signal.aborted) {
+                progressContainer.style.display = 'none';
+                renderErrorUI(lastError);
+            }
+        }
+
+        // ==========================================
+        // 5. 错误界面渲染 (含镜像列表)
+        // ==========================================
+        function renderErrorUI(err) {
+            let errorMsg = "网络连接失败。";
+            if (err && err.name === 'AbortError') errorMsg = "请求超时。网络较差，或节点响应缓慢。";
+            else if (err && err.message.includes('Failed to fetch')) errorMsg = "无法连接到代理服务器。域名可能被屏蔽、网络断开或节点已失效。";
+            else if (err) errorMsg = err.message;
+
+            countEl.textContent = '加载失败';
+            badgeEl.textContent = '连接异常';
+            badgeEl.className = 'status-badge local';
+
+            let mirrorHtml = `
+                <div class="mirror-list-container">
+                    <div class="mirror-list-title">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        点击切换其他镜像线路
+                    </div>
+            `;
+            MIRRORS.forEach((m, idx) => {
+                const isCurrent = idx === currentMirrorIndex;
+                const tagClass = isCurrent ? 'active' : '';
+                const tagText = isCurrent ? '失败' : '备用';
+                mirrorHtml += `
+                    <div class="mirror-item" onclick="switchMirror(${idx})">
+                        <span class="mirror-name">${m.name}</span>
+                        <span class="mirror-tag ${tagClass}">${tagText}</span>
+                    </div>
+                `;
+            });
+            mirrorHtml += `</div>`;
+
+            listEl.innerHTML = `
+                <div class="empty-state">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <p style="color:#FF3B30; font-weight:600; margin-bottom:8px;">线路连接失败</p>
+                    <div class="error-detail">${escapeHtml(errorMsg)}</div>
+                    ${mirrorHtml}
+                    <button class="refresh-btn" style="margin:24px auto 0; background:var(--blue-light); color:var(--blue);" onclick="document.getElementById('refreshBtn').click()">自动轮询可用节点</button>
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // 6. 数据解析与渲染
+        // ==========================================
         function parsePackages(raw) {
             const packages = [];
             const blocks = raw.split(/\n\s*\n/);
@@ -539,8 +640,6 @@
             const homepage = raw.Homepage || '';
 
             let downloadUrl = filename;
-            // 如果是相对路径 (例如原源的 ./xxx.deb)，则拼接当前基础域名
-            // 如果是镜像源生成的绝对路径 (http开头)，则原样保留
             if (downloadUrl && !downloadUrl.startsWith('http')) {
                 downloadUrl = REPO_BASE + downloadUrl.replace(/^\.\//, '');
             }
@@ -554,7 +653,7 @@
 
         function renderList(pkgs) {
             if (pkgs.length === 0) {
-                listEl.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><p>没有找到匹配的插件</p></div>`;
+                listEl.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><p>没有找到匹配的插件</p></div>`;
                 return;
             }
             listEl.innerHTML = pkgs.map(pkg => `
@@ -587,11 +686,11 @@
                 );
             }
             renderList(filteredPackages);
-            countEl.textContent = q ? `找到 ${filteredPackages.length} 个结果` : `共 ${allPackages.length} 个插件`;
+            if (q) countEl.textContent = `找到 ${filteredPackages.length} 个结果`;
         });
 
         // ==========================================
-        // 4. 详情弹窗逻辑
+        // 7. 详情与工具
         // ==========================================
         function openDetail(pkgId) {
             const pkg = allPackages.find(p => p.id === pkgId);
@@ -635,9 +734,6 @@
 
         detailOverlay.addEventListener('click', (e) => { if (e.target === detailOverlay) closeDetail(); });
 
-        // ==========================================
-        // 5. 复制与工具函数
-        // ==========================================
         function copyRepoUrl() {
             const btn = document.getElementById('copyRepoUrlBtn');
             if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -670,6 +766,9 @@
             if (!str) return '';
             return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
         }
+
+        // 启动：优先使用当前选择的线路
+        loadPackages(false, currentMirrorIndex, false);
     </script>
 </body>
 </html>
