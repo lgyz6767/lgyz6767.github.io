@@ -100,6 +100,24 @@ Description: 音量下+电源=截图（保留Home+电源截图）；音量上+�
 Author: taicang
 Name: VolumePowerSnap
 
+Package: wiki.lgyz.lsposed
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 2224
+Depends: firmware (>= 15.0)
+Filename: ./wiki.lgyz.lsposed_0.1.0_iphoneos-arm64.deb
+Size: 579992
+MD5sum: 6ece088de559f028da2ef8e747ac9c6f
+SHA1: f339a1f1c079d957a2504aaf1b121706e585017a
+SHA256: ae2e320bfa012631f3175373bc53c811600f5623e53732fb17e2ff2ffaa0da17
+Section: 自研
+Priority: optional
+Description: LSPosed 风格的越狱 iOS 模块(tweak)管理器，深度还原安卓 LSPosed 2.2.0 Miuix UI；UI 高度可自定义；管理 MobileSubstrate dylib 与作用域。
+Tag: role::application
+Author: lgyz6767
+Name: LSPosed
+
 Package: wiki.lgyz.lstabsileo
 Version: 0.6.7
 Architecture: iphoneos-arm64
