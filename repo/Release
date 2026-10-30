@@ -1,20 +1,25 @@
 Origin: lgyz源
 Label: lgyz源
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
 Description: 自研&搬运插件源
-Date: Tue, 27 Oct 2026 12:29:35 +0000
+Date: Fri, 30 Oct 2026 12:05:57 +0000
 MD5Sum:
  4dfa464218892a5d1b45dbaed5f2565c             5307 Packages
  1adc12b6803dddbaaad2a33c26b49aaa             2747 Packages.bz2
- 23a0435821b22bd3df5b981109e7b1a5             2727 Packages.gz
+ bb8b942a2acfa8c932861d72a4c36cfb             2727 Packages.gz
 SHA1:
  bc1f57b69aa3cc5a3a2746970d94f1b3b0db8ee4             5307 Packages
  ef217bdbdc1612c87476ce5ed061cf6162e80607             2747 Packages.bz2
- 716558ba1fc1e8452e4c2043fb67ecee2ef7787e             2727 Packages.gz
+ a9852fdedd7bd9a5ddd9824aaa1b63778b5862a8             2727 Packages.gz
 SHA256:
  7c8d55e220b292c09a531e5a79f344ea7d421c75fc040c642aad69040477dd7f             5307 Packages
  e47b6b0379cd0aae1ba1151e64c856dd8a8deb9bb53218844a2539354647b2f6             2747 Packages.bz2
- fb7d3189a9973a9d047ba05a0376636521972971dceaa26d68c26d020d3eb7dc             2727 Packages.gz
+ aea47672f7bf3d6131e4d2c373337806a641da77eeb36a7f3c29ac8080ae4fae             2727 Packages.gz
 SHA512:
  f0fde96fbe1aff770573a2950f20e4288754c64a6d4cb6c30eaca8f403215fc35c22f56dd4a2b79f3ffaf2ef1550ddeb69d2682b02fcca9050db0489a9c17e8b             5307 Packages
  2e0c1e9991cb4a34dd9c1faba66747424517c1d86d4940379ed177f77410661cf3ff858fdde2891ba58de626444655d47ce564b0a07f60b58ca03b551feb5381             2747 Packages.bz2
- 8af94f1d8ae159db0c6757211e6dc943a37429be9ca9589906f5309e469d9cb301188ee1fc45406aca80a0af3899c68f89edb251cb3563a48b645ef34907deb3             2727 Packages.gz
+ 5c14f9bffb09f98177dc34f22968c331864e4ec4b35e8a42eaf230e62faa7444b7625a19aace47dbdd4928f2334f6703b10f089faeda3bbe067383647f7f4b96             2727 Packages.gz
