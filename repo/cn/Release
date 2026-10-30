@@ -1,25 +1,25 @@
-Origin: lgyz源
-Label: lgyz源
+Origin: LGYZ's Repo
+Label: LGYZ's Repo
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: 自研&搬运插件源 (cn mirror)
-Date: Fri, 30 Oct 2026 15:34:28 +0000
+Date: Fri, 30 Oct 2026 16:06:02 +0000
 MD5Sum:
  97c58c2c653153decd73381fb9f73e8b             6698 Packages
  23bea529e498224775e0b77d31cbc390             3073 Packages.bz2
- a4a90b8c2628224c82d052cadb9ce0ba             3033 Packages.gz
+ 8af803e9f1a25d7b0921b532340fe78c             3033 Packages.gz
 SHA1:
  f6e5e3e4ca38f006473bf6a6f2e78cc93d708854             6698 Packages
  03c0869eb8b843157a93efe8e055ae5f3d63cfba             3073 Packages.bz2
- f7b6ca01efcc6eb1532eea45883af9ffa20c4b09             3033 Packages.gz
+ cdf9a08ee4510caf9e242cbd82130501dadb4129             3033 Packages.gz
 SHA256:
  887729e4292f236538aa09ad7bb96d1956e57309041f9768aba99fb88343d58e             6698 Packages
  2cf49ddb6343a5dbc14c6639e5a91061d73b055fddccbcc381b46a807d3aabaa             3073 Packages.bz2
- 16b505de8683d0223397613896541b5cbcc3641c798b3a4b47ccd1c218bc14ff             3033 Packages.gz
+ 91d96f281edaca08751093f8fc4e831359455e1444de05f5326cd466d20b6ad6             3033 Packages.gz
 SHA512:
  1af8ff417954ff6fb58c8e521606e0fe1662f6c8bcab7c96000c2acc58352aa006d133bc5768cc86f7ed11c72856af9f36590c16a6eac515c698630a49564d9a             6698 Packages
  173e3afa520fd5321cc2036f64968a257c0b84e2386e7bce093621d7099a2d2967e69d3477fcb6e629d1b01940182505722ec1bc8ebac52047db8ef5ed38dc11             3073 Packages.bz2
- c8661e4648214d2632567c357998338e11646d892849507a67528d4e31a98f52762824cf3c7a7bf676762377c92057bdc02022fe093afe90e12d8e83ad52171e             3033 Packages.gz
+ 29897ce92d82a05f880ba097c871e06314b3e2c38eab08ecd045348d160a62b6fc223fed70dc9ab0e43f8597ef42dec83dd21c2543f66e89727cec9f505eba89             3033 Packages.gz
