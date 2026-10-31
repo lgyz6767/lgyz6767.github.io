@@ -49,6 +49,23 @@ Tag: purpose::extension
 Author: lgyz6767
 Name: AndroidBack（安卓波浪返回）
 
+Package: com.ngkhoi.26home
+Version: 1.2.0-test
+Architecture: iphoneos-arm64
+Maintainer: ngkhoi
+Installed-Size: 29816
+Depends: mobilesubstrate
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.ngkhoi.26home_1.2.0-test_iphoneos-arm64.deb
+Size: 20118976
+MD5sum: 9dd0fff1582a6dbd84a74ff9ea7a9bc4
+SHA1: ef7bb3be6993ed2f64eb71fd3dc2086a344c0eef
+SHA256: e38a13e406c06d676923b6f69a3dcd4db62c1c169be34afb1708fc6bdb17fd18
+Section: 搬运
+Priority: optional
+Description: iOS 26 Homescreen customization.
+Author: ngkhoi
+Name: 26Home
+
 Package: com.ngkhoi.liquidass27
 Version: 0.1.2t-27
 Architecture: iphoneos-arm64
