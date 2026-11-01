@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Sileo Web</title>
+
+<!-- 使用你提供的 Sileo 图标 -->
+<link rel="icon" href="https://lgyz6767.github.io/sileo.png" />
+<link rel="apple-touch-icon" href="https://lgyz6767.github.io/sileo.png" />
+
+<style>
+/* ============ Design tokens (SwiftUI system colors) ============ */
+:root{
+  --bg:#F2F2F7;
+  --card:#FFFFFF;
+  --label:#000000;
+  --label-2:rgba(60,60,67,.6);
+  --label-3:rgba(60,60,67,.3);
+  --sep:rgba(60,60,67,.16);
+  --tint:#007AFF;
+  --green:#34C759;
+  --orange:#FF9500;
+  --red:#FF3B30;
+  --bar:rgba(249,249,249,.82);
+  --fill:rgba(120,120,128,.14);
+  --fill-2:rgba(120,120,128,.08);
+  --shimmer:rgba(255,255,255,.75);
+  --shadow:0 1px 3px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#000000;
+    --card:#1C1C1E;
+    --label:#FFFFFF;
+    --label-2:rgba(235,235,245,.6);
+    --label-3:rgba(235,235,245,.3);
+    --sep:rgba(84,84,88,.6);
+    --tint:#0A84FF;
+    --green:#30D158;
+    --orange:#FF9F0A;
+    --red:#FF453A;
+    --bar:rgba(29,29,31,.84);
+    --fill:rgba(120,120,128,.26);
+    --fill-2:rgba(120,120,128,.16);
+    --shimmer:rgba(255,255,255,.09);
+    --shadow:none;
+  }
+}
+
+/* ============ Base ============ */
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font:16px/1.42 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--label);
+  padding-bottom:calc(96px + env(safe-area-inset-bottom));
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:none;
+  transition:background .3s ease, color .3s ease;
+}
+::-webkit-scrollbar{width:0;height:0}
+
+/* ============ Header (large title) ============ */
+header{
+  position:sticky;top:0;z-index:30;
+  padding:calc(env(safe-area-inset-top) + 12px) 16px 10px;
+  background:var(--bar);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:.5px solid transparent;
+  transition:border-color .25s ease, padding .25s ease, background .3s ease;
+}
+body.scrolled header{border-bottom-color:var(--sep);padding-bottom:8px}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:34px;
+}
+#page-title{
+  margin:0;
+  font-size:34px;font-weight:700;letter-spacing:-.9px;line-height:1.12;
+  transition:font-size .26s cubic-bezier(.22,1,.36,1), letter-spacing .26s ease;
+  will-change:font-size;
+}
+body.scrolled #page-title{font-size:21px;letter-spacing:-.4px}
+.text-btn{
+  background:none;border:0;padding:0;
+  color:var(--tint);font-size:17px;font-weight:600;font-family:inherit;
+  cursor:pointer;transition:opacity .18s ease, transform .18s ease;
+}
+.text-btn:active{opacity:.45;transform:scale(.94)}
+
+/* ============ Pages ============ */
+main{padding:6px 16px 0}
+.page{display:none}
+.page.active{display:block;animation:pageIn .32s cubic-bezier(.22,1,.36,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.section-title{
+  font-size:13px;font-weight:600;color:var(--label-2);
+  letter-spacing:.2px;text-transform:none;
+  padding:18px 4px 8px;display:flex;align-items:center;gap:6px;
+}
+.section-title .count{
+  font-size:11px;font-weight:600;color:var(--label-2);
+  background:var(--fill);border-radius:20px;padding:1px 8px;
+}
+.list{display:flex;flex-direction:column;gap:9px}
+
+/* ============ Rows ============ */
+.row{
+  display:flex;align-items:center;gap:12px;
+  background:var(--card);
+  border-radius:14px;
+  padding:11px 13px;
+  cursor:pointer;
+  box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;
+  transition:transform .2s cubic-bezier(.2,.8,.3,1), background .2s ease;
+  animation:rowIn .5s cubic-bezier(.22,1,.36,1) both;
+  animation-delay:calc(var(--i,0) * 26ms);
+  will-change:transform;
+}
+.row:active{transform:scale(.975)}
+@keyframes rowIn{
+  from{opacity:0;transform:translateY(12px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+.row-icon{
+  width:46px;height:46px;border-radius:12px;flex:0 0 auto;
+  display:grid;place-items:center;
+  color:#fff;font-weight:700;font-size:19px;
+  overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+  background:linear-gradient(160deg,#5AC8FA,#007AFF);
+}
+.row-icon.big{width:64px;height:64px;border-radius:16px;font-size:26px}
+.row-main{flex:1;min-width:0}
+.row-title{
+  font-size:16px;font-weight:600;letter-spacing:-.2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.row-sub{
+  font-size:13px;color:var(--label-2);margin-top:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.row-trail{font-size:13px;color:var(--label-3);flex:0 0 auto;font-variant-numeric:tabular-nums}
+
+/* ============ Source row ============ */
+.src-row{
+  display:flex;align-items:center;gap:12px;
+  background:var(--card);border-radius:14px;padding:12px 13px;
+  cursor:pointer;box-shadow:var(--shadow);
+  transition:transform .2s cubic-bezier(.2,.8,.3,1);
+  animation:rowIn .5s cubic-bezier(.22,1,.36,1) both;
+  animation-delay:calc(var(--i,0) * 40ms);
+}
+.src-row:active{transform:scale(.975)}
+.badge{
+  font-size:12px;font-weight:600;color:var(--label-2);
+  background:var(--fill);border-radius:20px;padding:3px 10px;
+  font-variant-numeric:tabular-nums;
+}
+.badge.err{color:#fff;background:var(--red)}
+.footnote{
+  text-align:center;font-size:12px;color:var(--label-3);
+  padding:16px 0 8px;
+}
+
+/* ============ Horizontal banner scroller ============ */
+.hscroll{
+  display:flex;gap:12px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  margin:0 -16px;padding:0 16px 6px;
+  -webkit-overflow-scrolling:touch;
+}
+.hscroll::-webkit-scrollbar{display:none}
+.banner{
+  width:260px;height:150px;flex:0 0 auto;
+  border-radius:16px;overflow:hidden;position:relative;
+  scroll-snap-align:start;cursor:pointer;
+  background:linear-gradient(160deg,#5AC8FA,#007AFF);
+  background-size:cover;background-position:center;
+  transition:transform .22s cubic-bezier(.2,.8,.3,1);
+  animation:rowIn .55s cubic-bezier(.22,1,.36,1) both;
+  animation-delay:calc(var(--i,0) * 45ms);
+  box-shadow:0 4px 16px rgba(0,0,0,.12);
+}
+.banner:active{transform:scale(.965)}
+.banner-overlay{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:14px 12px 12px;color:#fff;
+  background:linear-gradient(transparent, rgba(0,0,0,.72));
+}
+.banner-tag{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;opacity:.8}
+.banner-title{font-size:16px;font-weight:700;line-height:1.2;margin-top:2px;letter-spacing:-.2px}
+
+/* ============ News card ============ */
+.news-card{
+  background:var(--card);border-radius:16px;overflow:hidden;
+  cursor:pointer;box-shadow:var(--shadow);
+  transition:transform .22s cubic-bezier(.2,.8,.3,1);
+  animation:rowIn .55s cubic-bezier(.22,1,.36,1) both;
+  animation-delay:calc(var(--i,0) * 45ms);
+}
+.news-card:active{transform:scale(.975)}
+.news-banner{
+  height:150px;display:grid;place-items:center;
+  font-size:40px;font-weight:800;color:rgba(255,255,255,.92);
+  background:linear-gradient(160deg,#5AC8FA,#007AFF);
+  background-size:cover;background-position:center;
+}
+.news-body{padding:12px 15px 15px}
+.news-tag{
+  font-size:10px;font-weight:700;letter-spacing:.7px;
+  text-transform:uppercase;color:var(--tint);
+}
+.news-title{font-size:17px;font-weight:650;letter-spacing:-.3px;margin:3px 0 3px;line-height:1.25}
+.news-caption{font-size:13px;color:var(--label-2);line-height:1.4}
+
+/* ============ Search bar ============ */
+.searchbar{
+  display:flex;align-items:center;gap:8px;
+  background:var(--fill);border-radius:10px;
+  padding:9px 11px;margin:10px 0 14px;
+  color:var(--label-2);
+  transition:background .2s ease;
+}
+.searchbar svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;flex:0 0 auto}
+.searchbar input{
+  flex:1;background:none;border:0;outline:none;
+  font-size:17px;color:var(--label);font-family:inherit;
+  -webkit-appearance:none;
+}
+.searchbar input::-webkit-search-cancel-button{-webkit-appearance:none}
+
+/* ============ Empty / skeleton ============ */
+.empty{text-align:center;padding:64px 24px;color:var(--label-2)}
+.empty.small{padding:34px 24px;font-size:14px}
+.empty-icon{font-size:38px;margin-bottom:10px;opacity:.85}
+.empty-title{font-size:17px;font-weight:600;color:var(--label);margin-bottom:5px}
+.empty-sub{font-size:13px;color:var(--label-2);line-height:1.45}
+
+.skel{pointer-events:none}
+.skel-icon,.skel-line{
+  background:var(--fill-2);border-radius:6px;position:relative;overflow:hidden;
+}
+.skel-icon{width:46px;height:46px;border-radius:12px;flex:0 0 auto}
+.skel-line{height:11px;margin:6px 0}
+.w60{width:60%}.w40{width:40%}
+.skel-icon::after,.skel-line::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,var(--shimmer),transparent);
+  transform:translateX(-100%);animation:shimmer 1.35s infinite;
+}
+@keyframes shimmer{to{transform:translateX(100%)}}
+
+/* ============ Tab bar ============ */
+.tabbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  display:flex;
+  padding:7px 0 calc(7px + env(safe-area-inset-bottom));
+  background:var(--bar);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-top:.5px solid var(--sep);
+}
+.tabbar button{
+  flex:1;background:none;border:0;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  color:var(--label-2);font-size:10px;font-weight:500;font-family:inherit;
+  cursor:pointer;
+  transition:color .22s ease, transform .22s cubic-bezier(.2,.8,.3,1);
+}
+.tabbar button.active{color:var(--tint)}
+.tabbar button:active{transform:scale(.9)}
+.tabbar svg{
+  width:25px;height:25px;
+  fill:none;stroke:currentColor;stroke-width:1.75;
+  stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .28s cubic-bezier(.22,1.4,.4,1);
+}
+.tabbar button.active svg{transform:translateY(-1px) scale(1.06)}
+
+/* ============ Sheet (SwiftUI presentation) ============ */
+.sheet{position:fixed;inset:0;z-index:60;display:none}
+.sheet-backdrop{
+  position:absolute;inset:0;background:rgba(0,0,0,.42);
+  opacity:0;transition:opacity .34s ease;
+}
+.sheet.open .sheet-backdrop{opacity:1}
+.sheet-panel{
+  position:absolute;left:0;right:0;bottom:0;top:46px;
+  background:var(--bg);
+  border-radius:18px 18px 0 0;
+  transform:translateY(100%);
+  transition:transform .42s cubic-bezier(.32,.72,0,1);
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:8px 16px calc(32px + env(safe-area-inset-bottom));
+  box-shadow:0 -8px 40px rgba(0,0,0,.18);
+  will-change:transform;
+}
+.sheet.open .sheet-panel{transform:translateY(0)}
+.sheet-grabber{
+  width:38px;height:5px;border-radius:3px;
+  background:var(--label-3);margin:2px auto 14px;
+}
+
+.pkg-head{display:flex;align-items:center;gap:14px;padding:6px 0 14px}
+.pkg-head h2{font-size:21px;font-weight:700;letter-spacing:-.4px;margin:0;line-height:1.2;word-break:break-word}
+.pkg-sub{font-size:13px;color:var(--label-2);margin-top:3px}
+.chip-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.chip{
+  font-size:12px;font-weight:600;
+  background:var(--fill);color:var(--label-2);
+  border-radius:20px;padding:4px 11px;
+}
+.chip.ok{background:rgba(52,199,89,.16);color:var(--green)}
+.chip.miss{background:rgba(255,59,48,.14);color:var(--red)}
+.card-block{
+  background:var(--card);border-radius:14px;padding:15px;
+  font-size:14px;line-height:1.55;white-space:pre-wrap;
+  box-shadow:var(--shadow);
+  animation:rowIn .45s cubic-bezier(.22,1,.36,1) both;
+}
+.btn-primary{
+  display:block;width:100%;text-align:center;
+  background:var(--tint);color:#fff;
+  border:0;border-radius:14px;padding:15px;
+  font-size:17px;font-weight:600;font-family:inherit;
+  margin-top:18px;cursor:pointer;text-decoration:none;
+  transition:transform .18s cubic-bezier(.2,.8,.3,1), opacity .18s;
+  animation:rowIn .45s cubic-bezier(.22,1,.36,1) both;
+}
+.btn-primary:active{transform:scale(.97);opacity:.9}
+.btn-secondary{
+  display:block;width:100%;text-align:center;
+  background:var(--fill);color:var(--tint);
+  border:0;border-radius:14px;padding:14px;
+  font-size:16px;font-weight:600;font-family:inherit;
+  margin-top:10px;cursor:pointer;
+  transition:transform .18s cubic-bezier(.2,.8,.3,1), opacity .18s;
+}
+.btn-secondary:active{transform:scale(.97);opacity:.85}
+
+/* ============ Alert ============ */
+.alert-wrap{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:24px}
+/* 修复 hidden 属性被 display:grid 覆盖的 bug */
+.alert-wrap[hidden]{display:none !important;}
+.alert-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4);animation:fadeIn .22s ease both}
+.alert-card{
+  position:relative;width:100%;max-width:290px;
+  background:var(--card);border-radius:16px;padding:20px 18px 12px;
+  text-align:center;
+  animation:alertIn .34s cubic-bezier(.22,1.3,.4,1) both;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+@keyframes alertIn{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.alert-card h3{margin:0 0 6px;font-size:17px;font-weight:600}
+.alert-card p{margin:0 0 14px;font-size:13px;color:var(--label-2);line-height:1.4}
+.alert-card input{
+  width:100%;background:var(--fill);border:0;border-radius:9px;
+  padding:11px 12px;font-size:15px;color:var(--label);font-family:inherit;
+  outline:none;margin-bottom:14px;
+}
+.alert-actions{display:flex;border-top:.5px solid var(--sep);margin:0 -18px}
+.alert-actions button{
+  flex:1;background:none;border:0;padding:13px 0;
+  font-size:17px;font-family:inherit;cursor:pointer;
+  color:var(--tint);font-weight:400;
+  transition:background .15s;
+}
+.alert-actions button:first-child{
+  border-right:.5px solid var(--sep);font-weight:600;color:var(--label-2);
+}
+.alert-actions button:active{background:var(--fill-2)}
+
+/* ============ Toast ============ */
+.toast{
+  position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));
+  transform:translate(-50%, 18px);
+  background:rgba(28,28,30,.94);color:#fff;
+  font-size:14px;font-weight:500;
+  padding:11px 20px;border-radius:22px;
+  z-index:90;pointer-events:none;
+  opacity:0;transition:opacity .28s ease, transform .38s cubic-bezier(.22,1.3,.4,1);
+  backdrop-filter:blur(12px);
+  max-width:80vw;text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-color-scheme: dark){
+  .toast{background:rgba(240,240,245,.94);color:#000}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <h1 id="page-title">首页</h1>
+    <button class="text-btn" id="header-action" hidden>添加</button>
+  </div>
+</header>
+
+<main>
+  <section class="page active" id="page-featured"></section>
+  <section class="page" id="page-news"></section>
+  <section class="page" id="page-sources"></section>
+  <section class="page" id="page-search">
+    <div class="searchbar">
+      <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.6 15.6 20 20"/></svg>
+      <input id="search-input" type="search" placeholder="搜索" autocomplete="off" spellcheck="false" />
+    </div>
+    <div id="search-results"></div>
+  </section>
+  <section class="page" id="page-queue"></section>
+</main>
+
+<nav class="tabbar">
+  <button data-tab="featured" class="active">
+    <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.9V20a1 1 0 0 0 1 1h3.2v-5.6h4.6V21h3.2a1 1 0 0 0 1-1V9.9"/></svg>
+    <span>首页</span>
+  </button>
+  <button data-tab="news">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="13.5" height="14.5" rx="2.2"/><path d="M16.5 9.2H19a2 2 0 0 1 2 2v6.3a2 2 0 0 1-2 2h-1.5"/><path d="M6.2 8.6h7M6.2 12h7M6.2 15.4h4.6"/></svg>
+    <span>新闻</span>
+  </button>
+  <button data-tab="sources">
+    <svg viewBox="0 0 24 24"><rect x="3.2" y="6.2" width="17.6" height="12.4" rx="2.6"/><path d="M3.2 10.2h17.6"/><circle cx="7" cy="15.3" r="1.1" fill="currentColor" stroke="none"/></svg>
+    <span>源</span>
+  </button>
+  <button data-tab="search">
+    <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.6 15.6 20.5 20.5"/></svg>
+    <span>搜索</span>
+  </button>
+  <button data-tab="queue">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.8v8.4"/><path d="m8.6 12.9 3.4 3.4 3.4-3.4"/></svg>
+    <span>队列</span>
+  </button>
+</nav>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel">
+    <div class="sheet-grabber"></div>
+    <div id="sheet-content"></div>
+  </div>
+</div>
+
+<div class="alert-wrap" id="alert" hidden>
+  <div class="alert-backdrop" data-alert-close></div>
+  <div class="alert-card">
+    <h3 id="alert-title">添加源</h3>
+    <p id="alert-msg"></p>
+    <input id="alert-input" type="url" placeholder="https://repo.example.com/" />
+    <div class="alert-actions">
+      <button id="alert-cancel">取消</button>
+      <button id="alert-ok">添加</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+const SILEO_ICON = "https://lgyz6767.github.io/sileo.png";
+
+/* =========================================================
+   0. 小工具
+   ========================================================= */
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+function escapeHtml(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+function hostOf(u){ try{ return new URL(u).hostname; }catch(e){ return String(u); } }
+function joinBase(u){ return u.endsWith('/') ? u : u + '/'; }
+function firstLine(s){ return String(s || '').split('\n')[0].trim(); }
+
+function grad(str){
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) % 360;
+  return `linear-gradient(160deg, hsl(${h}, 80%, 62%), hsl(${(h + 32) % 360}, 78%, 47%))`;
+}
+function fmtSize(n){
+  n = Number(n) || 0;
+  if (n >= 1048576) return (n / 1048576).toFixed(1) + ' MB';
+  if (n >= 1024) return Math.round(n / 1024) + ' KB';
+  return n + ' B';
+}
+function timeAgo(t){
+  const d = (Date.now() - t) / 1000;
+  if (d < 60) return '刚刚';
+  if (d < 3600) return Math.floor(d / 60) + ' 分钟前';
+  if (d < 86400) return Math.floor(d / 3600) + ' 小时前';
+  return Math.floor(d / 86400) + ' 天前';
+}
+
+/* =========================================================
+   1. Cookie 存储层
+   ========================================================= */
+const MAX_COOKIE = 3900; // 单条 cookie 安全上限
+
+function getCookie(name){
+  const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  if (!m) return null;
+  try { return decodeURIComponent(m[1]); } catch (e) { return null; }
+}
+function setCookie(name, value, days){
+  days = days || 365;
+  try {
+    const v = encodeURIComponent(value);
+    if (v.length > MAX_COOKIE) return false;
+    document.cookie = name + '=' + v + '; path=/; max-age=' + (days * 86400) + '; SameSite=Lax';
+    return true;
+  } catch (e) { return false; }
+}
+function getJSON(name, fallback){
+  try {
+    const v = getCookie(name);
+    return v ? JSON.parse(v) : fallback;
+  } catch (e) { return fallback; }
+}
+
+/* =========================================================
+   2. 全局状态
+   ========================================================= */
+const TITLES = {
+  featured: '首页',
+  news: '新闻',
+  sources: '源',
+  search: '搜索',
+  queue: '队列'
+};
+
+const state = {
+  tab: 'featured',
+  sources: [],
+  pkgs: [],
+  news: [],
+  queue: [],
+  loading: false
+};
+
+let pkgSet = new Set();
+let loadToken = 0;
+
+/* =========================================================
+   3. APT 元数据解析
+   ========================================================= */
+function parsePackages(text, repoBase){
+  return text.split(/\n\s*\n/).filter(Boolean).map(block => {
+    const p = {};
+    let lastKey = null;
+    block.split('\n').forEach(line => {
+      if (/^\s/.test(line) && lastKey) {
+        p[lastKey] += ' ' + line.trim();
+        return;
+      }
+      const i = line.indexOf(':');
+      if (i <= 0) return;
+      lastKey = line.slice(0, i).trim();
+      p[lastKey] = line.slice(i + 1).trim();
+    });
+    if (!p.Package) return null;
+
+    p._repo = repoBase;
+    p._debURL = new URL(p.Filename, repoBase).href;
+    p._deps = (p.Depends || '')
+      .split(',')
+      .map(s => s.trim().split(/\s*\(/)[0].trim())
+      .filter(Boolean);
+    return p;
+  }).filter(Boolean);
+}
+
+function parseRelease(text){
+  const out = {};
+  text.split('\n').forEach(line => {
+    const i = line.indexOf(':');
+    if (i > 0) out[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+  });
+  return out;
+}
+
+/* =========================================================
+   4. 网络层
+   ========================================================= */
+async function fetchText(url, gzip){
+  const res = await fetch(url, { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  if (!gzip) return await res.text();
+  if (typeof DecompressionStream === 'undefined') throw new Error('no gzip support');
+  const stream = res.body.pipeThrough(new DecompressionStream('gzip'));
+  return await new Response(stream).text();
+}
+
+async function fetchPackagesText(base){
+  try {
+    return await fetchText(base + 'Packages.gz', true);
+  } catch (e) {
+    return await fetchText(base + 'Packages', false);
+  }
+}
+
+async function fetchFeatured(base){
+  const raw = JSON.parse(await fetchText(base + 'sileo-featured.json', false));
+  const list = [];
+  if (Array.isArray(raw.banners)) {
+    raw.banners.forEach(b => {
+      list.push({
+        title: b.title || '未命名',
+        caption: b.caption || '',
+        image: b.url || '',
+        package: b.package || '',
+        repoBase: base
+      });
+    });
+  }
+  return list;
+}
+
+/* =========================================================
+   5. 加载所有源
+   ========================================================= */
+async function loadAll(showSkeleton){
+  if (!state.sources.length) {
+    state.loading = false;
+    state.pkgs = [];
+    state.news = [];
+    pkgSet = new Set();
+    render();
+    return;
+  }
+
+  const token = ++loadToken;
+  if (showSkeleton !== false) state.loading = true;
+  render();
+
+  const results = await Promise.all(state.sources.map(async src => {
+    const base = joinBase(src.url);
+    let pkgs = [], meta = {}, news = [], error = null;
+
+    try {
+      const text = await fetchPackagesText(base);
+      pkgs = parsePackages(text, base);
+    } catch (e) {
+      error = 'Packages 加载失败';
+    }
+
+    try {
+      meta = parseRelease(await fetchText(base + 'Release', false));
+    } catch (e) { }
+
+    try {
+      news = await fetchFeatured(base);
+    } catch (e) { }
+
+    return { src, base, pkgs, meta, news, error };
+  }));
+
+  if (token !== loadToken) return;
+
+  const allPkgs = [], allNews = [];
+  results.forEach(r => {
+    const repoName = r.meta.Origin || r.meta.Label || r.meta.Suite || hostOf(r.base);
+    r.src.name  = repoName;
+    r.src.count = r.pkgs.length;
+    r.src.error = r.error;
+
+    r.pkgs.forEach(p => { p._repoName = repoName; });
+    allPkgs.push(...r.pkgs);
+
+    r.news.forEach(n => {
+      allNews.push({
+        title: n.title,
+        caption: n.caption,
+        image: n.image,
+        package: n.package,
+        repo: repoName,
+        repoBase: r.base
+      });
+    });
+  });
+
+  state.pkgs = allPkgs;
+  state.news = allNews;
+  pkgSet = new Set(allPkgs.map(p => p.Package));
+  state.loading = false;
+
+  persist();
+  render();
+}
+
+/* 全部状态写回 Cookie */
+function persist(){
+  setCookie('sileo_sources', JSON.stringify(state.sources.map(s => s.url)));
+  setCookie('sileo_repos', JSON.stringify(
+    state.sources.map(s => ({ url: s.url, name: s.name, count: s.count }))
+  ));
+  setCookie('sileo_queue', JSON.stringify(state.queue.slice(0, 20)));
+  setCookie('sileo_news', JSON.stringify(
+    state.news.slice(0, 6).map(n => ({
+      title: n.title, caption: n.caption, image: n.image,
+      package: n.package, repo: n.repo
+    }))
+  ));
+}
+
+/* =========================================================
+   6. 渲染
+   ========================================================= */
+function render(){
+  $('#page-title').textContent = TITLES[state.tab] || 'Sileo';
+  $('#header-action').hidden = state.tab !== 'sources';
+
+  $$('.tabbar button').forEach(b => b.classList.toggle('active', b.dataset.tab === state.tab));
+  $$('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + state.tab));
+
+  switch (state.tab) {
+    case 'featured': renderFeatured(); break;
+    case 'news':     renderNews();     break;
+    case 'sources':  renderSources();  break;
+    case 'search':   renderSearch();   break;
+    case 'queue':    renderQueue();    break;
+  }
+}
+
+function rowHTML(p, i){
+  return `<div class="row" data-idx="${i}" style="--i:${Math.min(i, 12)}">
+    <div class="row-icon" style="background:${grad(p.Package)}">${escapeHtml(p.Package.slice(0,1).toUpperCase())}</div>
+    <div class="row-main">
+      <div class="row-title">${escapeHtml(p.Package)}</div>
+      <div class="row-sub">${escapeHtml(firstLine(p.Description) || p._repoName || '')}</div>
+    </div>
+    <div class="row-trail">${escapeHtml(p.Version || '')}</div>
+  </div>`;
+}
+
+function bindRows(container, arr){
+  container.querySelectorAll('[data-idx]').forEach(el => {
+    el.addEventListener('click', () => {
+      const p = arr[+el.dataset.idx];
+      if (p) openPackage(p);
+    });
+  });
+}
+
+function bannerHTML(n, i){
+  const img = n.image
+    ? `background-image:url("${String(n.image).replace(/["\\]/g, '')}")`
+    : '';
+  return `<div class="banner" data-banner="${i}" style="--i:${i};${img}">
+    <div class="banner-overlay">
+      <div class="banner-tag">${escapeHtml(n.repo || '')}</div>
+      <div class="banner-title">${escapeHtml(n.title || '')}</div>
+    </div>
+  </div>`;
+}
+
+function bindBanners(container, arr){
+  container.querySelectorAll('[data-banner]').forEach(el => {
+    el.addEventListener('click', () => {
+      const n = arr[+el.dataset.banner];
+      if (n) openNews(n);
+    });
+  });
+}
+
+function emptyState(title, sub){
+  return `<div class="empty">
+    <img src="${SILEO_ICON}" style="width:64px;height:64px;border-radius:16px;margin-bottom:14px;box-shadow:0 4px 12px rgba(0,0,0,.12)" alt="Sileo">
+    <div class="empty-title">${escapeHtml(title)}</div>
+    <div class="empty-sub">${escapeHtml(sub)}</div>
+  </div>`;
+}
+
+function skeletonRows(n){
+  let html = '<div class="list">';
+  for (let i = 0; i < n; i++){
+    html += `<div class="row skel" style="--i:${i}">
+      <div class="skel-icon"></div>
+      <div class="row-main">
+        <div class="skel-line w60"></div>
+        <div class="skel-line w40"></div>
+      </div>
+    </div>`;
+  }
+  return html + '</div>';
+}
+
+/* ---------- 首页 ---------- */
+function renderFeatured(){
+  const el = $('#page-featured');
+
+  if (!state.sources.length){
+    el.innerHTML = emptyState('还没有添加源', '前往「源」标签页，点击右上角「添加」');
+    return;
+  }
+  if (state.loading && !state.pkgs.length){
+    el.innerHTML = skeletonRows(7);
+    return;
+  }
+
+  const banners = state.news.slice(0, 8);
+  const sorted = state.pkgs
+    .slice()
+    .sort((a, b) => a.Package.localeCompare(b.Package))
+    .slice(0, 80);
+
+  el.innerHTML = `
+    ${banners.length ? `<div class="section-title">推荐</div>
+      <div class="hscroll">${banners.map(bannerHTML).join('')}</div>` : ''}
+    <div class="section-title">软件包 <span class="count">${state.pkgs.length}</span></div>
+    ${sorted.length
+      ? `<div class="list">${sorted.map(rowHTML).join('')}</div>`
+      : emptyState('暂无软件包', '该源的 Packages 可能为空或无法解析')}
+  `;
+  bindRows(el, sorted);
+  bindBanners(el, banners);
+}
+
+/* ---------- 新闻 ---------- */
+function newsCardHTML(n, i){
+  const img = n.image
+    ? `background-image:url("${String(n.image).replace(/["\\]/g, '')}")`
+    : '';
+  return `<article class="news-card" data-banner="${i}" style="--i:${Math.min(i, 10)}">
+    <div class="news-banner" style="${img}">
+      ${n.image ? '' : `<img src="${SILEO_ICON}" style="width:56px;height:56px;border-radius:14px;opacity:.9">`}
+    </div>
+    <div class="news-body">
+      <div class="news-tag">${escapeHtml(n.repo || '')}</div>
+      <div class="news-title">${escapeHtml(n.title || '')}</div>
+      ${n.caption ? `<div class="news-caption">${escapeHtml(n.caption)}</div>` : ''}
+    </div>
+  </article>`;
+}
+
+function renderNews(){
+  const el = $('#page-news');
+
+  if (!state.sources.length){
+    el.innerHTML = emptyState('还没有添加源', '新闻来自各源根目录的 sileo-featured.json');
+    return;
+  }
+  if (state.loading && !state.news.length){
+    el.innerHTML = skeletonRows(3);
+    return;
+  }
+  if (!state.news.length){
+    el.innerHTML = emptyState('暂无新闻', '在源根目录放置 sileo-featured.json 即可发布新闻与推荐位');
+    return;
+  }
+
+  el.innerHTML = `<div class="section-title">来自 ${state.sources.length} 个源</div>
+    <div class="list">${state.news.map(newsCardHTML).join('')}</div>`;
+  bindBanners(el, state.news);
+}
+
+/* ---------- 源 ---------- */
+function renderSources(){
+  const el = $('#page-sources');
+
+  if (!state.sources.length){
+    el.innerHTML = emptyState('没有添加源', '点击右上角「添加」输入 APT 源地址');
+    return;
+  }
+
+  el.innerHTML = `<div class="list">
+    ${state.sources.map((s, i) => `
+      <div class="src-row" data-src="${i}" style="--i:${i}">
+        <div class="row-icon" style="background:${grad(s.name || s.url)}">
+          ${escapeHtml((s.name || hostOf(s.url)).slice(0, 1).toUpperCase())}
+        </div>
+        <div class="row-main">
+          <div class="row-title">${escapeHtml(s.name || hostOf(s.url))}</div>
+          <div class="row-sub">${escapeHtml(s.url)}</div>
+        </div>
+        <span class="badge ${s.error ? 'err' : ''}">
+          ${s.error ? '错误' : (s.count || 0)}
+        </span>
+      </div>
+    `).join('')}
+  </div>
+  <div class="footnote">轻点源可移除 · 下拉刷新页面可重新同步</div>`;
+
+  el.querySelectorAll('[data-src]').forEach(node => {
+    node.addEventListener('click', () => {
+      const i = +node.dataset.src;
+      const s = state.sources[i];
+      showAlert({
+        title: '移除源？',
+        message: s.name || s.url,
+        input: false,
+        okText: '移除',
+        onOk: () => removeSource(i)
+      });
+    });
+  });
+}
+
+/* ---------- 搜索 ---------- */
+function renderSearch(){
+  const input = $('#search-input');
+  const box = $('#search-results');
+  const q = input.value.trim().toLowerCase();
+
+  if (!q){
+    box.innerHTML = `<div class="empty small">在 ${state.pkgs.length} 个软件包中搜索</div>`;
+    return;
+  }
+
+  const res = state.pkgs
+    .filter(p =>
+      p.Package.toLowerCase().includes(q) ||
+      (p.Description || '').toLowerCase().includes(q)
+    )
+    .slice(0, 80);
+
+  if (!res.length){
+    box.innerHTML = emptyState('没有结果', '换个关键字试试');
+    return;
+  }
+
+  box.innerHTML = `<div class="list">${res.map(rowHTML).join('')}</div>`;
+  bindRows(box, res);
+}
+
+/* ---------- 队列 ---------- */
+function renderQueue(){
+  const el = $('#page-queue');
+
+  if (!state.queue.length){
+    el.innerHTML = emptyState('下载队列为空', '在软件包详情页点击「下载 .deb」后会记录在这里');
+    return;
+  }
+
+  el.innerHTML = `<div class="list">
+    ${state.queue.map((q, i) => `
+      <a class="row" href="${escapeHtml(q.url)}" target="_blank" rel="noopener" style="--i:${i}">
+        <div class="row-icon" style="background:${grad(q.name || 'x')}">↓</div>
+        <div class="row-main">
+          <div class="row-title">${escapeHtml(q.name)}</div>
+          <div class="row-sub">${escapeHtml(q.version || '')} · ${escapeHtml(q.repo || '')}</div>
+        </div>
+        <div class="row-trail">${timeAgo(q.time || Date.now())}</div>
+      </a>
+    `).join('')}
+  </div>
+  <button class="btn-secondary" id="clear-queue" style="margin-top:16px">清空队列</button>`;
+
+  const btn = $('#clear-queue');
+  if (btn) btn.addEventListener('click', () => {
+    state.queue = [];
+    persist();
+    render();
+    toast('队列已清空');
+  });
+}
+
+/* =========================================================
+   7. Sheet（软件包详情 / 新闻详情）
+   ========================================================= */
+let sheetTimer = null;
+
+function sheetOpen(html){
+  const sheet = $('#sheet');
+  $('#sheet-content').innerHTML = html;
+  sheet.style.display = 'block';
+  void sheet.offsetHeight;
+  requestAnimationFrame(() => sheet.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+  clearTimeout(sheetTimer);
+}
+
+function sheetClose(){
+  const sheet = $('#sheet');
+  if (!sheet.classList.contains('open')) return;
+  sheet.classList.remove('open');
+  document.body.style.overflow = '';
+  clearTimeout(sheetTimer);
+  sheetTimer = setTimeout(() => { sheet.style.display = 'none'; }, 440);
+}
+
+function openPackage(p){
+  const deps = p._deps || [];
+  const depChips = deps.map(d =>
+    `<span class="chip ${pkgSet.has(d) ? 'ok' : 'miss'}">${escapeHtml(d)}</span>`
+  ).join('');
+
+  sheetOpen(`
+    <div class="pkg-head">
+      <div class="row-icon big" style="background:${grad(p.Package)}">
+        ${escapeHtml(p.Package.slice(0, 1).toUpperCase())}
+      </div>
+      <div style="min-width:0">
+        <h2>${escapeHtml(p.Package)}</h2>
+        <div class="pkg-sub">${escapeHtml(p.Version || '')} · ${escapeHtml(p.Architecture || '')}</div>
+      </div>
+    </div>
+
+    <div class="chip-row">
+      <span class="chip">${escapeHtml(p._repoName || '')}</span>
+      ${p.Size ? `<span class="chip">${fmtSize(p.Size)}</span>` : ''}
+      ${p.Section ? `<span class="chip">${escapeHtml(p.Section)}</span>` : ''}
+      ${p.Maintainer ? `<span class="chip">${escapeHtml(p.Maintainer)}</span>` : ''}
+    </div>
+
+    <div class="card-block">${escapeHtml(p.Description || '无描述')}</div>
+
+    ${deps.length ? `
+      <div class="section-title">依赖（绿=已在本机源中找到）</div>
+      <div class="chip-row">${depChips}</div>
+    ` : ''}
+
+    <a class="btn-primary" id="dl-btn" href="${escapeHtml(p._debURL)}" target="_blank" rel="noopener">
+      下载 .deb
+    </a>
+    <button class="btn-secondary" id="copy-btn">复制下载链接</button>
+  `);
+
+  const dl = $('#dl-btn');
+  if (dl) dl.addEventListener('click', () => pushQueue(p));
+
+  const cp = $('#copy-btn');
+  if (cp) cp.addEventListener('click', () => {
+    const done = () => toast('已复制链接');
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(p._debURL).then(done).catch(() => toast(p._debURL));
+    } else {
+      toast(p._debURL);
+    }
+  });
+}
+
+function openNews(n){
+  if (n.package){
+    const pkg = state.pkgs.find(p => p.Package === n.package);
+    if (pkg) { openPackage(pkg); return; }
+    toast('该新闻关联的包不在已添加的源中');
+    return;
+  }
+  sheetOpen(`
+    <div class="pkg-head">
+      <div class="row-icon big" style="background:${grad(n.title || 'n')};background-image:url('${SILEO_ICON}');background-size:cover">
+      </div>
+      <div style="min-width:0">
+        <h2>${escapeHtml(n.title || '')}</h2>
+        <div class="pkg-sub">${escapeHtml(n.repo || '')}</div>
+      </div>
+    </div>
+    ${n.image ? `<div class="card-block" style="padding:0;overflow:hidden">
+      <img src="${escapeHtml(n.image)}" style="width:100%;display:block" alt="">
+    </div>` : ''}
+    <div class="card-block" style="margin-top:12px">${escapeHtml(n.caption || '暂无更多内容')}</div>
+  `);
+}
+
+function pushQueue(p){
+  state.queue = state.queue.filter(q => q.url !== p._debURL);
+  state.queue.unshift({
+    name: p.Package,
+    version: p.Version || '',
+    repo: p._repoName || '',
+    url: p._debURL,
+    time: Date.now()
+  });
+  state.queue = state.queue.slice(0, 20);
+  persist();
+  toast('已加入下载队列');
+}
+
+/* =========================================================
+   8. Alert（SwiftUI 风格弹窗）
+   ========================================================= */
+let alertHandler = null;
+
+function showAlert(opts){
+  const wrap = $('#alert');
+  $('#alert-title').textContent = opts.title || '';
+  $('#alert-msg').textContent = opts.message || '';
+  $('#alert-msg').style.display = opts.message ? '' : 'none';
+  $('#alert-input').style.display = opts.input === false ? 'none' : '';
+  $('#alert-input').value = opts.value || '';
+  $('#alert-ok').textContent = opts.okText || '确定';
+  alertHandler = opts.onOk || null;
+
+  wrap.hidden = false;
+  if (opts.input !== false){
+    setTimeout(() => $('#alert-input').focus(), 60);
+  }
+}
+
+function hideAlert(){
+  $('#alert').hidden = true;
+  alertHandler = null;
+}
+
+/* =========================================================
+   9. Toast
+   ========================================================= */
+let toastTimer = null;
+function toast(msg){
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 1900);
+}
+
+/* =========================================================
+   10. 源增删
+   ========================================================= */
+function addSource(raw){
+  let url = String(raw || '').trim();
+  if (!url) return;
+  if (!/^https?:\/\//i.test(url)){
+    toast('请输入 http(s) 开头的地址');
+    return;
+  }
+  url = joinBase(url);
+  if (state.sources.some(s => s.url === url)){
+    toast('该源已存在');
+    return;
+  }
+  state.sources.push({ url, name: '', count: 0, error: null });
+  persist();
+  state.tab = 'sources';
+  render();
+  toast('正在同步…');
+  loadAll();
+}
+
+function removeSource(i){
+  state.sources.splice(i, 1);
+  persist();
+  state.pkgs = [];
+  state.news = [];
+  pkgSet = new Set();
+  render();
+  if (state.sources.length) loadAll();
+  else toast('已移除全部源');
+}
+
+/* =========================================================
+   11. 事件绑定
+   ========================================================= */
+function bindEvents(){
+  // Tab 切换
+  $$('.tabbar button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (state.tab === btn.dataset.tab) return;
+      state.tab = btn.dataset.tab;
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+      document.body.classList.remove('scrolled');
+      render();
+    });
+  });
+
+  // 右上角「添加」
+  $('#header-action').addEventListener('click', () => {
+    showAlert({
+      title: '添加源',
+      message: '源根目录需包含 Packages 与 debs/',
+      input: true,
+      value: 'https://',
+      okText: '添加',
+      onOk: v => addSource(v)
+    });
+  });
+
+  // Alert 按钮
+  $('#alert-cancel').addEventListener('click', hideAlert);
+  $('#alert-ok').addEventListener('click', () => {
+    const fn = alertHandler;
+    const val = $('#alert-input').value;
+    hideAlert();
+    if (fn) fn(val);
+  });
+  $('#alert-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter'){ e.preventDefault(); $('#alert-ok').click(); }
+  });
+  $('#alert').querySelectorAll('[data-alert-close]').forEach(el => {
+    el.addEventListener('click', hideAlert);
+  });
+
+  // Sheet 关闭
+  $('#sheet').querySelectorAll('[data-close]').forEach(el => {
+    el.addEventListener('click', sheetClose);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape'){ sheetClose(); hideAlert(); }
+  });
+
+  // 搜索输入
+  const si = $('#search-input');
+  si.addEventListener('input', renderSearch);
+  si.addEventListener('focus', () => { if (window.scrollY > 16) window.scrollTo({ top: 0 }); });
+
+  // 滚动 → 大标题收缩
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      document.body.classList.toggle('scrolled', window.scrollY > 14);
+      ticking = false;
+    });
+  }, { passive: true });
+
+  // 下拉刷新手势（触摸）
+  let touchStartY = 0, pulling = false;
+  window.addEventListener('touchstart', e => {
+    if (window.scrollY <= 0) { touchStartY = e.touches[0].clientY; pulling = true; }
+    else pulling = false;
+  }, { passive: true });
+  window.addEventListener('touchend', e => {
+    if (!pulling) return;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    pulling = false;
+    if (dy > 90 && state.sources.length){
+      toast('正在刷新源…');
+      loadAll();
+    }
+  }, { passive: true });
+}
+
+/* =========================================================
+   12. 初始化
+   ========================================================= */
+function init(){
+  const urls  = getJSON('sileo_sources', []);
+  const repos = getJSON('sileo_repos', []);
+  const map = new Map(repos.map(r => [r.url, r]));
+
+  state.sources = (Array.isArray(urls) ? urls : []).map(u => {
+    const r = map.get(u) || {};
+    return { url: u, name: r.name || '', count: r.count || 0, error: null };
+  });
+
+  const q = getJSON('sileo_queue', []);
+  state.queue = Array.isArray(q) ? q : [];
+
+  const n = getJSON('sileo_news', []);
+  state.news = Array.isArray(n) ? n : [];
+
+  bindEvents();
+  render();
+  loadAll();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
