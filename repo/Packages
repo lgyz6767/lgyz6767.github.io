@@ -1,3 +1,23 @@
+Package: com.bazik1337.ios2627anims
+Version: 1.4.7
+Architecture: iphoneos-arm64
+Maintainer: bazik1337
+Installed-Size: 240
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.bazik.codexgenie27, com.bazik.genie27
+Replaces: com.bazik.codexgenie27
+Filename: ./com.bazik1337.ios2627anims_1.4.7_iphoneos-arm64.deb
+Size: 32238
+MD5sum: 71ae4939e88dd3f61ae72ce627363769
+SHA1: 358692c775e6da9ec2b3cd1294101d788eb70fd5
+SHA256: f59e0f96f122fe1dcb29c3b9085c17fb512e6cc74fb39239f8d9f0d69d323e07
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Homepage: https://t.me/ba31k_tweaks
+Description: iOS 27 app open and close animations. Authors: bazik1337 (Telegram @bazik1337). Channel: https://t.me/ba31k_tweaks
+Author: bazik1337 (@bazik1337)
+Name: iOS 27 Animations
+
 Package: com.lgyz.mtfile
 Version: 1.0.0-89
 Architecture: iphoneos-arm64
@@ -60,7 +80,7 @@ Size: 20118976
 MD5sum: 9dd0fff1582a6dbd84a74ff9ea7a9bc4
 SHA1: ef7bb3be6993ed2f64eb71fd3dc2086a344c0eef
 SHA256: e38a13e406c06d676923b6f69a3dcd4db62c1c169be34afb1708fc6bdb17fd18
-Section: 搬运
+Section: 仿iOS26、27插件（搬运）
 Priority: optional
 Description: iOS 26 Homescreen customization.
 Author: ngkhoi
@@ -77,45 +97,11 @@ Size: 3842264
 MD5sum: feb7fc82f435ff2b36b3f343c7f4b31f
 SHA1: 73f54b3ba9de84701d42f244366000dde8f9839f
 SHA256: 7c16a5c85dd860d340de2880f1d2c4a2f5e5be7be33c478557e5f0cb420a32e4
-Section: 搬运
+Section: 仿iOS26、27插件（搬运）
 Priority: optional
 Description: liquidass but 27（还原 27，非 26）。终于有官方中文了，搬运于官方 Discord，内测版，安装需要卸载原版 liquidass（这句话是我加的）
 Author: ngkhoi, dylv
 Name: 【搬运】Liquid (Gl)ass 27 内测抢先版！
-
-Package: com.taicang.ccbackgroundalpha
-Version: 1.1.7
-Architecture: iphoneos-arm64
-Maintainer: taicang
-Installed-Size: 156
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.8)
-Filename: ./com.taicang.ccbackgroundalpha_1.1.7_iphoneos-arm64.deb
-Size: 9814
-MD5sum: f8f99270dcf3992411fe48db4cf8c744
-SHA1: 661f88e8e6507aa55dbb3eaa97fa681bbe4276bc
-SHA256: f01b885cc7d5b2221754e6fd57ca4d800f2832180c660b5166be7113c74737f1
-Section: 杂鱼
-Priority: optional
-Description: 自定义控制中心模块背景与整体背景透明度（分别调节 0~100），可移除多余视图，改动即时生效
-Author: taicang
-Name: CC背景透明度
-
-Package: com.taicang.vpsnap
-Version: 1.2.0
-Architecture: iphoneos-arm64
-Maintainer: taicang
-Installed-Size: 72
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
-Filename: ./com.taicang.vpsnap_1.2.0_iphoneos-arm64.deb
-Size: 5244
-MD5sum: 21a49f28777555be627a7bc2b60b31d1
-SHA1: 1ac320725e69107cc9979edc78063816b260eb42
-SHA256: dde22c118ff8e5441389d41739bff27d8b506028c3de23e2bfaa078195d804c2
-Section: 杂鱼
-Priority: optional
-Description: 音量下+电源=截图（保留Home+电源截图）；音量上+电源长按5秒=注销
-Author: taicang
-Name: VolumePowerSnap
 
 Package: wiki.lgyz.lsposed
 Version: 0.1.0
