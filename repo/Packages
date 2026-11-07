@@ -18,6 +18,23 @@ Description: iOS 27 app open and close animations. Authors: bazik1337 (Telegram 
 Author: bazik1337 (@bazik1337)
 Name: iOS 27 Animations
 
+Package: com.controlcenter26
+Version: 0.0.8a-1+debug
+Architecture: iphoneos-arm64
+Maintainer: Pala and Lionel
+Installed-Size: 3788
+Depends: firmware (>= 14.0), firmware (<< 17.4), ellekit, com.opa334.ccsupport, mobilesubstrate, preferenceloader
+Filename: ./com.controlcenter26_0.0.8a-1+debug_iphoneos-arm64.deb
+Size: 702838
+MD5sum: 28f882889f8202ab07c01d14b148d7ea
+SHA1: 7484c797624631ad99d40c39f0532da3ea7681e7
+SHA256: e2b0c3fe5a2a0df0198f8bf25fde9ee3ff5a35d47a67fd49d9cb425a709329f6
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: A tweak that makes the control center similar to that of ios 26
+Author: Lionel and Pala
+Name: controlcenter26
+
 Package: com.lgyz.mtfile
 Version: 1.0.0-89
 Architecture: iphoneos-arm64
@@ -69,6 +86,40 @@ Tag: purpose::extension
 Author: lgyz6767
 Name: AndroidBack（安卓波浪返回）
 
+Package: com.mekabrine.liquidisland
+Version: 1.4.0
+Architecture: iphoneos-arm64
+Maintainer: Meka
+Installed-Size: 424
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+Filename: ./com.mekabrine.liquidisland_1.4.0_iphoneos-arm64.deb
+Size: 30882
+MD5sum: 021add06652e4346ff370bd44b01bad9
+SHA1: 8e3635d2fa4de58683802977a340d564e97b51f1
+SHA256: 8235eb953a8551ae888b3668f392dc432b075df600d22a8eabdfeab196ace274
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Liquid glass for active and expanded Dynamic Island states.
+Author: Meka
+Name: Liquid Island
+
+Package: com.mekabrine.moreparalax
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Meka
+Installed-Size: 344
+Depends: mobilesubstrate, preferenceloader
+Filename: ./com.mekabrine.moreparalax_1.0.0_iphoneos-arm64.deb
+Size: 7140
+MD5sum: 8fd55fcf44f46455859d62e11d13be20
+SHA1: 498ee20a455d6fa654ec61cc20e798423258e562
+SHA256: 93eafd394d08d0c2b65981fb133b4ce9ce15c821fc639b003f22a4cd23fce8ad
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Amplifies the gyroscope parallax effect on the Home Screen so icons move more when you tilt your device.
+Author: Meka
+Name: MoreParalax
+
 Package: com.ngkhoi.26home
 Version: 1.2.0-test
 Architecture: iphoneos-arm64
@@ -102,6 +153,77 @@ Priority: optional
 Description: liquidass but 27（还原 27，非 26）。终于有官方中文了，搬运于官方 Discord，内测版，安装需要卸载原版 liquidass（这句话是我加的）
 Author: ngkhoi, dylv
 Name: 【搬运】Liquid (Gl)ass 27 内测抢先版！
+
+Package: com.sekoandlionel.26safari
+Version: 3.5.0
+Architecture: iphoneos-arm64
+Maintainer: Seko,lionel
+Installed-Size: 308
+Depends: mobilesubstrate
+Filename: ./com.sekoandlionel.26safari_3.5.0_iphoneos-arm64.deb
+Size: 51196
+MD5sum: 6e83ac58f853751ff46b2c70c63d819d
+SHA1: 238da4d42e662c3e4742692e34e4d413bbd88f33
+SHA256: db951f144efc82ee9a72a9f86db1d299b50d96cdb5c449d1246af2d825e75b87
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 "Liquid Glass" style floating bars for iOS 16 Safari
+Author: Seko,lionel
+Name: 26Safari
+
+Package: dylv.lasymbols
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 380
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./dylv.lasymbols_0.0.1_iphoneos-arm64.deb
+Size: 25764
+MD5sum: b5234ad2c29f7ade3997b654e1083f8a
+SHA1: b39fa9bc129ecacb55c57fa77b436ad22e709191
+SHA256: c5a1f6df05e7506b9843abb02ac70dec9d2108af3b74ec0796eaf242c411ad9a
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Los Angeles Symbols brings iOS 26 SF Symbols to older iOS versions.
+Author: dylv
+Name: LASymbols
+
+Package: dylv.liquidass
+Version: 0.1.2t+r2
+Architecture: iphoneos-arm
+Maintainer: dylv
+Installed-Size: 11064
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
+Conflicts: dylv.blurless, com.ngkhoi.liquidass27
+Replaces: dylv.blurless, com.ngkhoi.liquidass27
+Filename: ./dylv.liquidass_0.1.2t+r2_ios13_iphoneos-arm.deb
+Size: 4269462
+MD5sum: 9c969e6a3c432dc8632c5ca61f0aa764
+SHA1: 5e9a4b36bd12b1caf9161b570ab29bd03b51b79e
+SHA256: 8c8ce06317b4331e52d4a5d525c77f06da2ae11f7b38693aed2b258300f4ade7
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
+Package: moe.waru.soko
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: waruhachi
+Installed-Size: 464
+Depends: firmware (>= 16.0), firmware (<< 19.0), mobilesubstrate (>= 0.9.5000)
+Filename: ./moe.waru.soko_1.0.0_iphoneos-arm64.deb
+Size: 54140
+MD5sum: ac9d9c74f6986276ea7d0cf893189edf
+SHA1: e628f08c74a7883232fec831144295f250b8fb74
+SHA256: 8d378669b88d0c651105fdaf8b3447bb97a05e2bc1d195dc9225fcf0c0b0c781
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 style Lock Screen widgets
+Author: waruhachi
+Name: Soko
 
 Package: wiki.lgyz.lsposed
 Version: 0.1.0
