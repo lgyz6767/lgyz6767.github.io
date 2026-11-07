@@ -41,10 +41,26 @@ Architecture: iphoneos-arm64
 Maintainer: lgyz
 Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
 Filename: ./com.lgyz.mtfile_1.0.0-89_iphoneos-arm64.deb
-Size: 1192996
-MD5sum: 833e5d928dfe0d69837c244a375a12f3
-SHA1: 98369c2429d0e2f84e0d7e3c7f562457b7086119
-SHA256: a368e3c67a59382de51270a8ed1a0964ec4dd9243bb2f1a813aa84d671bcff8d
+Size: 1265254
+MD5sum: 5e5419c4d8137a16396aa9ae8a9cb793
+SHA1: 4534d627f8e07884aa7d42b7835ffb8ea1f192bf
+SHA256: 9ec05424613ccde394d052ff698e32138fdd699bcc6ce1853475b643693cc9a1
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-90
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile_1.0.0-90_iphoneos-arm64.deb
+Size: 1267764
+MD5sum: 131e88902ecda708f078b9d005d6944f
+SHA1: 1f1e7ef7b377c46dea15e746bac580b4af6d5717
+SHA256: 6f42ad78ea3551dbaeced87ab2a81312d6d53b70e527fe301b31b272175649d1
 Section: 自研
 Priority: optional
 Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
@@ -67,6 +83,22 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基
 Author: lgyz
 Name: mt 管理器（rootful）
 
+Package: com.lgyz.mtfile.rootful
+Version: 1.0.0-90
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile.rootful_1.0.0-90_iphoneos-arm64.deb
+Size: 1267638
+MD5sum: 9fffafe15d44f7807fe2b7bdccda481a
+SHA1: 9b50cdec29b50d9964d9e3c1408e2bf2d3379faf
+SHA256: 696dd6f43cdebeeb686fc00951f33af4d11e4b4019eed6752d31284b30fc38db
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器（rootful）
+
 Package: com.lgyz.mtfile.roothide
 Version: 1.0.0-89
 Architecture: iphoneos-arm64
@@ -77,6 +109,22 @@ Size: 1265284
 MD5sum: 3ac3490d8096eccaf853ad129ee9a956
 SHA1: ca84bd89f077813794226aa4a4631f4a7f44a84f
 SHA256: 857a41bb1db54eab044dbc8debb84471857dfd580bb80f82b2558a105eebe177
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器（roothide）
+
+Package: com.lgyz.mtfile.roothide
+Version: 1.0.0-90
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile.roothide_1.0.0-90_iphoneos-arm64.deb
+Size: 1267772
+MD5sum: f7e63729d4726844374539441ce47d14
+SHA1: 1e16bce1c2b7c128e57735df024cb1b021ce5e17
+SHA256: 7379aef1d166517e20b0982167c6be73b6d2f3fb33c2d7f061f414fe24593466
 Section: 自研
 Priority: optional
 Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
