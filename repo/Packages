@@ -137,23 +137,6 @@ Description: iOS 26 Homescreen customization.
 Author: ngkhoi
 Name: 26Home
 
-Package: com.ngkhoi.liquidass27
-Version: 0.1.2t-27
-Architecture: iphoneos-arm64
-Maintainer: ngkhoi, dylv
-Installed-Size: 7724
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader, com.opa334.altlist
-Filename: ./com.ngkhoi.liquidass27_0.1.2t-27_iphoneos-arm64 (2).deb
-Size: 3842264
-MD5sum: feb7fc82f435ff2b36b3f343c7f4b31f
-SHA1: 73f54b3ba9de84701d42f244366000dde8f9839f
-SHA256: 7c16a5c85dd860d340de2880f1d2c4a2f5e5be7be33c478557e5f0cb420a32e4
-Section: 仿iOS26、27插件（搬运）
-Priority: optional
-Description: liquidass but 27（还原 27，非 26）。终于有官方中文了，搬运于官方 Discord，内测版，安装需要卸载原版 liquidass（这句话是我加的）
-Author: ngkhoi, dylv
-Name: 【搬运】Liquid (Gl)ass 27 内测抢先版！
-
 Package: com.sekoandlionel.26safari
 Version: 3.5.0
 Architecture: iphoneos-arm64
@@ -190,17 +173,17 @@ Name: LASymbols
 
 Package: dylv.liquidass
 Version: 0.1.2t+r2
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Maintainer: dylv
-Installed-Size: 11064
+Installed-Size: 10744
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
 Conflicts: dylv.blurless, com.ngkhoi.liquidass27
 Replaces: dylv.blurless, com.ngkhoi.liquidass27
-Filename: ./dylv.liquidass_0.1.2t+r2_ios13_iphoneos-arm.deb
-Size: 4269462
-MD5sum: 9c969e6a3c432dc8632c5ca61f0aa764
-SHA1: 5e9a4b36bd12b1caf9161b570ab29bd03b51b79e
-SHA256: 8c8ce06317b4331e52d4a5d525c77f06da2ae11f7b38693aed2b258300f4ade7
+Filename: ./dylv.liquidass_0.1.2t+r2_iphoneos-arm64.deb
+Size: 4136654
+MD5sum: 3edcec91093ba77767a54dbb3f630a68
+SHA1: 95f2991a26c1284db43058f8d285d13bc18ae8cf
+SHA256: 0e84a274899bdff995906bb5a1cf7955422b7d435152dce469b0e5ba63c28e28
 Section: 仿iOS26、27插件（搬运）
 Priority: optional
 Description: next level diarrhea
