@@ -51,6 +51,38 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基
 Author: lgyz
 Name: mt 管理器
 
+Package: com.lgyz.mtfile.rootful
+Version: 1.0.0-89
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile.rootful_1.0.0-89_iphoneos-arm64.deb
+Size: 1265116
+MD5sum: cb935f70304cb489fa99edd8da0c2b83
+SHA1: 8abcb83cd11f1f33ca25fcb3f2d1677a32d07864
+SHA256: 11a65f50ae23d32ae0f6d2702e87fb58232cd1a7c3794366a0e9ba07aa540b80
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器（rootful）
+
+Package: com.lgyz.mtfile.roothide
+Version: 1.0.0-89
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile.roothide_1.0.0-89_iphoneos-arm64.deb
+Size: 1265284
+MD5sum: 3ac3490d8096eccaf853ad129ee9a956
+SHA1: ca84bd89f077813794226aa4a4631f4a7f44a84f
+SHA256: 857a41bb1db54eab044dbc8debb84471857dfd580bb80f82b2558a105eebe177
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器（roothide）
+
 Package: com.lgyz.pro
 Version: 0.1.0
 Architecture: iphoneos-arm64
@@ -173,17 +205,17 @@ Name: LASymbols
 
 Package: dylv.liquidass
 Version: 0.1.2t+r2
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm
 Maintainer: dylv
-Installed-Size: 10744
+Installed-Size: 11064
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
 Conflicts: dylv.blurless, com.ngkhoi.liquidass27
 Replaces: dylv.blurless, com.ngkhoi.liquidass27
-Filename: ./dylv.liquidass_0.1.2t+r2_iphoneos-arm64.deb
-Size: 4136654
-MD5sum: 3edcec91093ba77767a54dbb3f630a68
-SHA1: 95f2991a26c1284db43058f8d285d13bc18ae8cf
-SHA256: 0e84a274899bdff995906bb5a1cf7955422b7d435152dce469b0e5ba63c28e28
+Filename: ./dylv.liquidass_0.1.2t+r2_iphoneos-arm.deb
+Size: 4269462
+MD5sum: 9c969e6a3c432dc8632c5ca61f0aa764
+SHA1: 5e9a4b36bd12b1caf9161b570ab29bd03b51b79e
+SHA256: 8c8ce06317b4331e52d4a5d525c77f06da2ae11f7b38693aed2b258300f4ade7
 Section: 仿iOS26、27插件（搬运）
 Priority: optional
 Description: next level diarrhea

@@ -1,25 +1,25 @@
-Origin: LGYZ's Repo
-Label: LGYZ's Repo
+Origin: lgyz源
+Label: lgyz源
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: 自研&搬运插件源
-Date: Sat, 07 Nov 2026 03:42:12 +0000
+Date: Sat, 07 Nov 2026 05:23:25 +0000
 MD5Sum:
- 3628b2bb3733c5a2d7fa8d3c862c7235             9552 Packages
- d9f59f554c8a55b9b142bda53922d3a8             4043 Packages.bz2
- df8a55884db3955980abee90a114649d             4100 Packages.gz
+ c8813cd60e186a7af7b7235aa687526a            10827 Packages
+ b52bfcdc038614dee32669c480ed9099             4306 Packages.bz2
+ 6af310221d353abdb5c46484a1462167             4348 Packages.gz
 SHA1:
- c4ed2a23d4aa9e5f1b52bb4955a1e04996e50756             9552 Packages
- 3d1db17acc8662fe298dd4189869341ca849c78e             4043 Packages.bz2
- 4146d7fab129efa980b13bfce1a9121e0c4baddd             4100 Packages.gz
+ 8af177d9de2422fd8aaa35645704b47dcce5c318            10827 Packages
+ 88044b761752f22f34a933680f4f14d5723fa630             4306 Packages.bz2
+ 21529d07bb0b11c9898ec9004d84e78506b57e58             4348 Packages.gz
 SHA256:
- 742c92d4b1abccec613ba5662401d4a968141d9644fcedadb5a0186407afb278             9552 Packages
- 1b293eeed42a33d1e98729d196bd26dc5c490e126e53f3c4063aff0c2105a027             4043 Packages.bz2
- 043098da05304af61ec4b4bb0b05c6f83cb3dad3ce347c95b52078c62f4d1f51             4100 Packages.gz
+ fe3b1832bcec618f7913a4f3263f3f4b63a8425bec96a266eff1ba0ada0c9ed9            10827 Packages
+ 3c366b7e6de0dea92b3afa5b7be5dbe07804e09abce6cdfdef8ac3893bfd8d28             4306 Packages.bz2
+ e4aeeb8a81e3256405687aeb8dfbfe3c81fbc43ef0fb12084745c85949101d4f             4348 Packages.gz
 SHA512:
- 99ef2d3df6054a33b5f28fb5ea143a95df71461ce648a3c13abe49c4131e84ba6517f99fbc523517ef12c07221622c7deb01c33254611f23f1fb9837f1d65de7             9552 Packages
- 31a6262c1689fcafc093cbd886f4d6a5e4af96370425f79e5a08b596f720235883aeebaf28a4a0331f7e2624fbe72495d44589ffa53ac55d1177c8d75b7914ad             4043 Packages.bz2
- afbe48553be924b9208e0c542fb15d3ef7dbd06b152918dadbbc525658f08d3180d2ac0c6fd2312b3e94f12ec415f60cf6b33b7f908821f1e894539fe944e1ae             4100 Packages.gz
+ 0fea9e36a2cac1718b5d3c6a3c654ca5dc1a16a949a41e105e8d448e345f8abfbc18a854e6e7d2337473f0becd7c60066ef06cf8892daad1b55b2e82efae12d9            10827 Packages
+ ef6602278d82fcd1d01523a89f1d79721fd43982da8e853776348cf6df896784b3910ca1f6667948c8689de0c19413f5f3896b98fb8f52e6eec14bbf91f78dbe             4306 Packages.bz2
+ 14d6262356009f2750419b916430559f67aec4b41302dd87c8931089701f3b3528c65b99d0da563887c0f9a5def058aaec4883c403aef338b49156c4ee65f881             4348 Packages.gz
