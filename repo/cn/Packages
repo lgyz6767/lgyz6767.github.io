@@ -223,6 +223,26 @@ Author: dylv
 Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
 Name: Liquid (Gl)ass
 
+Package: dylv.liquidass
+Version: 0.1.2t+r2
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 10744
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
+Conflicts: dylv.blurless, com.ngkhoi.liquidass27
+Replaces: dylv.blurless, com.ngkhoi.liquidass27
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./dylv.liquidass_0.1.2t+r2_iphoneos-arm64.deb
+Size: 4136654
+MD5sum: 3edcec91093ba77767a54dbb3f630a68
+SHA1: 95f2991a26c1284db43058f8d285d13bc18ae8cf
+SHA256: 0e84a274899bdff995906bb5a1cf7955422b7d435152dce469b0e5ba63c28e28
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
 Package: moe.waru.soko
 Version: 1.0.0
 Architecture: iphoneos-arm64
