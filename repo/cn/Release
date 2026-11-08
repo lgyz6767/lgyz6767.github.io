@@ -6,20 +6,20 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: 自研&搬运插件源 (cn mirror)
-Date: Sun, 08 Nov 2026 02:00:55 +0000
+Date: Sun, 08 Nov 2026 02:18:07 +0000
 MD5Sum:
- 67987b2416b70df9a75bb60756f7b4b8            16099 Packages
- b193c9b2ec7ebfc25421161dac7f15d2             5013 Packages.bz2
- 74c9fd98a77cf6f429baa8ca8fd5c73e             5030 Packages.gz
+ 0b46857c45b41cd7bea7adb422c479f6            16802 Packages
+ c0780dfc9139e331eef32a965b4ba132             5138 Packages.bz2
+ de02ffca13f96ec8429d6775cbb8ecb0             5141 Packages.gz
 SHA1:
- dd083f3a04d6f02e3b61107d5321f43a3c0d9223            16099 Packages
- d3590842b7534b35e29797cf18c892fae9d8ac71             5013 Packages.bz2
- a4677f6ab11b256d0fc5e632f9c6b8dad5b5fddb             5030 Packages.gz
+ 3c02f4df39a11dec03c6e4404ea2626a073870a4            16802 Packages
+ b5e30feeb261c0a7fcc892b58022c5e6edda9b4d             5138 Packages.bz2
+ 3f5bb1c6d05fcfb334091db4d639eaaa69b26967             5141 Packages.gz
 SHA256:
- 2c7abf8e00b23d13eb26098c490493c6c56a7923e801c030cc884486b6ea0f35            16099 Packages
- aefbf9f27773bddea9fca827487e16f222565c486491fafc16e9d736caf3fba3             5013 Packages.bz2
- bdf28e9b30d2891d5c68c07b766c6d9cd51b264b5832f87f7b229c3b80167551             5030 Packages.gz
+ 0f6071dd31ed98a3f1c4927af6e61f0d8a6d7416ba29120a0507d089b539fd4e            16802 Packages
+ 6b3664e021a751bb80c09d7e498298e185b05ea881e57ff31db5a736d0313c33             5138 Packages.bz2
+ 2621135f197afcaf2a609cfa41cfe01274556203f06b836ae07d1b28afed868a             5141 Packages.gz
 SHA512:
- 3a361b05347790424cfe953fe5f786f5814ca6b7ed32a65a30c8d69124b1fa1b4e0b2d0bdf6917098f16a1eb5b1fe660a7572efe569cb9d6f97d6390bd908e68            16099 Packages
- 88f886b3159a9435334756ff335b8e962a6974788492c122ef6d76012d2e23807c1cdc3caa9acfa634644c365b69dfab682906c7b5db492d72385abcbd60cfc0             5013 Packages.bz2
- c9787a5dec956e702c6871c6e47e340932d571d1a06b6a1811fbd0407513e1e466cf7a2f0962146cd6f9d74474d1cbdef5cf5e2ba206013651048424e0baebfa             5030 Packages.gz
+ 51aaf3e50453785f175b0ef2aa008f5d6596dffbf90f7c14ba1f9a3e2db7fae885a14a5de16f049485c0362e07d71ec144214c9dd16fca613795e33c7a4bc1f7            16802 Packages
+ 1330f85f9852dee33f809178b9f6b2ed281f6abb3b6149793474a688736cf238c61869444dc68f64158a3fdf729363cc6a41b3670d99f30fc11ff134989b771c             5138 Packages.bz2
+ abf3f41bab9d72c64ccc73b2858ca8baec87704baf145e7ad6fc19c18c8ea41797c7d3eab47596ed2dfe2b0f1511240ef38a33cbbb06d2dceae9bea001459fce             5141 Packages.gz
