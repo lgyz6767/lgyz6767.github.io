@@ -99,6 +99,22 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基
 Author: lgyz
 Name: mt 管理器（rootful）
 
+Package: com.lgyz.mtfile.rootful
+Version: 1.0.0-96
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
+Filename: ./com.lgyz.mtfile.rootful_1.0.0-96_iphoneos-arm64.deb
+Size: 1296906
+MD5sum: f708443d0070d29a36f237087f140c71
+SHA1: ca94ad158a1b18d64e581fa43e447995bc184af3
+SHA256: 6ba52565af4e812c91cae8bcad5b478a7f894c72fb7b40317d80d55ec5b1a379
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Author: lgyz
+Name: mt 管理器（rootful）
+
 Package: com.lgyz.mtfile.roothide
 Version: 1.0.0-89
 Architecture: iphoneos-arm64
