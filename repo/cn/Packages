@@ -36,132 +36,36 @@ Author: Lionel and Pala
 Name: controlcenter26
 
 Package: com.lgyz.mtfile
-Version: 1.0.0-89
+Version: 1.0.0-123
 Architecture: iphoneos-arm64
 Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-89_iphoneos-arm64.deb
-Size: 1265254
-MD5sum: 5e5419c4d8137a16396aa9ae8a9cb793
-SHA1: 4534d627f8e07884aa7d42b7835ffb8ea1f192bf
-SHA256: 9ec05424613ccde394d052ff698e32138fdd699bcc6ce1853475b643693cc9a1
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-123_iphoneos-arm64.deb
+Size: 1706862
+MD5sum: 61317475b3c8602b5a73e61ce93ff18e
+SHA1: 4b87eb8daab1102dd732217759d60955ff2f3e1d
+SHA256: 01c40424ba15b450b183cf6813b48310327a985d3c0a2cc762817c3e5047ebf3
 Section: 自研
 Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
 Author: lgyz
 Name: mt 管理器
 
 Package: com.lgyz.mtfile
-Version: 1.0.0-90
+Version: 1.0.0-132
 Architecture: iphoneos-arm64
 Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-90_iphoneos-arm64.deb
-Size: 1267764
-MD5sum: 131e88902ecda708f078b9d005d6944f
-SHA1: 1f1e7ef7b377c46dea15e746bac580b4af6d5717
-SHA256: 6f42ad78ea3551dbaeced87ab2a81312d6d53b70e527fe301b31b272175649d1
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-132_iphoneos-arm64.deb
+Size: 1721476
+MD5sum: 27cf4d6762ec3bf2bfc56748c237c637
+SHA1: e12fbdc7c1342b9d6847b76c215241d4681b1da8
+SHA256: b00e99aabcd94563decb33f37e23d2384b792ee5e87c73aa5e75a0bc223dc06a
 Section: 自研
 Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
 Author: lgyz
 Name: mt 管理器
-
-Package: com.lgyz.mtfile
-Version: 1.0.0-96
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-96_iphoneos-arm64.deb
-Size: 1297038
-MD5sum: d1b46f8b133a87688d28802988f42300
-SHA1: 3c3164bd1478c3e77576246620ddd731eb5aa1db
-SHA256: cad82bd050f4d7c6bf9166b304789bc77b7d317428a41bda91b8b1f913a687a5
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器
-
-Package: com.lgyz.mtfile.rootful
-Version: 1.0.0-89
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile.rootful_1.0.0-89_iphoneos-arm64.deb
-Size: 1265116
-MD5sum: cb935f70304cb489fa99edd8da0c2b83
-SHA1: 8abcb83cd11f1f33ca25fcb3f2d1677a32d07864
-SHA256: 11a65f50ae23d32ae0f6d2702e87fb58232cd1a7c3794366a0e9ba07aa540b80
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器（rootful）
-
-Package: com.lgyz.mtfile.rootful
-Version: 1.0.0-90
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile.rootful_1.0.0-90_iphoneos-arm64.deb
-Size: 1267638
-MD5sum: 9fffafe15d44f7807fe2b7bdccda481a
-SHA1: 9b50cdec29b50d9964d9e3c1408e2bf2d3379faf
-SHA256: 696dd6f43cdebeeb686fc00951f33af4d11e4b4019eed6752d31284b30fc38db
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器（rootful）
-
-Package: com.lgyz.mtfile.rootful
-Version: 1.0.0-96
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile.rootful_1.0.0-96_iphoneos-arm64.deb
-Size: 1296906
-MD5sum: f708443d0070d29a36f237087f140c71
-SHA1: ca94ad158a1b18d64e581fa43e447995bc184af3
-SHA256: 6ba52565af4e812c91cae8bcad5b478a7f894c72fb7b40317d80d55ec5b1a379
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器（rootful）
-
-Package: com.lgyz.mtfile.roothide
-Version: 1.0.0-89
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile.roothide_1.0.0-89_iphoneos-arm64.deb
-Size: 1265284
-MD5sum: 3ac3490d8096eccaf853ad129ee9a956
-SHA1: ca84bd89f077813794226aa4a4631f4a7f44a84f
-SHA256: 857a41bb1db54eab044dbc8debb84471857dfd580bb80f82b2558a105eebe177
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器（roothide）
-
-Package: com.lgyz.mtfile.roothide
-Version: 1.0.0-90
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), unzip, zip, unrar, dpkg
-Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile.roothide_1.0.0-90_iphoneos-arm64.deb
-Size: 1267772
-MD5sum: f7e63729d4726844374539441ce47d14
-SHA1: 1e16bce1c2b7c128e57735df024cb1b021ce5e17
-SHA256: 7379aef1d166517e20b0982167c6be73b6d2f3fb33c2d7f061f414fe24593466
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器，核心基于 NSFileManager（同 Filza 思路）。rootless 应用，安装后主屏幕可见。
-Author: lgyz
-Name: mt 管理器（roothide）
 
 Package: com.lgyz.pro
 Version: 0.1.0
