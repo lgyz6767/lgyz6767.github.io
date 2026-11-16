@@ -88,22 +88,6 @@ Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.ccas
 
 Package: com.lgyz.mtfile
 Version: 1.0.0-134
-Architecture: iphoneos-arm64
-Maintainer: lgyz
-Depends: firmware (>= 15.0), dpkg
-Filename: ./com.lgyz.mtfile_1.0.0-134_iphoneos-arm64.deb
-Size: 1725152
-MD5sum: bb5d7c568c5f053e0ecad849fbe7464c
-SHA1: 534627446303d8cecb251c3cbe7c81170cef15ed
-SHA256: 213bb5ad309c4dea10c498acc24b4b35dda4027a05734c67ff755ed98907e1cd
-Section: 自研
-Priority: optional
-Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
-Author: lgyz
-Name: mt 管理器
-
-Package: com.lgyz.mtfile
-Version: 1.0.0-134
 Architecture: iphoneos-arm64e
 Maintainer: lgyz
 Depends: firmware (>= 15.0), dpkg
@@ -118,6 +102,22 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压
 Author: lgyz
 Name: mt 管理器（roothide）
 Theospackage-Scheme: roothide
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-139
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: ./com.lgyz.mtfile_1.0.0-139_iphoneos-arm64.deb
+Size: 1740174
+MD5sum: fd7ec33f997095de8bb8f9df43b0bd03
+SHA1: d027c399bb965ca2bb8818b2de50c87d266a21ff
+SHA256: e07ad073ad01d94a1cb3b5dd04985bbbb9f9e9716313fca0851aa3db2430b136
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
 
 Package: com.lgyz.pro
 Version: 0.1.0
