@@ -18,6 +18,38 @@ Description: iOS 27 app open and close animations. Authors: bazik1337 (Telegram 
 Author: bazik1337 (@bazik1337)
 Name: iOS 27 Animations
 
+Package: com.blu-tek.26passcode
+Version: 1.0.0-56+debug
+Architecture: iphoneos-arm64
+Maintainer: blu_tek
+Installed-Size: 104
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.blu-tek.26passcode_1.0.0-56+debug_iphoneos-arm64.deb
+Size: 15276
+MD5sum: 938199803a22b5fef3af9feb635dabd5
+SHA1: 21aed932e8dde383a547dde148ce0d11c0852f60
+SHA256: f723e6d91b4c919302ab02a4c2fa260754c451c225f8f18a1fdb29af342186d7
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Center-out zoom+bounce fly-in for the iOS 16 passcode pad
+Author: blu_tek
+Name: 26Passcode
+
+Package: com.blu-tek.26wave
+Version: 1.0.0-208+debug
+Architecture: iphoneos-arm64
+Maintainer: blu_tek
+Installed-Size: 580
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.blu-tek.26wave_1.0.0-208+debug_iphoneos-arm64.deb
+Size: 51858
+MD5sum: a240d9ad9b7e27c8a1639a31d57db2b2
+SHA1: 52146552d665cf06e81ba457bb99d35ff56ed4cc
+SHA256: 4fe931a23faef3ddec7a847e68105d677bebfa02070dcb66f2bd3c7336e6ade4
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26-style center-out unlock wave for the iOS 16 lock screen
+Author: blu_tek
+Name: 26Unlock
+
 Package: com.controlcenter26
 Version: 0.0.8a-1+debug
 Architecture: iphoneos-arm64
@@ -35,6 +67,25 @@ Description: A tweak that makes the control center similar to that of ios 26
 Author: Lionel and Pala
 Name: controlcenter26
 
+Package: com.futur3sn0w.ccaster
+Version: 0.2.2
+Architecture: iphoneos-arm64
+Maintainer: futur3sn0w
+Installed-Size: 1616
+Depends: firmware (>= 16.0), firmware (<< 17.0), ellekit, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.futur3sn0w.ccaster_0.2.2_iphoneos-arm64.deb
+Size: 388642
+MD5sum: 7885101ff6cdbacc713af520e51d9f6d
+SHA1: 2775c35a0b54aad5cde5bc6ef4d7f3298e82da48
+SHA256: 818d542b6c845dda83d953dd8ddc9eb40f72f119d91bfcd8936d613fd490595f
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: An iOS 18-inspired, editable Control Center experience for iOS 16.
+Author: futur3sn0w
+Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.ccaster.png
+Name: CCAster
+Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.ccaster.json
+
 Package: com.lgyz.mtfile
 Version: 1.0.0-134
 Architecture: iphoneos-arm64
@@ -50,6 +101,23 @@ Priority: optional
 Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
 Author: lgyz
 Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-134
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-134_iphoneos-arm64e.deb
+Size: 1712222
+MD5sum: 5aa2ae1a9212816191f5269e54f60fbb
+SHA1: 2f8e760d7c998ec2b388791d9ae476ca62705359
+SHA256: e26a3879f18b0981cabd68e37476e05992afae072dbeea8d2ac2120c3abb6658
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器（roothide）
+Theospackage-Scheme: roothide
 
 Package: com.lgyz.pro
 Version: 0.1.0
@@ -120,6 +188,121 @@ Description: Amplifies the gyroscope parallax effect on the Home Screen so icons
 Author: Meka
 Name: MoreParalax
 
+Package: com.nano.control26
+Version: 1.2.6
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1104
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.control26
+Replaces: com.user.control26
+Provides: com.user.control26
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.control26_1.2.6_iphoneos-arm64.deb
+Size: 502352
+MD5sum: db4a1b022dfbfa204b29f9b72c3cd2ec
+SHA1: 53c47b78b482ac12f958fa17fa3462e23823723d
+SHA256: 4d432dfa8f7b667c6e48257e92301c8529f7630ada9c175732dd64c9804493d4
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: The iOS 26 Control Center for iOS 16: edit mode with free placement and resizing, Add a Control, up to 6 pages, big Music and Connectivity layouts, layout presets, liquid glass music module, slide to power off, drop-in opening animation and an iOS 18 style settings page. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/Control26/icon.png
+Name: Control26
+
+Package: com.nano.ios26packages
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: nano
+Depends: com.nano.control26 (>= 1.1), com.nano.messages26 (>= 1.2), com.nano.musicpill (>= 1.2.71), com.nano.photos26
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.ios26packages_1.0_iphoneos-arm64.deb
+Size: 832
+MD5sum: 01dfd6abe2d38fdedece6f7556157d36
+SHA1: 7cb48f3e0250a232d7e074f27ae3d742b7e2d879
+SHA256: d0a8002a6a20d2fdf365c744325da43172d44a5f4f52e1e9c8524dcc62e46c34
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: All of nano's iOS 26 style tweaks in one install: Control26, Messages26, MusicPill and Photos26. Remove this package any time; the tweaks stay until you remove them too.
+Author: nano
+Name: iOS 26 Packages
+
+Package: com.nano.liquidlock
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 552
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.liquidlock_1.0_iphoneos-arm64.deb
+Size: 343406
+MD5sum: e80d99ec33636f736537c415246a4718
+SHA1: 947dfec7b42e6ba736219415f3cc03f0ac2dffa5
+SHA256: 68e72df017bc9de8e6500963fb08e475b4c73551be51dd6cd48ded00ca13091b
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Animated Face ID for notched iPhones. The lock turns into a Face ID face that waits for you while Face ID looks (and on the passcode screen), curls into a spinning ring with a check when you unlock, and shakes like jelly when it does not recognize you. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/LiquidLock/icon.png
+Name: LiquidLock
+
+Package: com.nano.messages26
+Version: 1.4.3
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1508
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.messages26_1.4.3_iphoneos-arm64.deb
+Size: 493882
+MD5sum: 0a41f458c6ec50d9203a9148972fd5c5
+SHA1: d1230c9b35de0177b8f5c806dc5363abf08a41ff
+SHA256: d6f8de7675e8779b30fd488c28afd4e5a75b64ee3624474618738474e518813a
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Messages redesigned in the iOS 26 Liquid Glass style: glass message bar and + app menu, bottom search pill, glass bubbles with swipe to reply, a new contact page with tabs and chat backgrounds, bubble colors, contact frames, Face ID chat lock and more.
+Author: nano
+Name: Messages26
+Sileodepiction: https://nanoonsjs.github.io/nano-repo/depictions/com.nano.messages26.json
+
+Package: com.nano.musicpill
+Version: 1.8
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1960
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.musicpill
+Replaces: com.user.musicpill
+Provides: com.user.musicpill
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.musicpill_1.8_iphoneos-arm64.deb
+Size: 755016
+MD5sum: 39e5bb466ec666c5659b8f28fedf76ba
+SHA1: 4583b185d76dc1c1e9db2262c852361e2457b300
+SHA256: 4b92a7e5892f5445a790b6907b1920247d487344d12fe9c1d4aa7cf020e6bd32
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Apple Music, iOS 26 style. A small glass now-playing pill (swipe to skip, scrolling title) that collapses with the tab bar, iOS 26 album, artist, search and library pages, star favorites, glass top buttons, animated album covers in the player and more. For iOS 15 and 16, every iPhone (A11 and newer). Tested on iPhone 13 Pro Max, iOS 16. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/MusicPill/icon.png
+Name: MusicPill
+
+Package: com.nano.photos26
+Version: 3.4.3
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 844
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.photos26
+Replaces: com.user.photos26
+Provides: com.user.photos26
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.photos26_3.4.3_iphoneos-arm64.deb
+Size: 483532
+MD5sum: 30f7590034417099ef67476623f0f9c7
+SHA1: 079830e925e614293092f3cd7d69497c65429fa7
+SHA256: 2cc94930ce07b2321f5c9aa1bc56b84e3aa4cab658944c9c2d04ba63c23fd34b
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 style Photos viewer: liquid glass buttons and a glass video player. For iOS 15 and 16, every iPhone (A11 and newer). Tested on iPhone 13 Pro Max, iOS 16. Made by nano. (Replaces PhotosGlass.)
+Author: nano
+Icon: file:///var/jb/usr/share/Photos26/icon.png
+Name: Photos26
+
 Package: com.ngkhoi.26home
 Version: 1.2.0-test
 Architecture: iphoneos-arm64
@@ -136,6 +319,25 @@ Priority: optional
 Description: iOS 26 Homescreen customization.
 Author: ngkhoi
 Name: 26Home
+
+Package: com.samuel.r3v4mp
+Version: 2.0.58
+Architecture: iphoneos-arm64
+Maintainer: Samuel
+Installed-Size: 11392
+Suggests: com.ngkhoi.liquidass27
+Conflicts: com.samuel.18configs
+Replaces: com.samuel.18configs
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.samuel.r3v4mp_2.0.58_iphoneos-arm64.deb
+Size: 9362170
+MD5sum: cafaa883b903fd42ef57e6ff61b24ce6
+SHA1: 1a8e18f82be9e0186eab3c4f8185cb6f599cc2e2
+SHA256: c3fa214e6b2eec551519468fec3714b46304d157be95a1bd977b7c1d9d0327e3
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: R3v4mp - iOS 18 / iOS 26 style Settings: banners, Apps section, redesigned pane. iOS 13 and later.
+Author: Samuel
+Name: R3v4mp
 
 Package: com.sekoandlionel.26safari
 Version: 3.5.0
