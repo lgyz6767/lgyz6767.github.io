@@ -356,6 +356,23 @@ Description: iOS 26 "Liquid Glass" style floating bars for iOS 16 Safari
 Author: Seko,lionel
 Name: 26Safari
 
+Package: com.yourcompany.liquidsiri
+Version: 1.1.2-1+debug
+Architecture: iphoneos-arm64
+Maintainer: Thijs mussig
+Installed-Size: 2760
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.yourcompany.liquidsiri_1.1.2-1+debug_iphoneos-arm64.deb
+Size: 963948
+MD5sum: e49ed926caddea1114d52ff28ab23234
+SHA1: 410cdd2a8e6651380f4f2e43c8a5a07bf1cfaab8
+SHA256: 3904974d9802f7d99544077e4cdb4dcb8d756a9b5dfd3b6842d22bedb07d3831
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Make your Siri look smart with Liquid Glass! Compatible with iOS 14.0 - 16.x.
+Author: Thijs mussig
+Name: LiquidSiri
+
 Package: dylv.lasymbols
 Version: 0.0.1
 Architecture: iphoneos-arm64
