@@ -209,22 +209,6 @@ Author: nano
 Icon: file:///var/jb/usr/share/Control26/icon.png
 Name: Control26
 
-Package: com.nano.ios26packages
-Version: 1.0
-Architecture: iphoneos-arm64
-Maintainer: nano
-Depends: com.nano.control26 (>= 1.1), com.nano.messages26 (>= 1.2), com.nano.musicpill (>= 1.2.71), com.nano.photos26
-Filename: ./com.nano.ios26packages_1.0_iphoneos-arm64.deb
-Size: 832
-MD5sum: 01dfd6abe2d38fdedece6f7556157d36
-SHA1: 7cb48f3e0250a232d7e074f27ae3d742b7e2d879
-SHA256: d0a8002a6a20d2fdf365c744325da43172d44a5f4f52e1e9c8524dcc62e46c34
-Section: 仿iOS26、27插件（搬运）
-Priority: optional
-Description: All of nano's iOS 26 style tweaks in one install: Control26, Messages26, MusicPill and Photos26. Remove this package any time; the tweaks stay until you remove them too.
-Author: nano
-Name: iOS 26 Packages
-
 Package: com.nano.liquidlock
 Version: 1.0
 Architecture: iphoneos-arm64
