@@ -151,6 +151,38 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压
 Author: lgyz
 Name: mt 管理器
 
+Package: com.lgyz.mtfile
+Version: 1.0.0-153
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: ./com.lgyz.mtfile_1.0.0-153_iphoneos-arm64e.deb
+Size: 1790996
+MD5sum: c41da958385de4a46510c975c5b9ec7d
+SHA1: 31c070567f5a0b741d320d58eb4bdbdb4ada764b
+SHA256: 3a59032b79f67d686c5d4aae51cf2d6127df70156691b38f757379b2d0abbf75
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-153
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: ./com.lgyz.mtfile_1.0.0-153_iphoneos-arm64.deb
+Size: 1791150
+MD5sum: a6c033c93241eb3b984820d7e8270fa4
+SHA1: 1be490af098aad261918f00372190ffb4a08e6cb
+SHA256: 528e4f9167f44a14c49aa7fc8cdf18a525336e763356f4ce90554d8163e0e823
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
 Package: com.lgyz.pro
 Version: 0.1.0
 Architecture: iphoneos-arm64
