@@ -6,20 +6,20 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: 自研&搬运插件源 (cn mirror)
-Date: Tue, 17 Nov 2026 12:59:03 +0000
+Date: Tue, 17 Nov 2026 13:04:15 +0000
 MD5Sum:
  ddd63ec823737c4cdf85aaafd2e07dab            25208 Packages
  4be502f0deb2ef14a2caa6a5bc7d7fc4             7425 Packages.bz2
- aa317baae2bd7fef09fdeb3176d34ef6             7814 Packages.gz
+ d87dff93ce5b1127bf6852fa81e7e9fa             7814 Packages.gz
 SHA1:
  c121ad814690efcfc32cf50db38dee77e35660c8            25208 Packages
  9df0c974e5b6489b6aaf35bb24cc51023b6f477c             7425 Packages.bz2
- 534e23bbb5a150460503476fbbb81bd60e79eaa4             7814 Packages.gz
+ aa1a02fd7d57efd4e95c0ff780278992af77021e             7814 Packages.gz
 SHA256:
  1c58c142cda1e1733a34b9d7bc4d96e8d5dbaa14bf6c0c4842b858928e7b85a4            25208 Packages
  12d772e29888254276eba729a844ea63866c1d292f173fceddb2d5f6d5620f49             7425 Packages.bz2
- 51d55562ae3a9545c0b7e7f74d3b0e949a60d4e37782509077b30430bfe667a1             7814 Packages.gz
+ b770ad6490ab222086a35ccdde343bf1dbfc915a23b7bb453cfd8d72dd0f2a53             7814 Packages.gz
 SHA512:
  3330f62d9cb88df63c868a6a9fb51bd0a50556be9a6790023841f49227ec5a041b2a9dc506ce015759d4dc0290503487419c2c3fbd37f5fe6a90bba13bc3e043            25208 Packages
  130bf4c1dee20cae46ce3207332960ba912cf0cc03df7df156cc426765f7f7d0757d48785f41821ccd36f4d43987bc5b9f4c0f4e8e8e88f4d30fc73de1111922             7425 Packages.bz2
- 29e6e5e5f5881c025b3472bd28ad4c3bce808519b719e6e14bc7ec048f6a0803d87e907b211a5f99f91c074f741209262fdbe935590a54c2d9589444eeb0878e             7814 Packages.gz
+ dc58d39fb7ee70c23b34ff37944940293973ee35ad5bff7e1dcbafa959e7a4c6c60e40d5efa0cdc5f21e1098924a7c52407713547cd996f7390fbcb6f197f51f             7814 Packages.gz
