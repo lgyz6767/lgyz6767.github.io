@@ -82,6 +82,26 @@
           "minOSVersion": "15.0"
         }
       ]
+    },
+    {
+      "name": "MT管理器·沙盒（无需越狱）",
+      "bundleIdentifier": "com.lgyz.mtfile.sandbox",
+      "developerName": "MTFile",
+      "subtitle": "ORDINARY 侧载",
+      "localizedDescription": "分类：ordinary",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.mtfile.sandbox.png",
+      "tintColor": "007AFF",
+      "category": "ordinary",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1.0.0-134",
+          "date": "2026-11-17",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/ordinary/MTFile-Sandbox-iOS26.ipa",
+          "size": 1980329,
+          "minOSVersion": "15.0"
+        }
+      ]
     }
   ],
   "news": []
