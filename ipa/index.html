@@ -9,7 +9,6 @@
             --blue: #007AFF; --blue-dark: #0062CC; --blue-light: rgba(0, 122, 255, 0.1);
             --bg-base: #F2F2F7; --text-main: #1D1D1F; --text-sub: #86868B;
             --radius-card: 20px; --radius-btn: 14px;
-            --ripple-dark: rgba(0, 0, 0, 0.06); --ripple-light: rgba(255, 255, 255, 0.35);
             --green: #34C759; --orange: #FF9500; --red: #FF3B30;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -91,8 +90,7 @@
     <div class="repo-header">
         <h1>LGYZ's IPA Repo</h1>
         <p>TrollStore & 普通侧载应用集</p>
-        <a href="https://lgyz6767.github.io/ipa/source.json" class="altstore-btn" target="_blank">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <a href="source.json" class="altstore-btn">
             添加至 AltStore
         </a>
     </div>
@@ -103,7 +101,7 @@
             <button class="speed-test-btn" onclick="testSpeed()">重新测速</button>
         </div>
         <div class="mirror-list" id="mirrorList">
-            <!-- 测速节点动态生成 -->
+            <!-- 动态生成 -->
         </div>
     </div>
 
@@ -117,24 +115,26 @@
     </div>
 
     <script>
-        // 镜像测速节点配置（前缀）
-        // 使用你之前提到的加速节点
+        // 镜像测速节点配置（注意：直接用根目录，避免路径嵌套错误）
         const MIRRORS = [
-            { id: 'origin', name: 'GitHub 直连', prefix: 'https://lgyz6767.github.io/' },
+            { id: 'origin', name: 'GitHub Pages (直连)', prefix: 'https://lgyz6767.github.io/' },
             { id: 'ghm', name: 'ghm.078465.xyz', prefix: 'https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/' },
             { id: 'tbap', name: 'github.tbap.top', prefix: 'https://github.tbap.top/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/' },
             { id: 'jsdelivr', name: 'jsDelivr CDN', prefix: 'https://cdn.jsdelivr.net/gh/lgyz6767/lgyz6767.github.io@main/' }
         ];
 
+        // 默认的备用 SVG 图标（防止没有任何图标时出错）
+        const DEFAULT_ICON = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNEMUQxRDYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMSAxNlY4YTIgMiAwIDAgMC0xLTEuNzNsLTctNGEyIDIgMCAwIDAtMiAwbC03IDRBMiAyIDAgMCAwIDMgOHY4YTIgMiAwIDAgMCAxIDEuNzNsNyA0YTIgMiAwIDAgMCAyIDBsNy00QTIgMiAwIDAgMCAyMSAxNnoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSIzLjI3IDYuOTYgMTIgMTIuMDEgMjAuNzMgNi45NiI+PC9wb2x5bGluZT48bGluZSB4MT0iMTIiIHkxPSIyMi4wOCIgeDI9IjEyIiB5Mj0iMTIiPjwvbGluZT48L3N2Zz4=";
+
         let currentMirror = MIRRORS[0];
         let allApps = [];
 
-        // 初始化
-        document.addEventListener('DOMContentLoaded', () => {
+        // 页面加载完立即执行
+        window.onload = () => {
             renderMirrors();
             testSpeed();
             loadApps();
-        });
+        };
 
         // 渲染镜像列表
         function renderMirrors() {
@@ -142,7 +142,7 @@
             list.innerHTML = MIRRORS.map((m, i) => `
                 <div class="mirror-item ${i === 0 ? 'active' : ''}" onclick="selectMirror(${i})" id="mirror-${m.id}">
                     <span>${m.name}</span>
-                    <span class="mirror-latency" id="latency-${m.id}">未测试</span>
+                    <span class="mirror-latency" id="latency-${m.id}">测速中...</span>
                 </div>
             `).join('');
         }
@@ -152,30 +152,31 @@
             currentMirror = MIRRORS[index];
             document.querySelectorAll('.mirror-item').forEach(el => el.classList.remove('active'));
             document.getElementById(`mirror-${currentMirror.id}`).classList.add('active');
-            renderApps(allApps); // 重渲染，更新下载链接
+            if (allApps.length > 0) renderApps(allApps);
         }
 
         // 测速逻辑
         async function testSpeed() {
-            // 随便找一个文件测速，这里使用 source.json 本身
+            // 用 source.json 本身测试延迟
             const testPath = 'ipa/source.json';
             
             MIRRORS.forEach(async (m) => {
                 const el = document.getElementById(`latency-${m.id}`);
+                if(!el) return;
+                
                 el.className = 'mirror-latency';
                 el.textContent = '测速中...';
                 
                 const start = performance.now();
                 try {
-                    // 加个时间戳防止缓存
-                    const res = await fetch(m.prefix + testPath + '?t=' + Date.now(), { method: 'HEAD', mode: 'no-cors' });
+                    // HEAD 请求测试，加时间戳防缓存
+                    await fetch(m.prefix + testPath + '?t=' + Date.now(), { method: 'HEAD', mode: 'no-cors' });
                     const latency = Math.round(performance.now() - start);
                     el.textContent = latency + ' ms';
                     
                     if (latency < 300) el.classList.add('fast');
                     else if (latency < 800) el.classList.add('slow');
                     else el.classList.add('slow');
-                    
                 } catch (e) {
                     el.textContent = '超时';
                     el.classList.add('fail');
@@ -186,16 +187,17 @@
         // 加载源 JSON
         async function loadApps() {
             try {
-                // 本地请求 JSON，直接走同目录
                 const res = await fetch('source.json');
+                if (!res.ok) throw new Error("未找到 source.json 文件");
                 const data = await res.json();
                 allApps = data.apps || [];
                 renderApps(allApps);
             } catch (err) {
                 document.getElementById('ipaList').innerHTML = `
                     <div style="text-align:center; padding: 40px; color: var(--red);">
-                        <p>加载数据失败</p>
+                        <p style="font-weight:600; font-size:16px;">加载数据失败</p>
                         <p style="font-size:12px; margin-top:8px;">${err.message}</p>
+                        <p style="font-size:12px; color:var(--text-sub); margin-top:12px;">请确保 source.json 已正确生成并上传至服务器。</p>
                     </div>`;
             }
         }
@@ -204,24 +206,28 @@
         function renderApps(apps) {
             const list = document.getElementById('ipaList');
             if (apps.length === 0) {
-                list.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-sub);">没有找到应用</div>`;
+                list.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-sub);">源内没有任何应用</div>`;
                 return;
             }
 
             list.innerHTML = apps.map(app => {
                 const latest = app.versions[0];
-                // 如果版本里包含了 repo/ipa，我们需要把它替换成当前镜像的前缀
-                // 原始链接: https://lgyz6767.github.io/repo/ipa/trollstore/xxx.ipa
-                // 提取相对路径: repo/ipa/trollstore/xxx.ipa
-                const relPath = latest.downloadURL.replace('https://lgyz6767.github.io/', '');
-                const finalUrl = currentMirror.prefix + relPath;
+                
+                // 截取相对路径 (例如从 https://lgyz6767.github.io/ipa/ordinary/xxx.ipa 提取 ipa/ordinary/xxx.ipa)
+                let relPath = latest.downloadURL;
+                try {
+                    const urlObj = new URL(relPath);
+                    relPath = urlObj.pathname.substring(1); // 去掉开头的 /
+                } catch(e) {}
 
+                const finalUrl = currentMirror.prefix + relPath;
                 const sizeMB = (latest.size / 1024 / 1024).toFixed(1);
                 const isTS = app.category === 'trollstore';
+                const iconSrc = app.iconURL || DEFAULT_ICON;
 
                 return `
                     <div class="ipa-card">
-                        <img class="ipa-icon" src="${app.iconURL || 'data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'64\\' height=\\'64\\'><rect width=\\'64\\' height=\\'64\\' rx=\\'14\\' fill=\\'%23eee\\'/></svg>'}" onerror="this.src='https://lgyz6767.github.io/repo/CydiaIcon.png'">
+                        <img class="ipa-icon" src="${iconSrc}" onerror="this.src='${DEFAULT_ICON}'">
                         <div class="ipa-info">
                             <div class="ipa-name">${app.name}</div>
                             <div class="ipa-meta">${app.bundleIdentifier}</div>
@@ -248,4 +254,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
