@@ -41,15 +41,28 @@
             border: 1px solid rgba(255, 255, 255, 0.7); border-radius: var(--radius-card);
             padding: 16px; margin-bottom: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.03);
         }
-        .mirror-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; display: flex; justify-content: space-between; }
+        .mirror-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
         .speed-test-btn { background: var(--blue-light); color: var(--blue); border: none; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+        
         .mirror-list { display: flex; flex-direction: column; gap: 8px; }
-        .mirror-item { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 8px 12px; background: rgba(255,255,255,0.6); border-radius: 10px; cursor: pointer; border: 1px solid transparent; }
+        .mirror-item { 
+            display: flex; justify-content: space-between; align-items: center; font-size: 13px; 
+            padding: 10px 12px; background: rgba(255,255,255,0.6); border-radius: 10px; 
+            cursor: pointer; border: 1px solid transparent; transition: all 0.2s;
+        }
         .mirror-item.active { border-color: var(--blue); background: rgba(0, 122, 255, 0.05); }
-        .mirror-latency { font-family: ui-monospace; font-size: 12px; padding: 2px 6px; border-radius: 4px; background: rgba(0,0,0,0.05); }
-        .mirror-latency.fast { color: var(--green); background: rgba(52, 199, 89, 0.1); }
-        .mirror-latency.slow { color: var(--orange); background: rgba(255, 149, 0, 0.1); }
-        .mirror-latency.fail { color: var(--red); background: rgba(255, 59, 48, 0.1); }
+        
+        /* 测速结果标签 */
+        .mirror-metrics { display: flex; gap: 6px; align-items: center; }
+        .metric-badge { 
+            font-family: ui-monospace, monospace; font-size: 11px; padding: 2px 6px; 
+            border-radius: 4px; background: rgba(0,0,0,0.05); color: var(--text-sub); 
+            min-width: 60px; text-align: center;
+        }
+        .metric-badge.fast { color: var(--green); background: rgba(52, 199, 89, 0.1); }
+        .metric-badge.slow { color: var(--orange); background: rgba(255, 149, 0, 0.1); }
+        .metric-badge.fail { color: var(--red); background: rgba(255, 59, 48, 0.1); }
+        .metric-badge.best { background: var(--blue); color: white; font-weight: bold; }
 
         /* 搜索 */
         .search-wrapper { position: relative; margin-bottom: 20px; }
@@ -97,12 +110,10 @@
 
     <div class="mirror-panel">
         <div class="mirror-title">
-            下载节点选择
-            <button class="speed-test-btn" onclick="testSpeed()">重新测速</button>
+            <span>下载节点 (自动选择最优)</span>
+            <button class="speed-test-btn" onclick="runSpeedTest()">重新测速</button>
         </div>
-        <div class="mirror-list" id="mirrorList">
-            <!-- 动态生成 -->
-        </div>
+        <div class="mirror-list" id="mirrorList"></div>
     </div>
 
     <div class="search-wrapper">
@@ -111,113 +122,199 @@
     </div>
 
     <div class="ipa-list" id="ipaList">
-        <div style="text-align:center; padding: 40px; color: var(--text-sub);">正在解析 JSON...</div>
+        <div style="text-align:center; padding: 40px; color: var(--text-sub);">正在加载...</div>
     </div>
 
     <script>
-        // 镜像测速节点配置（注意：直接用根目录，避免路径嵌套错误）
+        // 镜像池配置
         const MIRRORS = [
-            { id: 'origin', name: 'GitHub Pages (直连)', prefix: 'https://lgyz6767.github.io/' },
+            { id: 'origin', name: 'GitHub (直连)', prefix: 'https://lgyz6767.github.io/' },
+            { id: 'jsdelivr', name: 'jsDelivr CDN', prefix: 'https://cdn.jsdelivr.net/gh/lgyz6767/lgyz6767.github.io@main/' },
             { id: 'ghm', name: 'ghm.078465.xyz', prefix: 'https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/' },
-            { id: 'tbap', name: 'github.tbap.top', prefix: 'https://github.tbap.top/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/' },
-            { id: 'jsdelivr', name: 'jsDelivr CDN', prefix: 'https://cdn.jsdelivr.net/gh/lgyz6767/lgyz6767.github.io@main/' }
+            { id: 'tbap', name: 'github.tbap.top', prefix: 'https://github.tbap.top/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/' }
         ];
 
-        // 默认的备用 SVG 图标（防止没有任何图标时出错）
         const DEFAULT_ICON = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNEMUQxRDYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMSAxNlY4YTIgMiAwIDAgMC0xLTEuNzNsLTctNGEyIDIgMCAwIDAtMiAwbC03IDRBMiAyIDAgMCAwIDMgOHY4YTIgMiAwIDAgMCAxIDEuNzNsNyA0YTIgMiAwIDAgMCAyIDBsNy00QTIgMiAwIDAgMCAyMSAxNnoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSIzLjI3IDYuOTYgMTIgMTIuMDEgMjAuNzMgNi45NiI+PC9wb2x5bGluZT48bGluZSB4MT0iMTIiIHkxPSIyMi4wOCIgeDI9IjEyIiB5Mj0iMTIiPjwvbGluZT48L3N2Zz4=";
 
         let currentMirror = MIRRORS[0];
         let allApps = [];
 
-        // 页面加载完立即执行
+        // 初始化页面
         window.onload = () => {
             renderMirrors();
-            testSpeed();
-            loadApps();
+            loadApps();       // 先加载列表
+            runSpeedTest();   // 同时开始测速
         };
 
-        // 渲染镜像列表
+        // 1. 渲染镜像列表 UI
         function renderMirrors() {
             const list = document.getElementById('mirrorList');
-            list.innerHTML = MIRRORS.map((m, i) => `
-                <div class="mirror-item ${i === 0 ? 'active' : ''}" onclick="selectMirror(${i})" id="mirror-${m.id}">
+            list.innerHTML = MIRRORS.map((m) => `
+                <div class="mirror-item" onclick="selectMirror('${m.id}')" id="mirror-${m.id}">
                     <span>${m.name}</span>
-                    <span class="mirror-latency" id="latency-${m.id}">测速中...</span>
+                    <div class="mirror-metrics">
+                        <span class="metric-badge" id="lat-${m.id}">-- ms</span>
+                        <span class="metric-badge" id="spd-${m.id}">-- KB/s</span>
+                    </div>
                 </div>
             `).join('');
         }
 
-        // 切换镜像
-        function selectMirror(index) {
-            currentMirror = MIRRORS[index];
+        // 2. 执行测速逻辑
+        async function runSpeedTest() {
+            const testPath = 'ipa/source.json';
+            let results = [];
+
+            // 重置 UI
+            MIRRORS.forEach(m => {
+                document.getElementById(`lat-${m.id}`).className = 'metric-badge';
+                document.getElementById(`lat-${m.id}`).textContent = '测速中';
+                document.getElementById(`spd-${m.id}`).className = 'metric-badge';
+                document.getElementById(`spd-${m.id}`).textContent = '...';
+            });
+
+            // 并发发起测速
+            const promises = MIRRORS.map(async (m) => {
+                const start = performance.now();
+                let bytes = 0;
+                let firstByteTime = 0;
+                let success = false;
+
+                try {
+                    // 加时间戳防止缓存
+                    const url = m.prefix + testPath + '?t=' + Date.now();
+                    const res = await fetch(url);
+                    
+                    if (!res.ok) throw new Error('Network error');
+                    if (!res.body) {
+                        // 如果不支持流，退化为测总时间
+                        await res.blob();
+                        const end = performance.now();
+                        const speed = 10 * 1024 / ((end - start) / 1000); // 假设10kb
+                        return { id: m.id, lat: Math.round(end - start), speed, success: true };
+                    }
+
+                    const reader = res.body.getReader();
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+                        
+                        if (firstByteTime === 0) firstByteTime = performance.now();
+                        bytes += value.length;
+                        
+                        // 下载达到 200KB 就中断，用于计算速度，节省流量
+                        if (bytes > 200 * 1024) {
+                            reader.cancel();
+                            break;
+                        }
+                    }
+                    const end = performance.now();
+                    
+                    const lat = Math.round(firstByteTime - start);
+                    const downloadTime = (end - firstByteTime) / 1000;
+                    const speed = bytes / (downloadTime || 0.001); // bytes/s
+
+                    return { id: m.id, lat, speed, success: true };
+                } catch (e) {
+                    return { id: m.id, success: false };
+                }
+            });
+
+            results = await Promise.all(promises);
+            
+            let fastestId = null;
+            let maxSpeed = -1;
+
+            // 更新测速结果 UI
+            results.forEach(r => {
+                const latEl = document.getElementById(`lat-${r.id}`);
+                const spdEl = document.getElementById(`spd-${r.id}`);
+                
+                if (!r.success) {
+                    latEl.textContent = '超时';
+                    latEl.classList.add('fail');
+                    spdEl.textContent = '超时';
+                    spdEl.classList.add('fail');
+                    return;
+                }
+
+                // 延迟显示
+                latEl.textContent = `${r.lat} ms`;
+                if (r.lat < 400) latEl.classList.add('fast');
+                else latEl.classList.add('slow');
+
+                // 速度显示 (自适应 KB/MB)
+                let speedText = '';
+                if (r.speed > 1024 * 1024) {
+                    speedText = `${(r.speed / 1024 / 1024).toFixed(2)} MB/s`;
+                } else {
+                    speedText = `${(r.speed / 1024).toFixed(1)} KB/s`;
+                }
+                spdEl.textContent = speedText;
+                spdEl.classList.add('fast');
+
+                // 记录最快的
+                if (r.speed > maxSpeed) {
+                    maxSpeed = r.speed;
+                    fastestId = r.id;
+                }
+            });
+
+            // 自动选择最快节点
+            if (fastestId) {
+                const bestSpdEl = document.getElementById(`spd-${fastestId}`);
+                bestSpdEl.classList.remove('fast');
+                bestSpdEl.classList.add('best');
+                bestSpdEl.textContent = '👑 ' + bestSpdEl.textContent;
+                
+                selectMirror(fastestId);
+            }
+        }
+
+        // 3. 选择节点并刷新列表
+        function selectMirror(id) {
+            currentMirror = MIRRORS.find(m => m.id === id);
+            
             document.querySelectorAll('.mirror-item').forEach(el => el.classList.remove('active'));
-            document.getElementById(`mirror-${currentMirror.id}`).classList.add('active');
+            const activeEl = document.getElementById(`mirror-${id}`);
+            if (activeEl) activeEl.classList.add('active');
+            
             if (allApps.length > 0) renderApps(allApps);
         }
 
-        // 测速逻辑
-        async function testSpeed() {
-            // 用 source.json 本身测试延迟
-            const testPath = 'ipa/source.json';
-            
-            MIRRORS.forEach(async (m) => {
-                const el = document.getElementById(`latency-${m.id}`);
-                if(!el) return;
-                
-                el.className = 'mirror-latency';
-                el.textContent = '测速中...';
-                
-                const start = performance.now();
-                try {
-                    // HEAD 请求测试，加时间戳防缓存
-                    await fetch(m.prefix + testPath + '?t=' + Date.now(), { method: 'HEAD', mode: 'no-cors' });
-                    const latency = Math.round(performance.now() - start);
-                    el.textContent = latency + ' ms';
-                    
-                    if (latency < 300) el.classList.add('fast');
-                    else if (latency < 800) el.classList.add('slow');
-                    else el.classList.add('slow');
-                } catch (e) {
-                    el.textContent = '超时';
-                    el.classList.add('fail');
-                }
-            });
-        }
-
-        // 加载源 JSON
+        // 4. 加载 JSON 数据
         async function loadApps() {
             try {
                 const res = await fetch('source.json');
-                if (!res.ok) throw new Error("未找到 source.json 文件");
+                if (!res.ok) throw new Error("未找到 source.json");
                 const data = await res.json();
                 allApps = data.apps || [];
                 renderApps(allApps);
             } catch (err) {
                 document.getElementById('ipaList').innerHTML = `
                     <div style="text-align:center; padding: 40px; color: var(--red);">
-                        <p style="font-weight:600; font-size:16px;">加载数据失败</p>
+                        <p style="font-weight:600; font-size:16px;">数据加载失败</p>
                         <p style="font-size:12px; margin-top:8px;">${err.message}</p>
-                        <p style="font-size:12px; color:var(--text-sub); margin-top:12px;">请确保 source.json 已正确生成并上传至服务器。</p>
                     </div>`;
             }
         }
 
-        // 渲染应用列表
+        // 5. 渲染应用卡片
         function renderApps(apps) {
             const list = document.getElementById('ipaList');
             if (apps.length === 0) {
-                list.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-sub);">源内没有任何应用</div>`;
+                list.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-sub);">没有任何应用</div>`;
                 return;
             }
 
             list.innerHTML = apps.map(app => {
                 const latest = app.versions[0];
                 
-                // 截取相对路径 (例如从 https://lgyz6767.github.io/ipa/ordinary/xxx.ipa 提取 ipa/ordinary/xxx.ipa)
+                // 截取相对路径
                 let relPath = latest.downloadURL;
                 try {
                     const urlObj = new URL(relPath);
-                    relPath = urlObj.pathname.substring(1); // 去掉开头的 /
+                    relPath = urlObj.pathname.substring(1); 
                 } catch(e) {}
 
                 const finalUrl = currentMirror.prefix + relPath;
@@ -243,7 +340,7 @@
             }).join('');
         }
 
-        // 搜索过滤
+        // 6. 搜索过滤
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const q = e.target.value.toLowerCase();
             const filtered = allApps.filter(app => 
