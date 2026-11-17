@@ -119,6 +119,38 @@ Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压
 Author: lgyz
 Name: mt 管理器
 
+Package: com.lgyz.mtfile
+Version: 1.0.0-152
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-152_iphoneos-arm64e.deb
+Size: 1791082
+MD5sum: 164488644fa0680848fe101eef8cdbb2
+SHA1: 44381cf6153602293b977a49a846686f8846b4fd
+SHA256: 1bfa03139c2a125d39ecdbfefc9314afd869e72413a1239aa8bf6687ec88e67f
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-152
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-152_iphoneos-arm64.deb
+Size: 1790974
+MD5sum: dea53e985825a094a5158ad727ef0df5
+SHA1: da900c059c56c998a75a9815c5b18a226b31d4bb
+SHA256: ee5b6e2e313161870d3d6f113d9728cd21508b0fbd59e680abf1460e17a5ad0f
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
 Package: com.lgyz.pro
 Version: 0.1.0
 Architecture: iphoneos-arm64
@@ -135,6 +167,42 @@ Description: Companion tweak for Liquid (Gl)ass 0.1.1 that restores the Custom V
 Author: lgyz
 Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
 Name: LiquidAss Custom Views
+
+Package: com.lgyz.w10cmd
+Version: 1.1.11
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 624
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.w10cmd_1.1.11_iphoneos-arm64.deb
+Size: 156736
+MD5sum: 3b239ab48f49e86ca7c83e5040c6af2a
+SHA1: aefc5fb2adcd0f748387e8180ae98a3e79892478
+SHA256: 269727b1156186eb3f34a6f7f2bdb8e7dacffc70274d5fea6ae87785ce8f6f06
+Section: 自研
+Priority: optional
+Description: Windows 10 经典白框 cmd 窗口，注入 SpringBoard，浮在桌面与所有 App 之上；内核为 ChenPi11/cmd 解释器。
+Tag: purpose::extension
+Author: lgyz6767
+Name: W10 CMD
+
+Package: com.lgyz.w10taskmgr
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 396
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.w10taskmgr_1.0.2_iphoneos-arm64.deb
+Size: 68992
+MD5sum: d5de7443380413c8e6887769bb84148c
+SHA1: 6b43a3893c79d4d0316c11728027071f7086f5a2
+SHA256: 3ea20483e357168251ae33a7a42443b42bc4f5891530e9dc167fead697e22dd5
+Section: 自研
+Priority: optional
+Description: Windows 10 风格任务管理器，注入 SpringBoard 浮于桌面之上；实时进程列表、CPU/内存曲线、结束任务。
+Tag: purpose::extension
+Author: lgyz6767
+Name: W10 任务管理器
 
 Package: com.local.androidback
 Version: 1.1.4-1
