@@ -1,0 +1,89 @@
+{
+  "name": "MTFile 扩展市场",
+  "extensions": [
+    {
+      "id": "com.lgyz.mtext.luademo",
+      "name": "Lua 扩展示例",
+      "version": "1.0.0",
+      "author": "lgyz6767",
+      "description": "纯 Lua 编写的扩展示例：不编译 dylib，沙盒版也能运行。演示白名单 API、声明式 UI、文件操作与终端调用。",
+      "category": "扩展",
+      "icon": "doc.text",
+      "iconImage": "",
+      "size": 2026,
+      "sha256": "66c8ea03e6f0bb40ae8db7ff79599005612902919a4933aa907b64691da81cfd",
+      "download": "com.lgyz.mtext.luademo/LuaDemo.mtextra",
+      "format": "mtextra"
+    },
+    {
+      "id": "com.lgyz.mtext.lua",
+      "name": "Lua 脚本",
+      "version": "1.0.0",
+      "author": "lgyz",
+      "description": "内置 Lua 5.4.7 解释器：写脚本直接跑，print 输出到面板，host.shell 可调宿主终端；接管 .lua 文件的编辑器。",
+      "category": "开发工具",
+      "icon": "chevron.left.forwardslash.chevron.right",
+      "iconImage": "icon.png",
+      "size": 137120,
+      "sha256": "6e1e19d898b439f53fea906829b891d5cf917a34121530221040ee9ac8461b4d",
+      "download": "com.lgyz.mtext.lua/MTLuaExt.mtextra",
+      "format": "mtextra"
+    },
+    {
+      "id": "com.lgyz.mtext.codeserver",
+      "name": "VS Code（Code Server）",
+      "version": "1.0.3",
+      "author": "lgyz",
+      "description": "在 MTFile 里原生跑 code-server：真 VS Code 服务端 + Open VSX 插件，浏览器内核为 WKWebView。需 deb 版宿主（沙盒版无法创建子进程）。",
+      "category": "工具",
+      "icon": "chevron.left.forwardslash.chevron.right",
+      "iconImage": "",
+      "size": 68605196,
+      "sha256": "1daa98566157a2389abecc34d92a681938ff2ffe47922149ded3edc49adc3588",
+      "download": "com.lgyz.mtext.codeserver/MTFile-CodeServer-Extension.mtextra",
+      "format": "mtextra"
+    },
+    {
+      "id": "com.lgyz.pyblocks",
+      "name": "图形Python",
+      "version": "1.0.4",
+      "author": "lgyz6767",
+      "description": "Scratch式积木编辑器，实时生成并导出Python代码",
+      "category": "图形编程",
+      "icon": "square.grid.2x2",
+      "iconImage": "",
+      "size": 111592,
+      "sha256": "7fa93f1565a0ff51154c637b78a0c9aa184d18db3dd283891e788b8091499434",
+      "download": "com.lgyz.pyblocks/PyBlocks.mtextra",
+      "format": "mtextra"
+    },
+    {
+      "id": "com.lgyz.mt.ext.demo",
+      "name": "扩展能力演示",
+      "version": "1.2.0",
+      "author": "lgyz",
+      "description": "一体化演示扩展（v2.1）：侧栏分类、文件/zip/主题/动效/编辑器接管、权限弹窗、SceneKit 3D、四线程 Range 下载、bash 终端，以及内置 2048。原 demo + game2048 + 3D 已全部合并到这一个扩展。",
+      "category": "扩展演示",
+      "icon": "sparkles",
+      "iconImage": "icon.png",
+      "size": 63315,
+      "sha256": "2bb2ddf2a200c03b84fca5c90f4be9515f4204593fda36dca23dda817f2f1afb",
+      "download": "com.lgyz.mt.ext.demo/MTDemoExt.mtextra",
+      "format": "mtextra"
+    },
+    {
+      "id": "com.lgyz.mtext.term",
+      "name": "终端",
+      "version": "1.0.0",
+      "author": "lgyz",
+      "description": "给 MTFile 加一个真正的命令行：bash -lc 执行、stderr 实时回显、退出码、快捷命令。需 deb 版宿主（沙盒版会明确提示不可用）。",
+      "category": "工具",
+      "icon": "terminal",
+      "iconImage": "icon.png",
+      "size": 14989,
+      "sha256": "10a6e20a816193ef1ca5e09e97569256c5ef85ea4c7a26a9cbf1b6f7cbfbb79a",
+      "download": "com.lgyz.mtext.term/MTTermExt.mtextra",
+      "format": "mtextra"
+    }
+  ]
+}

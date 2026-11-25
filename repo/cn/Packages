@@ -1,0 +1,601 @@
+Package: com.bazik1337.ios2627anims
+Version: 1.4.7
+Architecture: iphoneos-arm64
+Maintainer: bazik1337
+Installed-Size: 240
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.bazik.codexgenie27, com.bazik.genie27
+Replaces: com.bazik.codexgenie27
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.bazik1337.ios2627anims_1.4.7_iphoneos-arm64.deb
+Size: 32238
+MD5sum: 71ae4939e88dd3f61ae72ce627363769
+SHA1: 358692c775e6da9ec2b3cd1294101d788eb70fd5
+SHA256: f59e0f96f122fe1dcb29c3b9085c17fb512e6cc74fb39239f8d9f0d69d323e07
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Homepage: https://t.me/ba31k_tweaks
+Description: iOS 27 app open and close animations. Authors: bazik1337 (Telegram @bazik1337). Channel: https://t.me/ba31k_tweaks
+Author: bazik1337 (@bazik1337)
+Name: iOS 27 Animations
+
+Package: com.blu-tek.26passcode
+Version: 1.0.0-56+debug
+Architecture: iphoneos-arm64
+Maintainer: blu_tek
+Installed-Size: 104
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.blu-tek.26passcode_1.0.0-56+debug_iphoneos-arm64.deb
+Size: 15276
+MD5sum: 938199803a22b5fef3af9feb635dabd5
+SHA1: 21aed932e8dde383a547dde148ce0d11c0852f60
+SHA256: f723e6d91b4c919302ab02a4c2fa260754c451c225f8f18a1fdb29af342186d7
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Center-out zoom+bounce fly-in for the iOS 16 passcode pad
+Author: blu_tek
+Name: 26Passcode
+
+Package: com.blu-tek.26wave
+Version: 1.0.0-208+debug
+Architecture: iphoneos-arm64
+Maintainer: blu_tek
+Installed-Size: 580
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.blu-tek.26wave_1.0.0-208+debug_iphoneos-arm64.deb
+Size: 51858
+MD5sum: a240d9ad9b7e27c8a1639a31d57db2b2
+SHA1: 52146552d665cf06e81ba457bb99d35ff56ed4cc
+SHA256: 4fe931a23faef3ddec7a847e68105d677bebfa02070dcb66f2bd3c7336e6ade4
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26-style center-out unlock wave for the iOS 16 lock screen
+Author: blu_tek
+Name: 26Unlock
+
+Package: com.controlcenter26
+Version: 0.0.8a-1+debug
+Architecture: iphoneos-arm64
+Maintainer: Pala and Lionel
+Installed-Size: 3788
+Depends: firmware (>= 14.0), firmware (<< 17.4), ellekit, com.opa334.ccsupport, mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.controlcenter26_0.0.8a-1+debug_iphoneos-arm64.deb
+Size: 702838
+MD5sum: 28f882889f8202ab07c01d14b148d7ea
+SHA1: 7484c797624631ad99d40c39f0532da3ea7681e7
+SHA256: e2b0c3fe5a2a0df0198f8bf25fde9ee3ff5a35d47a67fd49d9cb425a709329f6
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: A tweak that makes the control center similar to that of ios 26
+Author: Lionel and Pala
+Name: controlcenter26
+
+Package: com.futur3sn0w.ccaster
+Version: 0.2.2
+Architecture: iphoneos-arm64
+Maintainer: futur3sn0w
+Installed-Size: 1616
+Depends: firmware (>= 16.0), firmware (<< 17.0), ellekit, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.futur3sn0w.ccaster_0.2.2_iphoneos-arm64.deb
+Size: 388642
+MD5sum: 7885101ff6cdbacc713af520e51d9f6d
+SHA1: 2775c35a0b54aad5cde5bc6ef4d7f3298e82da48
+SHA256: 818d542b6c845dda83d953dd8ddc9eb40f72f119d91bfcd8936d613fd490595f
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: An iOS 18-inspired, editable Control Center experience for iOS 16.
+Author: futur3sn0w
+Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.ccaster.png
+Name: CCAster
+Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.ccaster.json
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-134
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-134_iphoneos-arm64e.deb
+Size: 1712222
+MD5sum: 5aa2ae1a9212816191f5269e54f60fbb
+SHA1: 2f8e760d7c998ec2b388791d9ae476ca62705359
+SHA256: e26a3879f18b0981cabd68e37476e05992afae072dbeea8d2ac2120c3abb6658
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器（roothide）
+Theospackage-Scheme: roothide
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-139
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-139_iphoneos-arm64.deb
+Size: 1740174
+MD5sum: fd7ec33f997095de8bb8f9df43b0bd03
+SHA1: d027c399bb965ca2bb8818b2de50c87d266a21ff
+SHA256: e07ad073ad01d94a1cb3b5dd04985bbbb9f9e9716313fca0851aa3db2430b136
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-152
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-152_iphoneos-arm64e.deb
+Size: 1791082
+MD5sum: 164488644fa0680848fe101eef8cdbb2
+SHA1: 44381cf6153602293b977a49a846686f8846b4fd
+SHA256: 1bfa03139c2a125d39ecdbfefc9314afd869e72413a1239aa8bf6687ec88e67f
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-152
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-152_iphoneos-arm64.deb
+Size: 1790974
+MD5sum: dea53e985825a094a5158ad727ef0df5
+SHA1: da900c059c56c998a75a9815c5b18a226b31d4bb
+SHA256: ee5b6e2e313161870d3d6f113d9728cd21508b0fbd59e680abf1460e17a5ad0f
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-153
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-153_iphoneos-arm64e.deb
+Size: 1790996
+MD5sum: c41da958385de4a46510c975c5b9ec7d
+SHA1: 31c070567f5a0b741d320d58eb4bdbdb4ada764b
+SHA256: 3a59032b79f67d686c5d4aae51cf2d6127df70156691b38f757379b2d0abbf75
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.0.0-153
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.0.0-153_iphoneos-arm64.deb
+Size: 1791150
+MD5sum: a6c033c93241eb3b984820d7e8270fa4
+SHA1: 1be490af098aad261918f00372190ffb4a08e6cb
+SHA256: 528e4f9167f44a14c49aa7fc8cdf18a525336e763356f4ce90554d8163e0e823
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: mt 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.2.0-11
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.2.0-11_iphoneos-arm64.deb
+Size: 3511000
+MD5sum: f5e2f70118f8edb911a86d574cfe7db3
+SHA1: d26878d38c5ca6a23bb043538bec13acd8f335d4
+SHA256: 87582312dc6910f27beea218614c5f93de0ec676d17a617cd793a94efef13373
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: MT 管理器
+
+Package: com.lgyz.mtfile
+Version: 1.2.0-11
+Architecture: iphoneos-arm64e
+Maintainer: lgyz
+Depends: firmware (>= 15.0), dpkg
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.mtfile_1.2.0-11_iphoneos-arm64e.deb
+Size: 3510924
+MD5sum: 634ccfc7e480f1ebc8d430168cc9edd6
+SHA1: b2a763703bb61ce8118e3da08f8567b2c8c8f718
+SHA256: 4210e3a0c5b91b7368eac5ea8b08b022ea9d6d0fc6da68db72626a4ef8ec8728
+Section: 自研
+Priority: optional
+Description: 双栏深色文件管理器，交互参考 MT 管理器。内置压缩包引擎（zip/7z/rar/tar/gz/bz2/xz 预览与解压）、压缩面板、后台任务、下拉刷新、IPA 工具。
+Author: lgyz
+Name: MT 管理器
+
+Package: com.lgyz.pro
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Maintainer: lgyz
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader, dylv.liquidass (>= 0.1.1)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.pro_0.1.0_iphoneos-arm64.deb
+Size: 223040
+MD5sum: 5a64e0ebb33d4b84eced7ffe238a9a18
+SHA1: c9b915e19fed661567159bd945377fcf21d51d01
+SHA256: 9afd71a252e14791424f15b863495784229c3af58f024f20308d55f1f794fff3
+Section: 自研
+Priority: optional
+Description: Companion tweak for Liquid (Gl)ass 0.1.1 that restores the Custom Views feature removed from the official build. Inject liquid glass into any view by class name, with scope (SpringBoard / global / per-app), material presets, sampling quality, custom or adaptive mask color, adaptive corner radius, strong background clear, button animation, and a floating LG menu (class sampling, rule management, menu customization, drag). Localized in English, Chinese and Vietnamese.
+Author: lgyz
+Icon: file:///var/jb/Library/PreferenceBundles/LiquidAssCustomPrefs.bundle/icon-list.png
+Name: LiquidAss Custom Views
+
+Package: com.lgyz.w10cmd
+Version: 1.1.11
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 624
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.w10cmd_1.1.11_iphoneos-arm64.deb
+Size: 156736
+MD5sum: 3b239ab48f49e86ca7c83e5040c6af2a
+SHA1: aefc5fb2adcd0f748387e8180ae98a3e79892478
+SHA256: 269727b1156186eb3f34a6f7f2bdb8e7dacffc70274d5fea6ae87785ce8f6f06
+Section: 自研
+Priority: optional
+Description: Windows 10 经典白框 cmd 窗口，注入 SpringBoard，浮在桌面与所有 App 之上；内核为 ChenPi11/cmd 解释器。
+Tag: purpose::extension
+Author: lgyz6767
+Name: W10 CMD
+
+Package: com.lgyz.w10taskmgr
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 396
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.lgyz.w10taskmgr_1.0.2_iphoneos-arm64.deb
+Size: 68992
+MD5sum: d5de7443380413c8e6887769bb84148c
+SHA1: 6b43a3893c79d4d0316c11728027071f7086f5a2
+SHA256: 3ea20483e357168251ae33a7a42443b42bc4f5891530e9dc167fead697e22dd5
+Section: 自研
+Priority: optional
+Description: Windows 10 风格任务管理器，注入 SpringBoard 浮于桌面之上；实时进程列表、CPU/内存曲线、结束任务。
+Tag: purpose::extension
+Author: lgyz6767
+Name: W10 任务管理器
+
+Package: com.local.androidback
+Version: 1.1.4-1
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 392
+Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit, com.opa334.altlist
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.local.androidback_1.1.4-1_iphoneos-arm64.deb
+Size: 53066
+MD5sum: cf48442752f5d6aec211c6703adcd474
+SHA1: b13f7bf57e9e8519002c2031c3a029be67623a90
+SHA256: a9f5625b2e084b48c6fee3d5c90ce3af19c8b593bc3c97d89c82acd886341453
+Section: 自研
+Priority: optional
+Description: 安卓风格边缘返回 v1.1.2：多策略返回（默认系统手势驱动，复用系统交互转场，同实测90%有效插件的方案，文件/文件管理类 App 也可返回）、左/右缘即时识别手势、波浪指示器（自定义颜色/描边/透明度/整体大小/箭头大小/箭头淡入时机）、曲线变平缩回动画、AltList 黑白名单、8 语言、液态玻璃退出提示、日志开关与复制/Filza 跳转。iPhone 7 / iOS 15 / Dopamine rootless。
+Tag: purpose::extension
+Author: lgyz6767
+Name: AndroidBack（安卓波浪返回）
+
+Package: com.mekabrine.liquidisland
+Version: 1.4.0
+Architecture: iphoneos-arm64
+Maintainer: Meka
+Installed-Size: 424
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.mekabrine.liquidisland_1.4.0_iphoneos-arm64.deb
+Size: 30882
+MD5sum: 021add06652e4346ff370bd44b01bad9
+SHA1: 8e3635d2fa4de58683802977a340d564e97b51f1
+SHA256: 8235eb953a8551ae888b3668f392dc432b075df600d22a8eabdfeab196ace274
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Liquid glass for active and expanded Dynamic Island states.
+Author: Meka
+Name: Liquid Island
+
+Package: com.mekabrine.moreparalax
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Meka
+Installed-Size: 344
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.mekabrine.moreparalax_1.0.0_iphoneos-arm64.deb
+Size: 7140
+MD5sum: 8fd55fcf44f46455859d62e11d13be20
+SHA1: 498ee20a455d6fa654ec61cc20e798423258e562
+SHA256: 93eafd394d08d0c2b65981fb133b4ce9ce15c821fc639b003f22a4cd23fce8ad
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Amplifies the gyroscope parallax effect on the Home Screen so icons move more when you tilt your device.
+Author: Meka
+Name: MoreParalax
+
+Package: com.nano.control26
+Version: 1.2.6
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1104
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.control26
+Replaces: com.user.control26
+Provides: com.user.control26
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.control26_1.2.6_iphoneos-arm64.deb
+Size: 502352
+MD5sum: db4a1b022dfbfa204b29f9b72c3cd2ec
+SHA1: 53c47b78b482ac12f958fa17fa3462e23823723d
+SHA256: 4d432dfa8f7b667c6e48257e92301c8529f7630ada9c175732dd64c9804493d4
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: The iOS 26 Control Center for iOS 16: edit mode with free placement and resizing, Add a Control, up to 6 pages, big Music and Connectivity layouts, layout presets, liquid glass music module, slide to power off, drop-in opening animation and an iOS 18 style settings page. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/Control26/icon.png
+Name: Control26
+
+Package: com.nano.liquidlock
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 552
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.liquidlock_1.0_iphoneos-arm64.deb
+Size: 343406
+MD5sum: e80d99ec33636f736537c415246a4718
+SHA1: 947dfec7b42e6ba736219415f3cc03f0ac2dffa5
+SHA256: 68e72df017bc9de8e6500963fb08e475b4c73551be51dd6cd48ded00ca13091b
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Animated Face ID for notched iPhones. The lock turns into a Face ID face that waits for you while Face ID looks (and on the passcode screen), curls into a spinning ring with a check when you unlock, and shakes like jelly when it does not recognize you. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/LiquidLock/icon.png
+Name: LiquidLock
+
+Package: com.nano.messages26
+Version: 1.4.3
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1508
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.messages26_1.4.3_iphoneos-arm64.deb
+Size: 493882
+MD5sum: 0a41f458c6ec50d9203a9148972fd5c5
+SHA1: d1230c9b35de0177b8f5c806dc5363abf08a41ff
+SHA256: d6f8de7675e8779b30fd488c28afd4e5a75b64ee3624474618738474e518813a
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Messages redesigned in the iOS 26 Liquid Glass style: glass message bar and + app menu, bottom search pill, glass bubbles with swipe to reply, a new contact page with tabs and chat backgrounds, bubble colors, contact frames, Face ID chat lock and more.
+Author: nano
+Name: Messages26
+Sileodepiction: https://nanoonsjs.github.io/nano-repo/depictions/com.nano.messages26.json
+
+Package: com.nano.musicpill
+Version: 1.8
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 1960
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.musicpill
+Replaces: com.user.musicpill
+Provides: com.user.musicpill
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.musicpill_1.8_iphoneos-arm64.deb
+Size: 755016
+MD5sum: 39e5bb466ec666c5659b8f28fedf76ba
+SHA1: 4583b185d76dc1c1e9db2262c852361e2457b300
+SHA256: 4b92a7e5892f5445a790b6907b1920247d487344d12fe9c1d4aa7cf020e6bd32
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Apple Music, iOS 26 style. A small glass now-playing pill (swipe to skip, scrolling title) that collapses with the tab bar, iOS 26 album, artist, search and library pages, star favorites, glass top buttons, animated album covers in the player and more. For iOS 15 and 16, every iPhone (A11 and newer). Tested on iPhone 13 Pro Max, iOS 16. Made by nano.
+Author: nano
+Icon: file:///var/jb/usr/share/MusicPill/icon.png
+Name: MusicPill
+
+Package: com.nano.photos26
+Version: 3.4.3
+Architecture: iphoneos-arm64
+Maintainer: nano
+Installed-Size: 844
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.user.photos26
+Replaces: com.user.photos26
+Provides: com.user.photos26
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.nano.photos26_3.4.3_iphoneos-arm64.deb
+Size: 483532
+MD5sum: 30f7590034417099ef67476623f0f9c7
+SHA1: 079830e925e614293092f3cd7d69497c65429fa7
+SHA256: 2cc94930ce07b2321f5c9aa1bc56b84e3aa4cab658944c9c2d04ba63c23fd34b
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 style Photos viewer: liquid glass buttons and a glass video player. For iOS 15 and 16, every iPhone (A11 and newer). Tested on iPhone 13 Pro Max, iOS 16. Made by nano. (Replaces PhotosGlass.)
+Author: nano
+Icon: file:///var/jb/usr/share/Photos26/icon.png
+Name: Photos26
+
+Package: com.ngkhoi.26home
+Version: 1.2.0-test
+Architecture: iphoneos-arm64
+Maintainer: ngkhoi
+Installed-Size: 29816
+Depends: mobilesubstrate
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.ngkhoi.26home_1.2.0-test_iphoneos-arm64.deb
+Size: 20118976
+MD5sum: 9dd0fff1582a6dbd84a74ff9ea7a9bc4
+SHA1: ef7bb3be6993ed2f64eb71fd3dc2086a344c0eef
+SHA256: e38a13e406c06d676923b6f69a3dcd4db62c1c169be34afb1708fc6bdb17fd18
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 Homescreen customization.
+Author: ngkhoi
+Name: 26Home
+
+Package: com.samuel.r3v4mp
+Version: 2.0.58
+Architecture: iphoneos-arm64
+Maintainer: Samuel
+Installed-Size: 11392
+Suggests: com.ngkhoi.liquidass27
+Conflicts: com.samuel.18configs
+Replaces: com.samuel.18configs
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.samuel.r3v4mp_2.0.58_iphoneos-arm64.deb
+Size: 9362170
+MD5sum: cafaa883b903fd42ef57e6ff61b24ce6
+SHA1: 1a8e18f82be9e0186eab3c4f8185cb6f599cc2e2
+SHA256: c3fa214e6b2eec551519468fec3714b46304d157be95a1bd977b7c1d9d0327e3
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: R3v4mp - iOS 18 / iOS 26 style Settings: banners, Apps section, redesigned pane. iOS 13 and later.
+Author: Samuel
+Name: R3v4mp
+
+Package: com.sekoandlionel.26safari
+Version: 3.5.0
+Architecture: iphoneos-arm64
+Maintainer: Seko,lionel
+Installed-Size: 308
+Depends: mobilesubstrate
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.sekoandlionel.26safari_3.5.0_iphoneos-arm64.deb
+Size: 51196
+MD5sum: 6e83ac58f853751ff46b2c70c63d819d
+SHA1: 238da4d42e662c3e4742692e34e4d413bbd88f33
+SHA256: db951f144efc82ee9a72a9f86db1d299b50d96cdb5c449d1246af2d825e75b87
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 "Liquid Glass" style floating bars for iOS 16 Safari
+Author: Seko,lionel
+Name: 26Safari
+
+Package: com.yourcompany.liquidsiri
+Version: 1.1.2-1+debug
+Architecture: iphoneos-arm64
+Maintainer: Thijs mussig
+Installed-Size: 2760
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./com.yourcompany.liquidsiri_1.1.2-1+debug_iphoneos-arm64.deb
+Size: 963948
+MD5sum: e49ed926caddea1114d52ff28ab23234
+SHA1: 410cdd2a8e6651380f4f2e43c8a5a07bf1cfaab8
+SHA256: 3904974d9802f7d99544077e4cdb4dcb8d756a9b5dfd3b6842d22bedb07d3831
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Make your Siri look smart with Liquid Glass! Compatible with iOS 14.0 - 16.x.
+Author: Thijs mussig
+Name: LiquidSiri
+
+Package: dylv.lasymbols
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 380
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./dylv.lasymbols_0.0.1_iphoneos-arm64.deb
+Size: 25764
+MD5sum: b5234ad2c29f7ade3997b654e1083f8a
+SHA1: b39fa9bc129ecacb55c57fa77b436ad22e709191
+SHA256: c5a1f6df05e7506b9843abb02ac70dec9d2108af3b74ec0796eaf242c411ad9a
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: Los Angeles Symbols brings iOS 26 SF Symbols to older iOS versions.
+Author: dylv
+Name: LASymbols
+
+Package: dylv.liquidass
+Version: 0.1.2t+r2
+Architecture: iphoneos-arm
+Maintainer: dylv
+Installed-Size: 11064
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
+Conflicts: dylv.blurless, com.ngkhoi.liquidass27
+Replaces: dylv.blurless, com.ngkhoi.liquidass27
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./dylv.liquidass_0.1.2t+r2_iphoneos-arm.deb
+Size: 4269462
+MD5sum: 9c969e6a3c432dc8632c5ca61f0aa764
+SHA1: 5e9a4b36bd12b1caf9161b570ab29bd03b51b79e
+SHA256: 8c8ce06317b4331e52d4a5d525c77f06da2ae11f7b38693aed2b258300f4ade7
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
+Package: dylv.liquidass
+Version: 0.1.2t+r2
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 10744
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0), firmware (<< 26.0), preferenceloader, com.opa334.libsandy (>= 1.1.6)
+Conflicts: dylv.blurless, com.ngkhoi.liquidass27
+Replaces: dylv.blurless, com.ngkhoi.liquidass27
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./dylv.liquidass_0.1.2t+r2_iphoneos-arm64.deb
+Size: 4136654
+MD5sum: 3edcec91093ba77767a54dbb3f630a68
+SHA1: 95f2991a26c1284db43058f8d285d13bc18ae8cf
+SHA256: 0e84a274899bdff995906bb5a1cf7955422b7d435152dce469b0e5ba63c28e28
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
+Package: moe.waru.soko
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: waruhachi
+Installed-Size: 464
+Depends: firmware (>= 16.0), firmware (<< 19.0), mobilesubstrate (>= 0.9.5000)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./moe.waru.soko_1.0.0_iphoneos-arm64.deb
+Size: 54140
+MD5sum: ac9d9c74f6986276ea7d0cf893189edf
+SHA1: e628f08c74a7883232fec831144295f250b8fb74
+SHA256: 8d378669b88d0c651105fdaf8b3447bb97a05e2bc1d195dc9225fcf0c0b0c781
+Section: 仿iOS26、27插件（搬运）
+Priority: optional
+Description: iOS 26 style Lock Screen widgets
+Author: waruhachi
+Name: Soko
+
+Package: wiki.lgyz.lsposed
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 2224
+Depends: firmware (>= 15.0)
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./wiki.lgyz.lsposed_0.1.0_iphoneos-arm64.deb
+Size: 579992
+MD5sum: 6ece088de559f028da2ef8e747ac9c6f
+SHA1: f339a1f1c079d957a2504aaf1b121706e585017a
+SHA256: ae2e320bfa012631f3175373bc53c811600f5623e53732fb17e2ff2ffaa0da17
+Section: 自研
+Priority: optional
+Description: LSPosed 风格的越狱 iOS 模块(tweak)管理器，深度还原安卓 LSPosed 2.2.0 Miuix UI；UI 高度可自定义；管理 MobileSubstrate dylib 与作用域。
+Tag: role::application
+Author: lgyz6767
+Name: LSPosed
+
+Package: wiki.lgyz.lstabsileo
+Version: 0.6.7
+Architecture: iphoneos-arm64
+Maintainer: lgyz6767
+Installed-Size: 268
+Depends: mobilesubstrate, preferenceloader
+Filename: https://ghm.078465.xyz/https://raw.githubusercontent.com/lgyz6767/lgyz6767.github.io/main/repo./wiki.lgyz.lstabsileo_0.6.7_iphoneos-arm64.deb
+Size: 27880
+MD5sum: 1c2e2e955de1a810585bbd938a1b25f1
+SHA1: 5d8f684560cedb8bb0917965547cc7cdc0d1fcb8
+SHA256: 04f08ca670a6b96a920e514274dbde6aa6967ceaf4a91541c832d66a5aac73d2
+Section: 自研
+Priority: optional
+Description: Inject cross-page continuous slide transition into Sileo native tab bar (reusable UIKit animator).
+Tag: compatible::ios15
+Author: lgyz6767
+Name: LS Tab Slide for Sileo
+

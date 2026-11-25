@@ -1,0 +1,128 @@
+{
+  "name": "LGYZ's IPA Repo",
+  "identifier": "com.lgyz.ipa.source",
+  "sourceURL": "https://lgyz6767.github.io/ipa/source.json",
+  "apps": [
+    {
+      "name": "CMD",
+      "bundleIdentifier": "com.lgyz.w10cmd.troll",
+      "developerName": "W10CMDTroll",
+      "subtitle": "TROLLSTORE 侧载",
+      "localizedDescription": "分类：trollstore",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.w10cmd.troll.png",
+      "tintColor": "018084",
+      "category": "trollstore",
+      "versions": [
+        {
+          "version": "1.1.11",
+          "buildVersion": "1.1.11",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/trollstore/W10CMDTroll_1.1.11_trollstore.ipa",
+          "size": 203918,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "资源管理器",
+      "bundleIdentifier": "com.lgyz.w10explorer.troll",
+      "developerName": "W10Explorer",
+      "subtitle": "TROLLSTORE 侧载",
+      "localizedDescription": "分类：trollstore",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.w10explorer.troll.png",
+      "tintColor": "018084",
+      "category": "trollstore",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1.0.0",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/trollstore/W10Explorer_1.0.0_trollstore.ipa",
+          "size": 102239,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "MT 管理器",
+      "bundleIdentifier": "com.lgyz.mtfile.trollstore",
+      "developerName": "MTFile",
+      "subtitle": "TROLLSTORE 侧载",
+      "localizedDescription": "分类：trollstore",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.mtfile.trollstore.png",
+      "tintColor": "018084",
+      "category": "trollstore",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1.2.0-11",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/trollstore/MTFile_1.2.0-11_TrollStore.ipa",
+          "size": 3543320,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "任务管理器",
+      "bundleIdentifier": "com.lgyz.w10taskmgr.troll",
+      "developerName": "W10TaskMgrTroll",
+      "subtitle": "TROLLSTORE 侧载",
+      "localizedDescription": "分类：trollstore",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.w10taskmgr.troll.png",
+      "tintColor": "018084",
+      "category": "trollstore",
+      "versions": [
+        {
+          "version": "1.0.4",
+          "buildVersion": "1.0.4",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/trollstore/W10TaskMgr_1.0.4_trollstore.ipa",
+          "size": 137709,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "WQ 文件",
+      "bundleIdentifier": "com.lgyz.wqfiles",
+      "developerName": "MTFile",
+      "subtitle": "ORDINARY 侧载",
+      "localizedDescription": "分类：ordinary",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.wqfiles.png",
+      "tintColor": "007AFF",
+      "category": "ordinary",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1.2.0-11",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/ordinary/MTFile_1.2.0-11_WQFile.ipa",
+          "size": 3543340,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "MT管理器·沙盒（无需越狱）",
+      "bundleIdentifier": "com.lgyz.mtfile.sandbox",
+      "developerName": "MTFile",
+      "subtitle": "ORDINARY 侧载",
+      "localizedDescription": "分类：ordinary",
+      "iconURL": "https://lgyz6767.github.io/repo/ipa/icons/com.lgyz.mtfile.sandbox.png",
+      "tintColor": "007AFF",
+      "category": "ordinary",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1.0.0-134",
+          "date": "2026-11-26",
+          "downloadURL": "https://lgyz6767.github.io/repo/ipa/ordinary/MTFile-Sandbox-iOS26.ipa",
+          "size": 1980307,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": []
+}

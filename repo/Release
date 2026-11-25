@@ -1,0 +1,25 @@
+Origin: lgyz源
+Label: lgyz源
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
+Components: main
+Description: 自研&搬运插件源
+Date: Thu, 26 Nov 2026 14:46:14 +0000
+MD5Sum:
+ 58ca27248735b37c5d6f66705eeeb8a3            23446 Packages
+ 2ffb04be53c2ae86489aa3e16c771b2c             7507 Packages.bz2
+ 69e1dceb5750675e2d87a8a467decdfb             7947 Packages.gz
+SHA1:
+ f825619d3c2a8fd4f3e9c55fd294c4485f1c17c7            23446 Packages
+ 3ace106dbaebb162c223ae9c74e37644c21c33b9             7507 Packages.bz2
+ 7e5db7825f4216cebe6b458bbe3d9dcf1f7747ad             7947 Packages.gz
+SHA256:
+ 6aea5356eb69beb0278b2d5afeda19909ea7b95e25e088c9aea0d57f35bf2341            23446 Packages
+ 85676836aa1b9ef66c29cb1865b6bed3e3631141f43a259885c31b211b97a5b1             7507 Packages.bz2
+ 83d90cc7fd255daa1dacf0c1a45b728ee0f65d980d34707c75f29c54f61b57aa             7947 Packages.gz
+SHA512:
+ fb328013a3d6c02b3fe4f812251ab7532087873283f3cc12f9ce4d43939d54def82f6c5f5265c0650095baf5e7c08c99fcfdf7e2d69addaaa7e05fc0d8f6aeda            23446 Packages
+ 081d575459a3d1066de69e3ed67077da14e66e5c82f6aa7a0cea525a683dcaff5a592a823e6294e500604714b4407c49bdb0b1864da6a4d2241625c51d718333             7507 Packages.bz2
+ 2f84806a58ab83f86842153213c9d44c25342dd52a068544c666790224ffe6e8497dc4dbc4d613308dcdf93ad37ae0be2414290682129a194d95bcf3069d7c96             7947 Packages.gz

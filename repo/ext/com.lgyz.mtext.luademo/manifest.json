@@ -1,0 +1,15 @@
+{
+  "framework": "v2.1",
+  "id": "com.lgyz.mtext.luademo",
+  "name": "Lua 扩展示例",
+  "version": "1.0.0",
+  "author": "lgyz6767",
+  "description": "纯 Lua 编写的扩展示例：不编译 dylib，沙盒版也能运行。演示白名单 API、声明式 UI、文件操作与终端调用。",
+  "runtime": "lua",
+  "entry": "main.lua",
+  "sidebar": {
+    "items": [
+      { "id": "home", "title": "Lua 示例", "icon": "doc.text" }
+    ]
+  }
+}
