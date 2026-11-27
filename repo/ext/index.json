@@ -60,14 +60,14 @@
     {
       "id": "com.lgyz.mt.ext.demo",
       "name": "扩展能力演示",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": "lgyz",
-      "description": "一体化演示扩展（v2.1）：侧栏分类、文件/zip/主题/动效/编辑器接管、权限弹窗、SceneKit 3D、四线程 Range 下载、bash 终端，以及内置 2048。原 demo + game2048 + 3D 已全部合并到这一个扩展。",
+      "description": "一体化演示扩展（v2.2）：侧栏分类、文件/zip/主题/动效/编辑器接管、权限弹窗、CoreAnimation 3D（透视立方体，适配 iPhone 7）、四线程 Range 下载、bash 终端，以及内置 2048。原 demo + game2048 + 3D 已全部合并到这一个扩展。",
       "category": "扩展演示",
       "icon": "sparkles",
       "iconImage": "icon.png",
-      "size": 63315,
-      "sha256": "2bb2ddf2a200c03b84fca5c90f4be9515f4204593fda36dca23dda817f2f1afb",
+      "size": 68795,
+      "sha256": "24ad5ed222c356bd03bdc04e8135e729a2357a12e2b2af29c1b2c9b81ec384a9",
       "download": "com.lgyz.mt.ext.demo/MTDemoExt.mtextra",
       "format": "mtextra"
     },
