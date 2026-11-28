@@ -280,20 +280,18 @@ version: 0.6.7
 maintainer: lgyz6767
 description: Inject cross-page continuous slide transition into Sileo native tab bar (reusable UIKit animator).
 
-Package: com.lgyz.touchsense
+Package: com.lgyz.touchsenseapp
 Version: 1.0.0-1
 Architecture: iphoneos-arm64
 Maintainer: lgyz
-Installed-Size: 164
-Section: Tweaks
-Filename: ./com.lgyz.touchsense_1.0.0_iphoneos-arm64.deb
-Size: 26824
-MD5sum: ca93fbb26daaa2193865b3aa454b701e
-SHA1: bb4171a0aaeda7e14bbad76f11c1be90e44154fb
-SHA256: 117c7279fcb665ecd82191edab096c0ef3877c315d37530e014e244c8858250c
-Depends: mobilesubstrate (>= 0.9.5000) | com.opa334.ellekit
-Description: 全屏触摸覆盖热力图 + HID 原始触点数据，用来定位 iPhone X 屏幕的断触/死区。三指长按 1.2 秒唤出检测面板。
+Section: Applications
+Filename: ./com.lgyz.touchsenseapp_1.0.0-1_iphoneos-arm64.deb
+Size: 33850
+MD5sum: 9a887edf5fcab40abb1db5d97f31cd4d
+SHA1: 17a844054a5ad84882f7162b1917e10957024f3a
+SHA256: 965bac35e509001be5e12698cb133caeaf46f65bec53ea2eacb02ed4533cd92d
+Depends: firmware (>= 15.0)
+Description: 独立越狱 App（自带 setuid-root helper）。全屏画布热力图记录触摸覆盖，零覆盖簇自动框出疑似死区；helper 以 root 读取 IOHID 数字转换器原始触点数据。用于定位 iPhone X 屏幕断触位置。
 Author: lgyz
 Name: TouchSense 断触检测
 Priority: optional
-
