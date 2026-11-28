@@ -2,7 +2,7 @@
   "framework": "v2.1.0",
   "id": "com.lgyz.mt.ext.demo",
   "name": "扩展能力演示",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "lgyz",
   "description": "一体化演示扩展（v2.2）：侧栏分类、文件/zip/主题/动效/编辑器接管、权限弹窗、CoreAnimation 3D（透视立方体，适配 iPhone 7）、四线程 Range 下载、bash 终端，以及内置 2048。原 demo + game2048 + 3D 已全部合并到这一个扩展。",
   "dylib": "MTDemoExt.dylib",

@@ -1,0 +1,23 @@
+{
+  "framework": "v2.1.0",
+  "id": "com.lgyz.mtext.term",
+  "name": "终端",
+  "version": "1.0.1",
+  "author": "lgyz",
+  "description": "给 MTFile 加一个真正的命令行：bash -lc 执行、stderr 实时回显、退出码、快捷命令。需 deb 版宿主（沙盒版会明确提示不可用）。",
+  "dylib": "MTTermExt.dylib",
+  "iconImage": "icon.png",
+  "capabilities": [
+    "terminal"
+  ],
+  "sidebar": {
+    "category": "工具",
+    "items": [
+      {
+        "id": "term",
+        "title": "终端",
+        "icon": "terminal"
+      }
+    ]
+  }
+}
