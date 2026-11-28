@@ -281,15 +281,15 @@ maintainer: lgyz6767
 description: Inject cross-page continuous slide transition into Sileo native tab bar (reusable UIKit animator).
 
 Package: com.lgyz.touchsenseapp
-Version: 1.0.0-1
+Version: 1.0.0-2
 Architecture: iphoneos-arm64
 Maintainer: lgyz
 Section: Applications
-Filename: ./com.lgyz.touchsenseapp_1.0.0-1_iphoneos-arm64.deb
-Size: 33850
-MD5sum: 9a887edf5fcab40abb1db5d97f31cd4d
-SHA1: 17a844054a5ad84882f7162b1917e10957024f3a
-SHA256: 965bac35e509001be5e12698cb133caeaf46f65bec53ea2eacb02ed4533cd92d
+Filename: ./com.lgyz.touchsenseapp_1.0.0-2_iphoneos-arm64.deb
+Size: 41324
+MD5sum: 2496e02bbb266618869c8b3d934b6bd9
+SHA1: 98d81316ec59b45f76a19a4695ce2c3a347d1195
+SHA256: 586bbd75304bb56ec60cdf8df0cbe6a672a8eb16b500bff79433ce62c9dce6e5
 Depends: firmware (>= 15.0)
 Description: 独立越狱 App（自带 setuid-root helper）。全屏画布热力图记录触摸覆盖，零覆盖簇自动框出疑似死区；helper 以 root 读取 IOHID 数字转换器原始触点数据。用于定位 iPhone X 屏幕断触位置。
 Author: lgyz
